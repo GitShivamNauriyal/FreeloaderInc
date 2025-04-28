@@ -1,27 +1,19 @@
 "use client";
 
-import { Float, Environment } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { Suspense } from "react";
 import Model from "./Model";
-import { useThree } from "@react-three/fiber";
-import { useEffect } from "react";
+import { OrbitControls } from "@react-three/drei";
 
 export default function HeroCanvas() {
-    const { gl } = useThree();
-
-    useEffect(() => {
-        gl.setClearColor("#5e17eb"); // Primary background color
-    }, [gl]);
-
     return (
-        <>
-            {/* Floating, cursor-reactive model */}
-            <Float speed={1.5} rotationIntensity={2} floatIntensity={2}>
+        <Canvas camera={{ position: [0, 0, 10], fov: 50 }}>
+            <ambientLight intensity={1} />
+            <directionalLight position={[0, 10, 5]} intensity={2} />
+            <Suspense fallback={null}>
                 <Model />
-            </Float>
-
-            {/* Lighting */}
-            <ambientLight intensity={1.5} />
-            <Environment preset="sunset" />
-        </>
+            </Suspense>
+            <OrbitControls enableDamping />
+        </Canvas>
     );
 }
