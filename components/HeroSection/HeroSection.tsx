@@ -6,24 +6,22 @@ import { HeroParallax } from "../ui/backgrounds/hero-parallax";
 export default function HeroSection() {
     const products = [
         {
-            title: "Coca-Cola",
-            link: "https://www.coca-cola.com/",
+            title: "McDonald's",
+            link: "https://www.mcdonalds.com/",
             thumbnail:
-                "https://www.coca-colacompany.com/content/dam/journey/us/en/brands/coca-cola/coca-cola-logo.png", // Official Coca-Cola PNG
+                "https://c8.alamy.com/zooms/9/311186be542a4d74b162d50afdd4c686/bxjp52.jpg",
         },
         {
             title: "Sprite",
             link: "https://www.sprite.com/",
             thumbnail:
-                "https://www.coca-colacompany.com/content/dam/journey/us/en/brands/coca-cola/coca-cola-logo.png", // Official Coca-Cola PNG
-            // "https://www.coca-colacompany.com/content/dam/journey/us/en/brands/sprite/sprite-logo.png", // Official Sprite PNG
+                "https://www.coca-cola.com/content/dam/onexp/in/en/homepage/banners/sprite-website.png",
         },
         {
-            title: "McDonald's",
-            link: "https://www.mcdonalds.com/",
+            title: "Coca-Cola",
+            link: "https://www.coca-cola.com/",
             thumbnail:
-                "https://www.coca-colacompany.com/content/dam/journey/us/en/brands/coca-cola/coca-cola-logo.png", // Official Coca-Cola PNG
-            // "https://www.mcdonalds.com/content/dam/sites/usa/nfl/public/brand-logos/mcdonalds-logo.png", // Official McDonald's PNG
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY90hoQF-NlmPKYOISnuOU3OG_HNMbCjPpZQ&s",
         },
         {
             title: "Ferrari",

@@ -55,7 +55,7 @@ export const HeroParallax = ({
     return (
         <div
             ref={ref}
-            className="h-[300vh] py-40 overflow-hidden  antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+            className="h-[300vh] md:h-[400vh] py-40 overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
         >
             <Header />
             <motion.div
@@ -105,10 +105,9 @@ export const Header = () => {
             <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
                 The Ultimate <br /> Freeloader Agency
             </h1>
-            <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-                We build beautiful products with the latest technologies and
-                frameworks. We are a team of passionate developers and designers
-                that love to build amazing products.
+            <p className="max-w-2xl text-base md:text-xl mt-4 dark:text-neutral-200">
+                In an all digital era, brands are beginning to lose tangible
+                connection with their audience at an ever increasing pace.
             </p>
         </div>
     );
@@ -143,8 +142,8 @@ export const ProductCard = ({
                 <img
                     src={product.thumbnail}
                     height="600"
-                    width="600"
-                    className="object-cover object-left-top absolute h-full w-full inset-0"
+                    width="400"
+                    className="rounded-4xl object-cover absolute h-full w-full inset-0"
                     alt={product.title}
                 />
             </a>
