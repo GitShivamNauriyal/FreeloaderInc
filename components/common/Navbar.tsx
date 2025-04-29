@@ -6,8 +6,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const menuItems = [
     "experiences",
-    "merch",
     "influencers",
+    "merch",
     "about us",
     "contact",
 ];

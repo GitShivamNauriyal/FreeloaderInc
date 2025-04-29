@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { HeroHighlight, Highlight } from "../ui/backgrounds/dotted-highlight";
 import { CanvasRevealEffect } from "../ui/grid/canvas-reveal-effect";
-import Bento_Grid from "../ui/grid/BentoGrid_demo";
 import { BentoGrid, BentoGridItem } from "../ui/grid/bento-grid";
 import {
     IconBoxAlignRightFilled,
@@ -15,62 +15,71 @@ import {
     IconTableColumn,
 } from "@tabler/icons-react";
 
-const data = [
-    {
-        title: "Full Width Banner",
-        image: "/assets/images/banner.jpg",
-    },
-    {
-        title: "Vertical Story",
-        image: "/assets/images/tall.jpg",
-    },
-    {
-        title: "Small 1",
-        image: "/assets/images/small1.jpg",
-    },
-    {
-        title: "Small 2",
-        image: "/assets/images/small2.jpg",
-    },
-    {
-        title: "Small 3",
-        image: "/assets/images/small3.jpg",
-    },
-    {
-        title: "Small 4",
-        image: "/assets/images/small4.jpg",
-    },
-    {
-        title: "Small 5",
-        image: "/assets/images/small5.jpg",
-    },
-];
+// const data = [
+//     {
+//         title: "Full Width Banner",
+//         image: "/assets/images/banner.jpg",
+//     },
+//     {
+//         title: "Vertical Story",
+//         image: "/assets/images/tall.jpg",
+//     },
+//     {
+//         title: "Small 1",
+//         image: "/assets/images/small1.jpg",
+//     },
+//     {
+//         title: "Small 2",
+//         image: "/assets/images/small2.jpg",
+//     },
+//     {
+//         title: "Small 3",
+//         image: "/assets/images/small3.jpg",
+//     },
+//     {
+//         title: "Small 4",
+//         image: "/assets/images/small4.jpg",
+//     },
+//     {
+//         title: "Small 5",
+//         image: "/assets/images/small5.jpg",
+//     },
+// ];
+
+const useHasMounted = () => {
+    const [hasMounted, setHasMounted] = useState(false);
+    useEffect(() => {
+        setHasMounted(true);
+    }, []);
+    return hasMounted;
+};
 
 const SkeletonOne = () => {
+    const [hasMounted, setHasMounted] = useState(false);
+
+    useEffect(() => {
+        setHasMounted(true);
+    }, []);
+
     const variants = {
-        initial: {
-            x: 0,
-        },
+        initial: { x: 0 },
         animate: {
             x: 10,
             rotate: 5,
-            transition: {
-                duration: 0.2,
-            },
+            transition: { duration: 0.2 },
         },
     };
+
     const variantsSecond = {
-        initial: {
-            x: 0,
-        },
+        initial: { x: 0 },
         animate: {
             x: -10,
             rotate: -5,
-            transition: {
-                duration: 0.2,
-            },
+            transition: { duration: 0.2 },
         },
     };
+
+    if (!hasMounted) return null; // Optional: Can show static fallback or nothing
 
     return (
         <motion.div
@@ -80,7 +89,7 @@ const SkeletonOne = () => {
         >
             <motion.div
                 variants={variants}
-                className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2  items-center space-x-2 bg-white dark:bg-black"
+                className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center space-x-2 bg-white dark:bg-black"
             >
                 <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 shrink-0" />
                 <div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
@@ -102,25 +111,19 @@ const SkeletonOne = () => {
         </motion.div>
     );
 };
+
 const SkeletonTwo = () => {
+    const hasMounted = useHasMounted();
+    if (!hasMounted) return null;
+
     const variants = {
-        initial: {
-            width: 0,
-        },
-        animate: {
-            width: "100%",
-            transition: {
-                duration: 0.2,
-            },
-        },
-        hover: {
-            width: ["0%", "100%"],
-            transition: {
-                duration: 2,
-            },
-        },
+        initial: { width: 0 },
+        animate: { width: "100%", transition: { duration: 0.2 } },
+        hover: { width: ["0%", "100%"], transition: { duration: 2 } },
     };
+
     const arr = new Array(6).fill(0);
+
     return (
         <motion.div
             initial="initial"
@@ -133,10 +136,10 @@ const SkeletonTwo = () => {
                     key={"skelenton-two" + i}
                     variants={variants}
                     style={{
-                        maxWidth: Math.random() * (100 - 40) + 40 + "%",
+                        maxWidth: `${Math.random() * (100 - 40) + 40}%`,
                     }}
-                    className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2  items-center space-x-2 bg-neutral-100 dark:bg-black w-full h-4"
-                ></motion.div>
+                    className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center space-x-2 bg-neutral-100 dark:bg-black w-full h-4"
+                />
             ))}
         </motion.div>
     );
@@ -311,6 +314,7 @@ const SkeletonFive = () => {
         </motion.div>
     );
 };
+
 const items = [
     {
         title: "AI Content Generation",
@@ -461,7 +465,7 @@ const Card = ({
 
 const Experience = () => {
     return (
-        <div id="experience" className="w-full bg-black text-white">
+        <div id="experiences" className="w-full bg-black text-white">
             {/* heading */}
             <HeroHighlight>
                 <motion.h1
@@ -486,7 +490,7 @@ const Experience = () => {
 
             {/*Bento grid */}
             {/* <Bento_Grid items={data} /> */}
-            <div className="flex flex-col items-center justify-center pt-20 pb-6 px-8 bg-black">
+            <div className="flex flex-col items-center justify-center pt-32 pb-8 px-8 bg-black">
                 <h2 className="text-4xl font-bold mb-4 text-center">
                     Experience the Freeloader Effect
                 </h2>
