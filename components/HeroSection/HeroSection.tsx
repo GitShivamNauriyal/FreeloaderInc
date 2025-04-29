@@ -21,49 +21,49 @@ export default function HeroSection() {
             title: "Coca-Cola",
             link: "https://www.coca-cola.com/",
             thumbnail:
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY90hoQF-NlmPKYOISnuOU3OG_HNMbCjPpZQ&s",
+                "https://mir-s3-cdn-cf.behance.net/project_modules/fs/82e4c690302975.5e142011dfffb.jpg",
         },
         {
             title: "Ferrari",
             link: "https://www.ferrari.com/",
             thumbnail:
-                "https://www.ferrari.com/sites/en/en-en/logo/ferrari-logo-black.png", // Official Ferrari PNG
+                "https://i.ytimg.com/vi/F49Yv8fZQ9k/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCZwuRszWOw7jCKa8OQYVxJV35peA", // Official Ferrari PNG
         },
         {
             title: "Harper's Bazaar India",
             link: "https://www.harpersbazaar.in/",
             thumbnail:
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Harper%27s_Bazaar_Logo.svg/1200px-Harper%27s_Bazaar_Logo.svg.png", // Wikimedia PNG
+                "https://www.thegreateasternhome.com/storage/uploads/articles/568f8bbfbe35f312fa1036092b116d23.jpg", // Wikimedia PNG
         },
         {
             title: "Delhi Times",
             link: "https://timesofindia.indiatimes.com/delhi-times",
             thumbnail:
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Times_of_India_logo.svg/1200px-Times_of_India_logo.svg.png", // Wikimedia PNG
+                "https://tma-live.s3.ap-south-1.amazonaws.com/referenceArtworks/1582183291297/Ref%20Images%20for%20MO%20%2820%29_logo.jpg", // Wikimedia PNG
         },
         {
             title: "Royal Enfield",
             link: "https://www.royalenfield.com/",
             thumbnail:
-                "https://www.royalenfield.com/content/dam/royalenfield/india/home-page/logo/re-logo.png", // Official Royal Enfield PNG
+                "https://www.royalenfield.com/content/dam/royal-enfield/shotgun-650/landing/desktop/shotgun-650-motorcycle.jpg", // Official Royal Enfield PNG
         },
         {
             title: "Nike",
             link: "https://www.nike.com/",
             thumbnail:
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/1200px-Logo_NIKE.svg.png", // Wikimedia PNG
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAh4m1NjMAEeF2gD-ZhunzER68MfGH3-TomA&s", // Wikimedia PNG
         },
         {
             title: "Adidas",
             link: "https://www.adidas.com/",
             thumbnail:
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Adidas_Logo.svg/1200px-Adidas_Logo.svg.png", // Wikimedia PNG
+                "https://i.pinimg.com/736x/97/42/3c/97423ca515e825adcab3e0d77cced64b.jpg", // Wikimedia PNG
         },
         {
             title: "Apple",
             link: "https://www.apple.com/",
             thumbnail:
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1200px-Apple_logo_black.svg.png", // Wikimedia PNG
+                "https://cdn.prod.website-files.com/6009ec8cda7f305645c9d91b/634d61ab95ff7003477f6c1f_d28Qv2T_gk1iZiHd2jgwYTCtdKB0cEX-hQmhwLIbzglorQzErM9tLeq0Sw0jp4j37mXfa6YP9zQA2ZcaW1D5DdjqOBmvB8kH3yd-F9dcEpxvDwlSxao1Qlgn24KC_GDcRdsd7TJ0zJjTTVURHJX3A-hrjWKp0JpuAPL28G6nrXA55Sad6Ujn-A79sA.jpeg", // Wikimedia PNG
         },
         {
             title: "Google",
@@ -75,25 +75,25 @@ export default function HeroSection() {
             title: "Amazon",
             link: "https://www.amazon.com/",
             thumbnail:
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1200px-Amazon_logo.svg.png", // Wikimedia PNG
+                "https://www.versionmuseum.com/images/websites/amazon-website/amazon-website%5E2019%5Ehomepage-august.jpg", // Wikimedia PNG
         },
         {
             title: "Samsung",
             link: "https://www.samsung.com/",
             thumbnail:
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/1200px-Samsung_Logo.svg.png", // Wikimedia PNG
+                "https://img.global.news.samsung.com/global/wp-content/uploads/2015/11/Samsung-Newsroom_main_2.jpg", // Wikimedia PNG
         },
         {
             title: "Tesla",
             link: "https://www.tesla.com/",
             thumbnail:
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Tesla_Motors.svg/1200px-Tesla_Motors.svg.png", // Wikimedia PNG
+                "https://mir-s3-cdn-cf.behance.net/project_modules/source/63007a40280859.5779785319f0f.jpg", // Wikimedia PNG
         },
         {
             title: "Netflix",
             link: "https://www.netflix.com/",
             thumbnail:
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1200px-Netflix_2015_logo.svg.png", // Wikimedia PNG
+                "https://repository-images.githubusercontent.com/587606503/2e0422ac-0946-4ff1-a4b4-373f691463ae", // Wikimedia PNG
         },
         {
             title: "Microsoft",
