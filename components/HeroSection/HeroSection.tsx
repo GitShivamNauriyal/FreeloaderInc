@@ -9,7 +9,7 @@ export default function HeroSection() {
             title: "McDonald's",
             link: "https://www.mcdonalds.com/",
             thumbnail:
-                "https://c8.alamy.com/zooms/9/311186be542a4d74b162d50afdd4c686/bxjp52.jpg",
+                "https://mir-s3-cdn-cf.behance.net/projects/max_808/cdff1e77436079.Y3JvcCwyODAwLDIxOTAsMCww.jpg",
         },
         {
             title: "Sprite",
@@ -23,12 +23,12 @@ export default function HeroSection() {
             thumbnail:
                 "https://mir-s3-cdn-cf.behance.net/project_modules/fs/82e4c690302975.5e142011dfffb.jpg",
         },
-        {
-            title: "Ferrari",
-            link: "https://www.ferrari.com/",
-            thumbnail:
-                "https://i.ytimg.com/vi/F49Yv8fZQ9k/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCZwuRszWOw7jCKa8OQYVxJV35peA", // Official Ferrari PNG
-        },
+        // {
+        //     title: "Ferrari",
+        //     link: "https://www.ferrari.com/",
+        //     thumbnail:
+        //         "https://i.ytimg.com/vi/F49Yv8fZQ9k/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCZwuRszWOw7jCKa8OQYVxJV35peA", // Official Ferrari PNG
+        // },
         {
             title: "Harper's Bazaar India",
             link: "https://www.harpersbazaar.in/",
@@ -47,12 +47,12 @@ export default function HeroSection() {
             thumbnail:
                 "https://www.royalenfield.com/content/dam/royal-enfield/shotgun-650/landing/desktop/shotgun-650-motorcycle.jpg", // Official Royal Enfield PNG
         },
-        {
-            title: "Nike",
-            link: "https://www.nike.com/",
-            thumbnail:
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAh4m1NjMAEeF2gD-ZhunzER68MfGH3-TomA&s", // Wikimedia PNG
-        },
+        // {
+        //     title: "Nike",
+        //     link: "https://www.nike.com/",
+        //     thumbnail:
+        //         "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAh4m1NjMAEeF2gD-ZhunzER68MfGH3-TomA&s", // Wikimedia PNG
+        // },
         {
             title: "Adidas",
             link: "https://www.adidas.com/",
@@ -69,7 +69,7 @@ export default function HeroSection() {
             title: "Google",
             link: "https://www.google.com/",
             thumbnail:
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png", // Wikimedia PNG
+                "https://akm-img-a-in.tosshub.com/indiatoday/images/story/201909/Google_for_India_0.jpeg?size=1200:675", // Wikimedia PNG
         },
         {
             title: "Amazon",
@@ -93,13 +93,13 @@ export default function HeroSection() {
             title: "Netflix",
             link: "https://www.netflix.com/",
             thumbnail:
-                "https://repository-images.githubusercontent.com/587606503/2e0422ac-0946-4ff1-a4b4-373f691463ae", // Wikimedia PNG
+                "https://cxl.com/wp-content/uploads/2021/08/netflix-homepage.jpg",
         },
         {
             title: "Microsoft",
             link: "https://www.microsoft.com/",
             thumbnail:
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/1200px-Microsoft_logo.svg.png", // Wikimedia PNG
+                "https://bsmedia.business-standard.com/_media/bs/img/article/2023-06/06/full/1686046036-9475.jpeg?im=FeatureCrop,size=(1200,720)", // Wikimedia PNG
         },
     ];
 

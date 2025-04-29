@@ -6,6 +6,7 @@ import createGlobe from "cobe";
 import { useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import { IconBrandYoutubeFilled } from "@tabler/icons-react";
+import Image from "next/image";
 // import { ContainerTextFlip } from "../ui/text/container-text-flip";
 
 const Influencer = () => {
@@ -146,11 +147,11 @@ export const SkeletonOne = () => {
         <div className="relative flex py-8 px-2 gap-10 h-full">
             <div className="w-full p-5 mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full">
                 <div className="flex flex-1 w-full h-full flex-col space-y-2">
-                    <img
+                    <Image
                         src="https://cached.imagescaler.hbpl.co.uk/resize/scaleWidth/1272/cached.offlinehbpl.hbpl.co.uk/news/ORP/GettyImages-1592937639.jpg"
                         alt="header"
                         width={800}
-                        height={500}
+                        height={400}
                         className="h-full w-full aspect-square object-cover object-left-top rounded-sm"
                         loading="lazy"
                         decoding="async"
@@ -174,7 +175,7 @@ export const SkeletonThree = () => {
             <div className="w-full mx-auto bg-transparent dark:bg-transparent group h-full">
                 <div className="flex flex-1 w-full h-full flex-col space-y-2 relative">
                     <IconBrandYoutubeFilled className="h-20 w-20 absolute z-10 inset-0 text-red-500 m-auto" />
-                    <img
+                    <Image
                         src="https://cdn.eventespresso.com/wp-content/uploads/2024/05/20001844/Blog-Banner-Influencer-Event.jpg"
                         alt="header"
                         width={800}
@@ -228,7 +229,7 @@ export const SkeletonTwo = () => {
                         whileTap="whileTap"
                         className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 shrink-0 overflow-hidden"
                     >
-                        <img
+                        <Image
                             src={image}
                             alt="bali images"
                             width="500"
@@ -250,7 +251,7 @@ export const SkeletonTwo = () => {
                         whileTap="whileTap"
                         className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 shrink-0 overflow-hidden"
                     >
-                        <img
+                        <Image
                             src={image}
                             alt="bali images"
                             width="500"

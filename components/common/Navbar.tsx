@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 const menuItems = [
@@ -22,10 +23,12 @@ const Navbar = () => {
                     {/* Logo */}
                     <div className="flex-shrink-0">
                         <Link href="/" className="relative glitch-container">
-                            <img
+                            <Image
                                 src={"/assets/images/logo.jpeg"}
                                 alt="Logo"
                                 className="h-12 rounded-full"
+                                width={48}
+                                height={48}
                             />
                             <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 glitch"></span>
                         </Link>
