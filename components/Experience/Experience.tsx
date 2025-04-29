@@ -5,24 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { HeroHighlight, Highlight } from "../ui/backgrounds/dotted-highlight";
 import { CanvasRevealEffect } from "../ui/grid/canvas-reveal-effect";
 
-const AceternityIcon = () => (
-    <svg
-        width="66"
-        height="65"
-        viewBox="0 0 66 65"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-10 w-10 text-white"
-    >
-        <path
-            d="M8 8.05571C8 8.05571 54.9009 18.1782 57.8687 30.062C60.8365 41.9458 9.05432 57.4696 9.05432 57.4696"
-            stroke="currentColor"
-            strokeWidth="15"
-            strokeMiterlimit="3.86874"
-            strokeLinecap="round"
-            style={{ mixBlendMode: "darken" }}
-        />
-    </svg>
+const FreeloaderIcon = () => (
+    <img
+        srcSet="/assets/images/logo.jpeg"
+        className="rounded-full scale-[0.3]"
+    />
 );
 
 const Icon = ({ className = "" }) => (
@@ -49,10 +36,21 @@ const Card = ({
 }) => {
     const [hovered, setHovered] = React.useState(false);
 
+    const toggleHover = () => {
+        // On mobile, a tap toggles hover state
+        if (typeof window !== "undefined" && window.innerWidth <= 768) {
+            setHovered((prev) => !prev);
+        }
+    };
+
     return (
-        <div
+        <motion.div
+            initial={{ opacity: 0, filter: "blur(10px)", y: 20 }}
+            whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
+            transition={{ duration: 0.6, ease: "easeInOut" }}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
+            onClick={toggleHover}
             className="group relative border border-white/20 bg-black h-[30rem] w-full max-w-sm p-4 overflow-hidden"
         >
             {/* Corner Icons */}
@@ -77,14 +75,22 @@ const Card = ({
 
             {/* Content */}
             <div className="relative z-10 flex flex-col items-center justify-center h-full text-center">
-                <div className="mb-4 transition duration-200 group-hover:-translate-y-4 group-hover:opacity-0">
+                <div
+                    className={`mb-4 transition duration-200 ${
+                        hovered ? "-translate-y-4 opacity-0" : "opacity-100"
+                    }`}
+                >
                     {icon}
                 </div>
-                <h2 className="text-xl font-bold text-white opacity-0 group-hover:opacity-100 transition duration-300 group-hover:-translate-y-2">
+                <h2
+                    className={`text-3xl font-bold text-white transition duration-300 ${
+                        hovered ? "opacity-100 -translate-y-2" : "opacity-0"
+                    }`}
+                >
                     {title}
                 </h2>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
@@ -93,9 +99,13 @@ const Experience = () => {
         <div id="experience" className="w-full bg-black text-white">
             <HeroHighlight>
                 <motion.h1
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: [20, -5, 0] }}
-                    transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
+                    initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+                    whileInView={{
+                        opacity: 1,
+                        y: [20, -5, 0],
+                        filter: "blur(0px)",
+                    }}
+                    transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
                     className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto"
                 >
                     Creating Unforgettable Experiences for Brands and their
@@ -109,29 +119,30 @@ const Experience = () => {
             </HeroHighlight>
 
             {/* Cards */}
-            <div className="py-20 px-8 flex flex-col lg:flex-row items-center justify-center gap-4 bg-black">
-                <Card title="Influencer Events" icon={<AceternityIcon />}>
+            <div className="py-20 px-8 flex flex-col bg lg:flex-row items-center justify-center gap-4 bg-black">
+                <Card title="Influencer Events" icon={<FreeloaderIcon />}>
                     <CanvasRevealEffect
-                        animationSpeed={5.1}
+                        animationSpeed={3}
                         containerClassName="bg-emerald-900"
                     />
                 </Card>
-                <Card title="Corporate Shows" icon={<AceternityIcon />}>
+                <Card title="Corporate Shows" icon={<FreeloaderIcon />}>
                     <CanvasRevealEffect
                         animationSpeed={3}
-                        containerClassName="bg-black"
+                        containerClassName="bg-rose-900/30"
                         colors={[
                             [236, 72, 153],
                             [232, 121, 249],
                         ]}
-                        dotSize={2}
+                        dotSize={3}
                     />
                 </Card>
-                <Card title="Fashion Shows" icon={<AceternityIcon />}>
+                <Card title="Fashion Shows" icon={<FreeloaderIcon />}>
                     <CanvasRevealEffect
                         animationSpeed={3}
-                        containerClassName="bg-sky-600"
+                        containerClassName="bg-cyan-900"
                         colors={[[125, 211, 252]]}
+                        dotSize={3}
                     />
                 </Card>
             </div>
