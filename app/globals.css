@@ -27,10 +27,24 @@ body {
     overflow-x: hidden;
     background: #0a0a0a; /* Dark background */
     color: white;
-    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
 }
 
-h1 {
+/* h1 {
     font-size: 12rem;
     font-weight: bold;
+} */
+
+@layer utilities {
+    .grad-fade-right {
+        background-image: linear-gradient(
+            to top right,
+            #845ec2,
+            #2c73d2,
+            #0081cf,
+            #0089ba,
+            #008e9b,
+            #008f7a
+        );
+    }
 }

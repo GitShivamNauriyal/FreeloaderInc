@@ -1,19 +1,126 @@
 "use client";
 
-import { Boxes } from "../ui/backgrounds/background-boxes";
+// import { Boxes } from "../ui/backgrounds/background-boxes";
+import { HeroParallax } from "../ui/backgrounds/hero-parallax";
 
 export default function HeroSection() {
+    const products = [
+        {
+            title: "Moonbeam",
+            link: "https://gomoonbeam.com",
+            thumbnail:
+                "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+        },
+        {
+            title: "Cursor",
+            link: "https://cursor.so",
+            thumbnail:
+                "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+        },
+        {
+            title: "Rogue",
+            link: "https://userogue.com",
+            thumbnail:
+                "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+        },
+
+        {
+            title: "Editorially",
+            link: "https://editorially.org",
+            thumbnail:
+                "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+        },
+        {
+            title: "Editrix AI",
+            link: "https://editrix.ai",
+            thumbnail:
+                "https://aceternity.com/images/products/thumbnails/new/editrix.png",
+        },
+        {
+            title: "Pixel Perfect",
+            link: "https://app.pixelperfect.quest",
+            thumbnail:
+                "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+        },
+
+        {
+            title: "Algochurn",
+            link: "https://algochurn.com",
+            thumbnail:
+                "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
+        },
+        {
+            title: "Aceternity UI",
+            link: "https://ui.aceternity.com",
+            thumbnail:
+                "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
+        },
+        {
+            title: "Tailwind Master Kit",
+            link: "https://tailwindmasterkit.com",
+            thumbnail:
+                "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
+        },
+        {
+            title: "SmartBridge",
+            link: "https://smartbridgetech.com",
+            thumbnail:
+                "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
+        },
+        {
+            title: "Renderwork Studio",
+            link: "https://renderwork.studio",
+            thumbnail:
+                "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
+        },
+
+        {
+            title: "Creme Digital",
+            link: "https://cremedigital.com",
+            thumbnail:
+                "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
+        },
+        {
+            title: "Golden Bells Academy",
+            link: "https://goldenbellsacademy.com",
+            thumbnail:
+                "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
+        },
+        {
+            title: "Invoker Labs",
+            link: "https://invoker.lol",
+            thumbnail:
+                "https://aceternity.com/images/products/thumbnails/new/invoker.png",
+        },
+        {
+            title: "E Free Invoice",
+            link: "https://efreeinvoice.com",
+            thumbnail:
+                "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
+        },
+    ];
     return (
-        <section className="relative w-full h-screen overflow-hidden bg-[#5e17eb]">
-            <Boxes />
-            <div className="pointer-events-none font-sans tracking-[-0.4em] scale-y-90 scale-x-105 align-baseline leading-36 absolute pl-28 pb-24 inset-0 flex flex-col justify-end text-white z-10">
-                <h1>FREE</h1>
-                <h1>LOADER</h1>
-                <h1 className="tracking-normal pb-0">AGENCY</h1>
-                <p className="text-xl leading-5 font-mono p-0 text-cyan-200 tracking-wider">
-                    MEMORIES CRAFTED, GIFTED AND FELT.
-                </p>
-            </div>
-        </section>
+        // <section className="relative w-full h-screen overflow-hidden grad-fade-right bg-gradient-to-br text-white">
+        //     <Boxes className="mask-fade-right" />
+
+        //     <div className="absolute inset-0 z-10 flex flex-col justify-end p-10 sm:p-20 pointer-events-none">
+        //         <h1 className="text-[9vw] font-extrabold leading-32 tracking-tight scale-y-90">
+        //         FREE
+        //         </h1>
+        //         <h1 className="text-[9vw] font-extrabold leading-32 tracking-tight scale-y-90">
+        //         LOADER
+        //         </h1>
+        //         <h1 className="text-[9vw] font-extrabold leading-32 tracking-normal pb-4 scale-y-90">
+        //         AGENCY
+        //         </h1>
+        //         <p className="text-lg sm:text-2xl font-mono text-cyan-200">
+        //         MEMORIES CRAFTED, GIFTED AND FELT.
+        //         </p>
+        //         </div>
+        // </section>
+
+        <main className="w-full">
+            <HeroParallax products={products} />
+        </main>
     );
 }
