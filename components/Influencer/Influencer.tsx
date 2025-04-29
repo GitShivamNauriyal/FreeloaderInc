@@ -41,7 +41,7 @@ export function FeaturesSectionDemo() {
                 "col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-800",
         },
         {
-            title: "Capture pictures with AI",
+            title: "Capture the moment",
             description:
                 "Capture stunning photos effortlessly using our advanced AI technology.",
             skeleton: <SkeletonTwo />,
@@ -124,7 +124,12 @@ const FeatureTitle = ({ children }: { children?: React.ReactNode }) => {
 
 const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
     return (
-        <p
+        <motion.p
+            initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{
+                duration: 0.5,
+            }}
             className={cn(
                 "text-sm md:text-base  max-w-4xl text-left mx-auto",
                 "text-neutral-500 text-center font-normal dark:text-neutral-300",
@@ -132,7 +137,7 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
             )}
         >
             {children}
-        </p>
+        </motion.p>
     );
 };
 

@@ -10,6 +10,7 @@ export default function Home() {
             <HeroSection />
             <Experience />
             <Influencer />
+            MORE to be added...
         </>
     );
 }
