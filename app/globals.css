@@ -35,7 +35,7 @@ body {
     font-weight: bold;
 } */
 
-@layer utilities {
+/* @layer utilities {
     .grad-fade-right {
         background-image: linear-gradient(
             to top right,
@@ -47,4 +47,4 @@ body {
             #008f7a
         );
     }
-}
+} */
