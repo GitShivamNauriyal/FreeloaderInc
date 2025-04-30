@@ -40,6 +40,16 @@
     --sidebar-accent-foreground: oklch(0.205 0 0);
     --sidebar-border: oklch(0.922 0 0);
     --sidebar-ring: oklch(0.708 0 0);
+
+    /* Custom properties for the theme */
+    --background-color: #0a0a0a; /* Dark background */
+    --foreground-color: #ffffff; /* Light text color */
+    --card-background-color: #1a1a1a; /* Card background */
+    --card-foreground-color: #ffffff; /* Card text color */
+    --popover-background-color: #1a1a1a; /* Popover background */
+    --popover-foreground-color: #ffffff; /* Popover text color */
+    --border-color: #333333; /* Border color */
+    --primary-color: #5e17eb;
 }
 
 /* Custom styles */

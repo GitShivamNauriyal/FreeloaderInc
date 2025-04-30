@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import BottomGradientHover from "../ui/text/bottom-gradient-hover";
 
 const menuItems = [
     "experiences",
@@ -35,15 +36,23 @@ const Navbar = () => {
                     </div>
 
                     {/* Desktop menu */}
+                    {/* Desktop menu */}
                     <div className="hidden md:flex md:items-center md:space-x-8">
                         {menuItems.map((item) => (
-                            <Link
-                                key={item}
-                                href={`#${item}`}
-                                className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors duration-300"
-                            >
-                                {item.charAt(0).toUpperCase() + item.slice(1)}
-                            </Link>
+                            <div key={item} className="relative group">
+                                <Link
+                                    href={`#${item}`}
+                                    className={`px-3 py-2 text-sm font-medium transition-colors duration-300 ${
+                                        item === "contact"
+                                            ? "bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 text-white rounded-md"
+                                            : "text-gray-300 hover:text-white"
+                                    }`}
+                                >
+                                    {item.charAt(0).toUpperCase() +
+                                        item.slice(1)}
+                                </Link>
+                                <BottomGradientHover />
+                            </div>
                         ))}
                     </div>
 
@@ -95,7 +104,11 @@ const Navbar = () => {
                             >
                                 <Link
                                     href={`#${item}`}
-                                    className="block text-gray-300 hover:text-white px-3 py-2 text-lg font-medium transition-colors duration-300"
+                                    className={`block  px-3 py-2 text-lg font-medium transition-colors duration-300 ${
+                                        item === "contact"
+                                            ? "bg-gradient-to-r from-violet-500 to-purple-600 hover:bg-gradient-to-r hover:from-violet-600 hover:to-purple-700 transition-all text-white rounded-md"
+                                            : "text-gray-300 hover:text-white"
+                                    }`}
                                 >
                                     {item.charAt(0).toUpperCase() +
                                         item.slice(1)}

@@ -67,17 +67,30 @@ export function FeaturesSectionDemo() {
     ];
     return (
         <div className="relative z-20 py-10 lg:py-20 max-w-7xl mx-auto">
-            <div className="px-8">
-                <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-black dark:text-white">
+            <motion.div
+                initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+                whileInView={{
+                    opacity: 1,
+                    y: [20, -5, 0],
+                    filter: "blur(0px)",
+                }}
+                transition={{
+                    duration: 0.6,
+                    ease: [0.4, 0, 0.2, 1],
+                    delay: 0.2,
+                }}
+                className="px-8"
+            >
+                <h4 className="text-3xl lg:text-5xl lg:leading-tight border-b-[1px] border-b-white tracking-tight font-medium text-black dark:text-white">
                     Influencer Events
                 </h4>
 
-                <p className="text-sm lg:text-base  max-w-2xl  my-4 mx-auto text-neutral-500 text-center font-normal dark:text-neutral-300">
+                <p className="text-sm lg:text-base  max-w-2xl  my-4 text-neutral-500 font-normal dark:text-neutral-300">
                     Our Influencer Events are designed to help you connect with
                     your audience and build your brand. The perfect platform to
                     showcase your talent and reach new heights.
                 </p>
-            </div>
+            </motion.div>
 
             <div className="relative ">
                 <div className="grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md dark:border-neutral-800">

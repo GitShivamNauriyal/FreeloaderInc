@@ -100,13 +100,13 @@ const SkeletonOne = () => {
                 className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
             >
                 <div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
-                <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 shrink-0" />
+                <div className="h-6 w-6 rounded-full bg-gradient-to-r from-blue-500 to-violet-500 shrink-0" />
             </motion.div>
             <motion.div
                 variants={variants}
                 className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center space-x-2 bg-white dark:bg-black"
             >
-                <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 shrink-0" />
+                <div className="h-6 w-6 rounded-full bg-gradient-to-r from-purple-500 to-violet-500 shrink-0" />
                 <div className="w-full bg-gray-100 h-4 rounded-full dark:bg-neutral-900" />
             </motion.div>
         </motion.div>
@@ -167,7 +167,7 @@ const SkeletonThree = () => {
             className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] rounded-lg bg-dot-black/[0.2] flex-col space-y-2"
             style={{
                 background:
-                    "linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)",
+                    "linear-gradient(-45deg, #3c096c, #6f2dbd, #a663cc, #b298dc)",
                 backgroundSize: "400% 400%",
             }}
         >
@@ -215,10 +215,10 @@ const SkeletonFour = () => {
                     className="rounded-full h-10 w-10"
                 />
                 <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-                    Just code in Vanilla Javascript
+                    Let's set up a brand pop-up in the middle of the city.
                 </p>
                 <p className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
-                    Delusional
+                    Bold
                 </p>
             </motion.div>
             <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
@@ -230,10 +230,10 @@ const SkeletonFour = () => {
                     className="rounded-full h-10 w-10"
                 />
                 <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-                    Tailwind CSS is cool, you know
+                    Add live interactions, giveaways, and street buzz.
                 </p>
-                <p className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
-                    Sensible
+                <p className="border border-purple-400 bg-purple-100 dark:bg-purple-900/20 text-purple-600 text-xs rounded-full px-2 py-0.5 mt-4">
+                    Buzzing
                 </p>
             </motion.div>
             <motion.div
@@ -248,10 +248,10 @@ const SkeletonFour = () => {
                     className="rounded-full h-10 w-10"
                 />
                 <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-                    I love angular, RSC, and Redux.
+                    What if we launch during Fashion Week at a metro station?
                 </p>
-                <p className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">
-                    Helpless
+                <p className="border border-green-500 bg-green-200 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
+                    Genius
                 </p>
             </motion.div>
         </motion.div>
@@ -291,7 +291,7 @@ const SkeletonFive = () => {
         >
             <motion.div
                 variants={variants}
-                className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2  items-start space-x-2 bg-white dark:bg-black"
+                className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2 items-start space-x-2 bg-white dark:bg-black"
             >
                 <Image
                     src="/assets/images/logo.jpeg"
@@ -301,16 +301,20 @@ const SkeletonFive = () => {
                     className="rounded-full h-10 w-10"
                 />
                 <p className="text-xs text-neutral-500">
-                    There are a lot of cool framerworks out there like React,
-                    Angular, Vue, Svelte that can make your life ....
+                    Let’s build a booth they’ll talk about — bold, interactive,
+                    unforgettable.
                 </p>
             </motion.div>
+
             <motion.div
                 variants={variantsSecond}
                 className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
             >
-                <p className="text-xs text-neutral-500">Use PHP.</p>
-                <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 shrink-0" />
+                <p className="text-xs text-neutral-500">
+                    Engagement doubles when the audience becomes part of the
+                    story.
+                </p>
+                <div className="h-6 w-6 rounded-full bg-gradient-to-r from-[#5e17eb] to-[#7f47ef] shrink-0" />
             </motion.div>
         </motion.div>
     );
@@ -318,10 +322,11 @@ const SkeletonFive = () => {
 
 const items = [
     {
-        title: "AI Content Generation",
+        title: "Immersive Brand Experiences",
         description: (
             <span className="text-sm">
-                Experience the power of AI in generating unique content.
+                Craft unforgettable brand moments that captivate and engage
+                audiences in real life.
             </span>
         ),
         header: <SkeletonOne />,
@@ -329,10 +334,11 @@ const items = [
         icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
     },
     {
-        title: "Automated Proofreading",
+        title: "Corporate Show Production",
         description: (
             <span className="text-sm">
-                Let AI handle the proofreading of your documents.
+                From ideation to execution, we produce high-impact corporate
+                shows with flair and precision.
             </span>
         ),
         header: <SkeletonTwo />,
@@ -340,10 +346,11 @@ const items = [
         icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
     },
     {
-        title: "Contextual Suggestions",
+        title: "Fashion Show Management",
         description: (
             <span className="text-sm">
-                Get AI-powered suggestions based on your writing context.
+                End-to-end planning and production for standout fashion shows
+                that turn heads.
             </span>
         ),
         header: <SkeletonThree />,
@@ -351,22 +358,23 @@ const items = [
         icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
     },
     {
-        title: "Sentiment Analysis",
+        title: "Pop-Up Activations",
         description: (
             <span className="text-sm">
-                Understand the sentiment of your text with AI analysis.
+                Execute bold, guerrilla-style pop-up campaigns that create buzz
+                and brand recall.
             </span>
         ),
         header: <SkeletonFour />,
         className: "md:col-span-2",
         icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
     },
-
     {
-        title: "Text Summarization",
+        title: "Audience Engagement Strategy",
         description: (
             <span className="text-sm">
-                Summarize your lengthy documents with AI technology.
+                Curate strategic experiences designed to maximize audience
+                interaction and brand loyalty.
             </span>
         ),
         header: <SkeletonFive />,
@@ -494,23 +502,55 @@ const Experience = () => {
 
             {/*Bento grid */}
             {/* <Bento_Grid items={data} /> */}
-            <div className="flex flex-col items-center justify-center pt-32 pb-8 px-8 bg-black">
-                <h2 className="text-4xl font-bold mb-4 text-center">
-                    Experience the Freeloader Effect
-                </h2>
+            <div className="relative z-20 py-10 lg:py-20 max-w-5xl mx-auto">
+                <motion.div
+                    initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+                    whileInView={{
+                        opacity: 1,
+                        y: [20, -5, 0],
+                        filter: "blur(0px)",
+                    }}
+                    transition={{
+                        duration: 0.6,
+                        ease: [0.4, 0, 0.2, 1],
+                        delay: 0.2,
+                    }}
+                    className="px-8 mb-12"
+                >
+                    <h4 className="text-3xl lg:text-5xl lg:leading-tight border-b-[1px] border-b-white tracking-tight font-medium text-black dark:text-white">
+                        Experience Marketing
+                    </h4>
+
+                    <p className="text-sm lg:text-base  max-w-3xl  my-4 text-neutral-500 font-normal dark:text-neutral-300">
+                        From conveptual brand launches, to theme based on-ground
+                        campaigns, to the most happening night of the town...
+                        on-ground experiences come in many flavors and a lot of
+                        shades.
+                    </p>
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+                    whileInView={{
+                        opacity: 1,
+                        y: [20, -5, 0],
+                        filter: "blur(0px)",
+                    }}
+                    transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+                >
+                    <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
+                        {items.map((item, i) => (
+                            <BentoGridItem
+                                key={i}
+                                title={item.title}
+                                description={item.description}
+                                header={item.header}
+                                className={cn("[&>p:text-lg]", item.className)}
+                                icon={item.icon}
+                            />
+                        ))}
+                    </BentoGrid>
+                </motion.div>
             </div>
-            <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
-                {items.map((item, i) => (
-                    <BentoGridItem
-                        key={i}
-                        title={item.title}
-                        description={item.description}
-                        header={item.header}
-                        className={cn("[&>p:text-lg]", item.className)}
-                        icon={item.icon}
-                    />
-                ))}
-            </BentoGrid>
 
             {/* Cards */}
             <div className="py-20 px-8 flex flex-col bg lg:flex-row items-center justify-center gap-4 bg-black">
