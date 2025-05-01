@@ -1,17 +1,16 @@
 import { motion } from "framer-motion";
 
+const statements = [
+    {
+        id: "1",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur, lectus et facilisis placerat.",
+    },
+    {
+        id: "2",
+        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur, lectus et facilisis placerat, magna mauris porttitor tortor, a auctor est felis ut nisl.",
+    },
+];
 export default function StatementSection() {
-    const statements = [
-        {
-            id: "1",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur, lectus et facilisis placerat.",
-        },
-        {
-            id: "2",
-            text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed efficitur, lectus et facilisis placerat, magna mauris porttitor tortor, a auctor est felis ut nisl.",
-        },
-    ];
-
     return (
         <section className="border max-w-5xl mx-auto px-4 py-16 text-white">
             <h2 className="text-4xl font-semibold text-gray-300 mb-8">

@@ -1,30 +1,35 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-export default function TeamSection() {
-    const team = [
-        {
-            name: "John Doe",
-            credentials: "Lead Engineer",
-            img: "/assets/images/team1.jpg",
-        },
-        {
-            name: "Jane Smith",
-            credentials: "Product Manager",
-            img: "/assets/images/team2.jpg",
-        },
-        {
-            name: "Alex Ray",
-            credentials: "Designer",
-            img: "/assets/images/team3.jpg",
-        },
-        {
-            name: "Lina Park",
-            credentials: "Developer",
-            img: "/assets/images/team4.jpg",
-        },
-    ];
+type TeamMember = {
+    name: string;
+    credentials: string;
+    img: string;
+};
 
+const team: TeamMember[] = [
+    {
+        name: "John Doe",
+        credentials: "Lead Engineer",
+        img: "/assets/images/team1.jpg",
+    },
+    {
+        name: "Jane Smith",
+        credentials: "Product Manager",
+        img: "/assets/images/team2.jpg",
+    },
+    {
+        name: "Alex Ray",
+        credentials: "Designer",
+        img: "/assets/images/team3.jpg",
+    },
+    {
+        name: "Lina Park",
+        credentials: "Developer",
+        img: "/assets/images/team4.jpg",
+    },
+];
+export default function TeamSection() {
     return (
         <section className="border max-w-5xl mx-auto px-4 py-16 text-white">
             <h2 className="text-4xl font-semibold text-gray-300 mb-10">
