@@ -14,7 +14,7 @@ export default function StatementSection() {
     return (
         <section className="border max-w-5xl mx-auto px-4 py-16 text-white">
             <h2 className="text-4xl font-semibold text-gray-300 mb-8">
-                Statement
+                Mission
             </h2>
             <div className="grid md:grid-cols-2 gap-10">
                 {statements.map((item, index) => (

@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import MerchScrollSection from "./ScrollObserver";
 import Image from "next/image";
+import MerchSubsection from "./Tangibles";
 
 const Merch = () => {
     const merchGridContent = {
@@ -258,6 +259,7 @@ const Merch = () => {
                     ))}
                 </div>
             </div>
+            <MerchSubsection />
         </div>
     );
 };

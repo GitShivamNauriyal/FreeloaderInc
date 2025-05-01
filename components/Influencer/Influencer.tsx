@@ -193,7 +193,7 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
             }}
             className={cn(
                 "text-sm md:text-base  max-w-4xl text-left mx-auto",
-                "text-center font-normal text-neutral-400",
+                "text-center font-normal text-violet-300",
                 "text-left max-w-sm mx-0 md:text-sm my-2"
             )}
         >
@@ -205,7 +205,7 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
 export const SkeletonOne = () => {
     return (
         <div className="relative flex py-8 px-2 gap-10 h-full">
-            <div className="w-full p-5 mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-fill">
+            <div className="w-full p-5 mx-auto bg-violet-600/30 shadow-2xl group h-fill">
                 <div className="flex flex-1 w-full h-full flex-col space-y-2">
                     <Image
                         src="https://cached.imagescaler.hbpl.co.uk/resize/scaleWidth/1272/cached.offlinehbpl.hbpl.co.uk/news/ORP/GettyImages-1592937639.jpg"
