@@ -2,6 +2,8 @@ import React from "react";
 import AboutDescriptionSection from "./Description";
 import StatementSection from "./StatementSection";
 import TeamSection from "./Team";
+import ProjectsSection from "./ProjectsSetion";
+import ClientsSection from "./ClientsSection";
 
 const About = () => {
     return (
@@ -9,6 +11,8 @@ const About = () => {
             <AboutDescriptionSection />
             <StatementSection />
             <TeamSection />
+            <ProjectsSection />
+            <ClientsSection />
         </div>
     );
 };
