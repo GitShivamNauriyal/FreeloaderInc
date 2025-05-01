@@ -62,7 +62,7 @@ export default function AboutDescriptionSection() {
                     </p>
                     <motion.span
                         whileHover={{ x: 5 }}
-                        className="text-violet-600 cursor-pointer inline-flex items-center gap-1 group transition-all duration-300"
+                        className="text-violet-400 cursor-pointer inline-flex items-center gap-1 group transition-all duration-300"
                     >
                         Read more
                         <span className="group-hover:translate-x-1 transition-transform duration-200">

@@ -1,10 +1,23 @@
+"use client";
+
 import React from "react";
 import { motion } from "framer-motion";
 import MerchScrollSection from "./ScrollObserver";
 import Image from "next/image";
 import MerchSubsection from "./Tangibles";
+// import { useIsMobile } from "@/components/useIsMobile";
+import { useEffect, useState } from "react";
 
 const Merch = () => {
+    const [isMobile, setIsMobile] = useState<boolean | null>(null); // `null` until client loads
+
+    useEffect(() => {
+        const checkMobile = () => setIsMobile(window.innerWidth < 768);
+
+        checkMobile(); // initial check
+        window.addEventListener("resize", checkMobile);
+        return () => window.removeEventListener("resize", checkMobile);
+    }, []);
     const merchGridContent = {
         topImage: "/assets/images/cubes_.png",
         middle: {
@@ -120,97 +133,108 @@ const Merch = () => {
                 </motion.div>
 
                 {/* Middle Row */}
-                <div className="grid md:grid-cols-3 gap-6">
-                    {/* Left Image */}
-                    <motion.div
-                        initial={{ opacity: 0, filter: "blur(20px)", y: 30 }}
-                        whileInView={{ opacity: 1, filter: "blur(0px)", y: 0 }}
-                        transition={{ duration: 0.6, ease: "easeOut" }}
-                        className="h-full min-h-[250px]"
-                    >
-                        <Image
-                            src={merchGridContent.middle.image}
-                            width={400}
-                            height={400}
-                            alt="merch_2"
-                            className="w-full h-full bg-violet-600/10 object-cover rounded-sm"
-                        />
-                    </motion.div>
-
-                    {/* Right Paragraph (Animated word-by-word) */}
-                    <div className="md:col-span-2">
-                        <motion.p
-                            className="text-white text-md leading-relaxed break-words"
-                            style={{
-                                wordWrap: "break-word",
-                                overflowWrap: "break-word",
+                {isMobile === false && (
+                    <div className="grid md:grid-cols-3 gap-6">
+                        {/* Left Image */}
+                        <motion.div
+                            initial={{
+                                opacity: 0,
+                                filter: "blur(20px)",
+                                y: 30,
                             }}
+                            whileInView={{
+                                opacity: 1,
+                                filter: "blur(0px)",
+                                y: 0,
+                            }}
+                            transition={{ duration: 0.6, ease: "easeOut" }}
+                            className="h-full min-h-[250px]"
                         >
-                            {merchGridContent.middle.text
-                                .split("\n") // Split by line breaks
-                                .map((line, lineIndex) => (
-                                    <span key={lineIndex} className="block">
-                                        {line
-                                            .split(" ")
-                                            .map((word, wordIndex) => {
-                                                const index =
-                                                    lineIndex * 100 + wordIndex; // ensure unique & increasing delay
-                                                return (
-                                                    <motion.span
-                                                        key={index}
-                                                        initial={{
-                                                            opacity: 0,
-                                                            filter: "blur(10px)",
-                                                            y: 5,
-                                                            color: "#7F5AF0", // initial purple-blue
-                                                        }}
-                                                        whileInView={{
-                                                            opacity: 1,
-                                                            filter: "blur(0)",
-                                                            y: 0,
-                                                            color: "#FFFFFF", // final color white
-                                                        }}
-                                                        transition={{
-                                                            opacity: {
-                                                                duration: 0.4,
-                                                                ease: "easeInOut",
-                                                                delay:
-                                                                    0.01 *
-                                                                    index,
-                                                            },
-                                                            filter: {
-                                                                duration: 0.4,
-                                                                ease: "easeInOut",
-                                                                delay:
-                                                                    0.01 *
-                                                                    index,
-                                                            },
-                                                            y: {
-                                                                duration: 0.4,
-                                                                ease: "easeInOut",
-                                                                delay:
-                                                                    0.01 *
-                                                                    index,
-                                                            },
-                                                            color: {
-                                                                duration: 1.2,
-                                                                ease: "easeInOut",
-                                                                delay:
-                                                                    0.01 *
-                                                                    index,
-                                                            },
-                                                        }}
-                                                        className="inline"
-                                                    >
-                                                        {word}&nbsp;
-                                                    </motion.span>
-                                                );
-                                            })}
-                                    </span>
-                                ))}
-                        </motion.p>
+                            <Image
+                                src={merchGridContent.middle.image}
+                                width={400}
+                                height={400}
+                                alt="merch_2"
+                                className="w-full h-full bg-violet-600/10 object-cover rounded-sm"
+                            />
+                        </motion.div>
+
+                        {/* Right Paragraph (Animated word-by-word) */}
+                        <div className="md:col-span-2">
+                            <motion.p
+                                className="text-white text-md leading-relaxed break-words"
+                                style={{
+                                    wordWrap: "break-word",
+                                    overflowWrap: "break-word",
+                                }}
+                            >
+                                {merchGridContent.middle.text
+                                    .split("\n") // Split by line breaks
+                                    .map((line, lineIndex) => (
+                                        <span key={lineIndex} className="block">
+                                            {line
+                                                .split(" ")
+                                                .map((word, wordIndex) => {
+                                                    const index =
+                                                        lineIndex * 100 +
+                                                        wordIndex; // ensure unique & increasing delay
+                                                    return (
+                                                        <motion.span
+                                                            key={index}
+                                                            initial={{
+                                                                opacity: 0,
+                                                                filter: "blur(10px)",
+                                                                y: 5,
+                                                                color: "#7F5AF0", // initial purple-blue
+                                                            }}
+                                                            whileInView={{
+                                                                opacity: 1,
+                                                                filter: "blur(0)",
+                                                                y: 0,
+                                                                color: "#FFFFFF", // final color white
+                                                            }}
+                                                            transition={{
+                                                                opacity: {
+                                                                    duration: 0.4,
+                                                                    ease: "easeInOut",
+                                                                    delay:
+                                                                        0.01 *
+                                                                        index,
+                                                                },
+                                                                filter: {
+                                                                    duration: 0.4,
+                                                                    ease: "easeInOut",
+                                                                    delay:
+                                                                        0.01 *
+                                                                        index,
+                                                                },
+                                                                y: {
+                                                                    duration: 0.4,
+                                                                    ease: "easeInOut",
+                                                                    delay:
+                                                                        0.01 *
+                                                                        index,
+                                                                },
+                                                                color: {
+                                                                    duration: 1.2,
+                                                                    ease: "easeInOut",
+                                                                    delay:
+                                                                        0.01 *
+                                                                        index,
+                                                                },
+                                                            }}
+                                                            className="inline"
+                                                        >
+                                                            {word}&nbsp;
+                                                        </motion.span>
+                                                    );
+                                                })}
+                                        </span>
+                                    ))}
+                            </motion.p>
+                        </div>
                     </div>
-                </div>
+                )}
 
                 {/* Bottom Grid of Images + Descriptions */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
