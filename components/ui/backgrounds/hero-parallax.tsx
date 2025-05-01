@@ -107,7 +107,7 @@ export const Header = () => {
                 Design & Innovation
             </span>
             <h1 className="text-2xl md:text-7xl font-bold dark:text-white">
-                The Ultimate <br /> Freeloader Agency
+                The Ultimate <br /> Free Loader Agency
             </h1>
             <p className="max-w-2xl text-base md:text-xl mt-4 dark:text-neutral-200">
                 In an all digital era, brands are beginning to lose tangible

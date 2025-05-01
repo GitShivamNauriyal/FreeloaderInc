@@ -15,8 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "Freeloader Inc.",
-    description: "The Ultimate Freeloader Agency",
+    title: "FREE LOADER AGENCY",
+    description:
+        "Free Loader Agency - Since 2009, Tangible Memories Crafted, Gifted and Felt.",
 };
 
 export default function RootLayout({

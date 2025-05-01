@@ -143,7 +143,7 @@ export default function MerchScrollSection() {
                                 itemRefs.current[idx] = el;
                             }}
                             className={clsx(
-                                "text-base md:text-2xl font-bold transition-all duration-100 ease-in-out mb-2",
+                                "text-base md:text-2xl font-bold transition-all duration-75 ease-in-out mb-2",
                                 activeIndex === idx
                                     ? "text-transparent bg-gradient-to-r from-purple-400 to-blue-300 bg-clip-text scale-105"
                                     : "text-white/50"

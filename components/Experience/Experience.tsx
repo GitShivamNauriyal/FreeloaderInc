@@ -222,13 +222,14 @@ const SkeletonFour = () => {
                 variants={first}
                 className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
             >
-                <Image
+                {/* <Image
                     src="/assets/images/logo.jpeg"
                     alt="avatar"
                     height="100"
                     width="100"
                     className="rounded-full h-10 w-10"
-                />
+                /> */}
+                <FreeloaderMiniIcon />
                 <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
                     Let&apos;s set up a brand pop-up in the middle of the city.
                 </p>
@@ -237,13 +238,14 @@ const SkeletonFour = () => {
                 </p>
             </motion.div>
             <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
-                <Image
+                {/* <Image
                     src="/assets/images/logo.jpeg"
                     alt="avatar"
                     height="100"
                     width="100"
                     className="rounded-full h-10 w-10"
-                />
+                /> */}
+                <FreeloaderMiniIcon />
                 <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
                     Add live interactions, giveaways, and street buzz.
                 </p>
@@ -255,13 +257,14 @@ const SkeletonFour = () => {
                 variants={second}
                 className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
             >
-                <Image
+                {/* <Image
                     src="/assets/images/logo.jpeg"
                     alt="avatar"
                     height="100"
                     width="100"
                     className="rounded-full h-10 w-10"
-                />
+                /> */}
+                <FreeloaderMiniIcon />
                 <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
                     What if we launch during Fashion Week at a metro station?
                 </p>
@@ -410,6 +413,13 @@ const FreeloaderIcon = () => (
         <div className="raleway leading-5 glitch-text">FREE</div>
         <div className="raleway leading-5 glitch-text">LOADER</div>
         <div className="raleway leading-5 glitch-text">AGENCY</div>
+    </div>
+);
+const FreeloaderMiniIcon = () => (
+    <div className="relative text-violet-200 --font-freelogo text-left text-sm font-bold">
+        <div className="raleway leading-3 glitch-text">FREE</div>
+        <div className="raleway leading-3 glitch-text">LOADER</div>
+        <div className="raleway leading-3 glitch-text">AGENCY</div>
     </div>
 );
 
