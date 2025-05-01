@@ -1,5 +1,6 @@
 "use client";
 
+import About from "@/components/About/About";
 import Experience from "@/components/Experience/Experience";
 import HeroSection from "@/components/HeroSection/HeroSection";
 import Influencer from "@/components/Influencer/Influencer";
@@ -12,6 +13,7 @@ export default function Home() {
             <Experience />
             <Merch />
             <Influencer />
+            <About />
             MORE to be added...
         </>
     );
