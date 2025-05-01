@@ -407,9 +407,9 @@ const FreeloaderIcon = () => (
     //     width="100"
     // />
     <div className="relative text-white --font-freelogo text-left text-xl font-bold">
-        <div className="raleway leading-5 glitch-text">Free</div>
-        <div className="raleway leading-5 glitch-text">Loader</div>
-        <div className="raleway leading-5 glitch-text">Agency</div>
+        <div className="raleway leading-5 glitch-text">FREE</div>
+        <div className="raleway leading-5 glitch-text">LOADER</div>
+        <div className="raleway leading-5 glitch-text">AGENCY</div>
     </div>
 );
 
@@ -589,7 +589,7 @@ const Experience = () => {
                     Audience.
                     <div>
                         <Highlight className="text-white">
-                            The Freeloader Experience
+                            The Free-Loader Experience
                         </Highlight>
                     </div>
                 </motion.h1>

@@ -5,14 +5,13 @@ import { motion } from "framer-motion";
 import clsx from "clsx";
 import Image from "next/image";
 
-// Dynamic list of any number of sections
 const sections = [
     {
         title: "MERCH is culture",
         image: "https://source.unsplash.com/random/800x600?sig=1",
     },
     {
-        title: "MERCH is expression",
+        title: "MERCH is identity",
         image: "https://source.unsplash.com/random/800x600?sig=2",
     },
     {
@@ -20,56 +19,52 @@ const sections = [
         image: "https://source.unsplash.com/random/800x600?sig=3",
     },
     {
-        title: "MERCH is freedom",
+        title: "MERCH is rebellion",
         image: "https://source.unsplash.com/random/800x600?sig=4",
     },
     {
-        title: "MERCH is identity",
+        title: "MERCH is freedom",
         image: "https://source.unsplash.com/random/800x600?sig=5",
     },
     {
-        title: "MERCH is x",
+        title: "MERCH is a statement",
         image: "https://source.unsplash.com/random/800x600?sig=6",
-    },
-    {
-        title: "MERCH is y",
-        image: "https://source.unsplash.com/random/800x600?sig=7",
-    },
-    {
-        title: "MERCH is z",
-        image: "https://source.unsplash.com/random/800x600?sig=8",
-    },
-    {
-        title: "MERCH is culture",
-        image: "https://source.unsplash.com/random/800x600?sig=1",
     },
     {
         title: "MERCH is expression",
-        image: "https://source.unsplash.com/random/800x600?sig=2",
-    },
-    {
-        title: "MERCH is community",
-        image: "https://source.unsplash.com/random/800x600?sig=3",
-    },
-    {
-        title: "MERCH is freedom",
-        image: "https://source.unsplash.com/random/800x600?sig=4",
-    },
-    {
-        title: "MERCH is identity",
-        image: "https://source.unsplash.com/random/800x600?sig=5",
-    },
-    {
-        title: "MERCH is x",
-        image: "https://source.unsplash.com/random/800x600?sig=6",
-    },
-    {
-        title: "MERCH is y",
         image: "https://source.unsplash.com/random/800x600?sig=7",
     },
     {
-        title: "MERCH is z",
-        image: "https://source.unsplash.com/random/800x600?sig=8",
+        title: "MERCH is vision",
+        image: "https://source.unsplash.com/random/800x600?sig=10",
+    },
+    {
+        title: "MERCH is connection",
+        image: "https://source.unsplash.com/random/800x600?sig=11",
+    },
+    {
+        title: "MERCH is storytelling",
+        image: "https://source.unsplash.com/random/800x600?sig=14",
+    },
+    {
+        title: "MERCH is legacy",
+        image: "https://source.unsplash.com/random/800x600?sig=15",
+    },
+    {
+        title: "MERCH is loyalty",
+        image: "https://source.unsplash.com/random/800x600?sig=16",
+    },
+    {
+        title: "MERCH is timeless",
+        image: "https://source.unsplash.com/random/800x600?sig=18",
+    },
+    {
+        title: "MERCH is future",
+        image: "https://source.unsplash.com/random/800x600?sig=19",
+    },
+    {
+        title: "MERCH is now",
+        image: "https://source.unsplash.com/random/800x600?sig=20",
     },
 ];
 
