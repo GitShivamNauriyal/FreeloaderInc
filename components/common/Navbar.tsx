@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import BottomGradientHover from "../ui/text/bottom-gradient-hover";
-import { it } from "node:test";
+// import { it } from "node:test";
 
 const menuItems = [
     "experiences",

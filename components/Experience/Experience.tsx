@@ -116,9 +116,12 @@ const SkeletonOne = () => {
 
 export const SkeletonTwo = () => {
     const hasMounted = useHasMounted();
-    const arr = useMemo(() => new Array(6).fill(0), []);
+
     const widths = useMemo(
-        () => arr.map(() => `${Math.random() * (100 - 40) + 40}%`),
+        () =>
+            new Array(6)
+                .fill(0)
+                .map(() => `${Math.random() * (100 - 40) + 40}%`),
         []
     );
 
@@ -137,17 +140,18 @@ export const SkeletonTwo = () => {
             whileHover="hover"
             className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
         >
-            {arr.map((_, i) => (
+            {widths.map((maxWidth, i) => (
                 <motion.div
                     key={`skeleton-two-${i}`}
                     variants={variants}
-                    style={{ maxWidth: widths[i] }}
+                    style={{ maxWidth }}
                     className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center space-x-2 bg-neutral-100 dark:bg-black w-full h-4"
                 />
             ))}
         </motion.div>
     );
 };
+
 const SkeletonThree = () => {
     const variants = {
         initial: {
@@ -218,7 +222,7 @@ const SkeletonFour = () => {
                     className="rounded-full h-10 w-10"
                 />
                 <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
-                    Let's set up a brand pop-up in the middle of the city.
+                    Let&apos;s set up a brand pop-up in the middle of the city.
                 </p>
                 <p className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
                     Bold
