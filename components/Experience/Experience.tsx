@@ -16,13 +16,13 @@ import {
 } from "@tabler/icons-react";
 import Image from "next/image";
 
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 
-const freelogo = localFont({
-    src: "../../public/fonts/agrandir-wide.ttf",
-    display: "swap",
-    variable: "--font-freelogo",
-});
+// const freelogo = localFont({
+//     src: "../../public/fonts/agrandir-wide.ttf",
+//     display: "swap",
+//     variable: "--font-freelogo",
+// });
 // import BottomGlowConstant from "../ui/text/bottom-glow-constant";
 
 // const data = [

@@ -25,13 +25,13 @@ const Navbar = () => {
                     <div className="flex-shrink-0">
                         <Link
                             href="/"
-                            className="relative text-white font-freelogo text-xl font-bold glitch-container"
+                            className="relative text-white font-freelogo text-xl font-medium glitch-container"
                         >
                             <div className="raleway translate-y-1 glitch-text">
-                                Free
+                                FREE
                             </div>
                             <div className="raleway -translate-y-1 glitch-text">
-                                Loader
+                                LOADER
                             </div>
                         </Link>
                     </div>

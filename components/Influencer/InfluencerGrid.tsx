@@ -47,7 +47,7 @@ const InfluencerGrid = () => {
                                 width={800}
                                 height={500}
                                 alt={`influencer_${index}`}
-                                className="w-full h-auto rounded-xl object-cover"
+                                className="w-full h-auto bg-violet-600/10 rounded-xl object-cover"
                             />
                         </motion.div>
 

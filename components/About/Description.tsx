@@ -19,7 +19,7 @@ export default function AboutDescriptionSection() {
                             alt="About Left Top"
                             width={500}
                             height={500}
-                            className="border-2 w-full h-full object-cover rounded-xl"
+                            className="border-2 w-full h-full bg-violet-600/10 object-cover rounded-xl"
                         />
                     </div>
                     <div className="col-span-1">
@@ -28,7 +28,7 @@ export default function AboutDescriptionSection() {
                             alt="About Right Top"
                             width={500}
                             height={500}
-                            className="border-2 w-full h-full object-cover rounded-xl"
+                            className="border-2 w-full h-full bg-violet-600/10 object-cover rounded-xl"
                         />
                     </div>
                     <div className="col-span-1">
@@ -37,7 +37,7 @@ export default function AboutDescriptionSection() {
                             alt="About Right Bottom"
                             width={500}
                             height={500}
-                            className="border-2 w-full h-full object-cover rounded-xl"
+                            className="border-2 w-full h-full bg-violet-600/10 object-cover rounded-xl"
                         />
                     </div>
                 </motion.div>

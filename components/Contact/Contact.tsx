@@ -29,7 +29,10 @@ export default function ContactSection() {
     };
 
     return (
-        <section className="max-w-6xl mx-auto px-4 py-24 text-white">
+        <section
+            id="contact"
+            className="max-w-6xl mx-auto px-4 pt-18 pb-28 text-white"
+        >
             <h2 className="text-4xl font-semibold text-violet-400 mb-8">
                 Contact Us
             </h2>

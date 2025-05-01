@@ -29,8 +29,10 @@ export default function Footer() {
             <div className="grid gap-10 md:grid-cols-4">
                 {/* Left - Brand */}
                 <div>
-                    <h3 className="text-xl font-bold tracking-widest mb-2">
-                        FREELOADER
+                    <h3 className="text-xl leading-5 font-bold tracking-widest mb-2">
+                        FREE <br />
+                        LOADER <br />
+                        AGENCY
                     </h3>
                     <p className="text-gray-400">Brand Experience Agency</p>
                     <p className="text-gray-400">Since 2009</p>

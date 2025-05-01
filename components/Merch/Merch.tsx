@@ -6,22 +6,22 @@ import MerchSubsection from "./Tangibles";
 
 const Merch = () => {
     const merchGridContent = {
-        topImage: "/assets/images/cubes_0.png",
+        topImage: "/assets/images/cubes_.png",
         middle: {
-            image: "/assets/images/cubes_0.png",
+            image: "/assets/images/cubes_.png",
             text: `0ur team has deep specialization in creating brand experience oriented hamper kits, fashion wear, accessories and tech based merchandise for your audience. Our merch is not just a product; it's a statement, a lifestyle, and a way to connect with your audience on a deeper level. We believe in creating merchandise that resonates with your brand's identity and values. We work closely with you to understand your vision and bring it to life through our unique designs and high quality products. Whether it's a limited edition drop or a full fledged merchandise line, we have the expertise and creativity to make it happen. Our team is dedicated to delivering exceptional results that exceed your expectations. We take pride in our attention to detail and commitment to quality, ensuring that every piece of merchandise we create is a true reflection of your brand.`,
         },
         bottomGrid: [
             {
-                image: "/assets/images/cubes_0.png",
+                image: "/assets/images/cubes_.png",
                 description: "Description for merch item 1",
             },
             {
-                image: "/assets/images/cubes_0.png",
+                image: "/assets/images/cubes_.png",
                 description: "Description for merch item 2",
             },
             {
-                image: "/assets/images/cubes_0.png",
+                image: "/assets/images/cubes_.png",
                 description: "Description for merch item 3",
             },
         ],
@@ -115,7 +115,7 @@ const Merch = () => {
                         width={1200}
                         height={400}
                         alt="merch_1"
-                        className="w-full h-auto rounded-sm"
+                        className="w-full h-auto bg-violet-600/10 rounded-sm"
                     />
                 </motion.div>
 
@@ -133,7 +133,7 @@ const Merch = () => {
                             width={400}
                             height={400}
                             alt="merch_2"
-                            className="w-full h-full object-cover rounded-sm"
+                            className="w-full h-full bg-violet-600/10 object-cover rounded-sm"
                         />
                     </motion.div>
 
@@ -237,7 +237,7 @@ const Merch = () => {
                                 width={400}
                                 height={300}
                                 alt={`merch_${i + 3}`}
-                                className="w-full h-60 object-cover rounded-sm"
+                                className="w-full h-60 bg-violet-600/10 object-cover rounded-sm"
                             />
                             <motion.p
                                 initial={{
