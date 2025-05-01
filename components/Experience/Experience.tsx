@@ -15,6 +15,7 @@ import {
     IconTableColumn,
 } from "@tabler/icons-react";
 import Image from "next/image";
+
 import localFont from "next/font/local";
 
 const freelogo = localFont({
