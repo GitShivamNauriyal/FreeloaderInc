@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import clsx from "clsx";
+import Image from "next/image";
 
 // Dynamic list of any number of sections
 const sections = [
@@ -97,7 +98,7 @@ export default function MerchScrollSection() {
             },
             {
                 threshold: 0.6,
-                rootMargin: "-30% 0px -30% 0px", // top/bottom margin to detect center
+                rootMargin: "-46% 0px -46% 0px", // top/bottom margin to detect center
             }
         );
 
@@ -113,23 +114,32 @@ export default function MerchScrollSection() {
     }, []);
 
     return (
-        <div className="bg-black text-white ">
-            <div className="max-w-7xl mx-auto flex">
+        <div className="bg-black text-white flex flex-col gap-0 pb-4 md:py-4">
+            <div className="max-w-5xl w-full mx-auto flex">
                 {/* Left sticky image */}
-                <div className="w-1/2 sticky top-0 self-start flex items-center justify-center">
-                    <motion.img
-                        key={sections[activeIndex].image}
-                        src={sections[activeIndex].image}
-                        alt={sections[activeIndex].title}
-                        className="rounded-xl w-full max-w-md h-auto object-cover border-2 border-white/20 min-h-64"
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                    />
+                <div className="w-1/2 sticky top-0 h-[300px] md:h-screen self-start flex items-center justify-center">
+                    <motion.div
+                        initial={{ opacity: 0, y: 10, filter: "blur(10px)" }}
+                        animate={{
+                            opacity: 1,
+                            y: 0,
+                            filter: "blur(0px)",
+                        }}
+                        transition={{ duration: 0.3 }}
+                    >
+                        <Image
+                            width={800}
+                            height={1200}
+                            key={sections[activeIndex].image}
+                            src={sections[activeIndex].image}
+                            alt={sections[activeIndex].title}
+                            className="rounded-xl w-[180px] md:w-[400px] max-w-full h-auto aspect-[2/3] object-cover border-2 border-white/20"
+                        />
+                    </motion.div>
                 </div>
 
                 {/* Right scrollable section */}
-                <div className="w-1/2 flex flex-col">
+                <div className="w-1/2 flex flex-col ref={containerRef} px-2 md:px-0">
                     {sections.map((section, idx) => (
                         <div
                             key={idx}
@@ -138,7 +148,7 @@ export default function MerchScrollSection() {
                                 itemRefs.current[idx] = el;
                             }}
                             className={clsx(
-                                "text-2xl font-bold transition-all duration-300 ease-in-out mb-2",
+                                "text-base md:text-2xl font-bold transition-all duration-300 ease-in-out mb-2",
                                 activeIndex === idx
                                     ? "text-transparent bg-gradient-to-r from-purple-400 to-blue-300 bg-clip-text scale-105"
                                     : "text-white/50"

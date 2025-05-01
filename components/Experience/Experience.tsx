@@ -391,13 +391,18 @@ const items = [
 ];
 
 const FreeloaderIcon = () => (
-    <Image
-        src="/assets/images/logo.jpeg"
-        alt="Freeloader Logo"
-        className="rounded-full scale-[0.7]"
-        height="100"
-        width="100"
-    />
+    // <Image
+    //     src="/assets/images/logo.jpeg"
+    //     alt="Freeloader Logo"
+    //     className="rounded-full scale-[0.7]"
+    //     height="100"
+    //     width="100"
+    // />
+    <div className="relative text-white font-logo text-left text-xl font-bold">
+        <div className="raleway leading-5 glitch-text">Free</div>
+        <div className="raleway leading-5 glitch-text">Loader</div>
+        <div className="raleway leading-5 glitch-text">Agency</div>
+    </div>
 );
 
 const Icon = ({ className = "" }) => (
@@ -442,10 +447,10 @@ const Card = ({
             className="group relative border border-white/20 bg-black h-[30rem] w-full max-w-sm p-4 overflow-hidden"
         >
             {/* Corner Icons */}
-            <Icon className="absolute h-6 w-6 -top-3 -left-3 text-white" />
-            <Icon className="absolute h-6 w-6 -bottom-3 -left-3 text-white" />
-            <Icon className="absolute h-6 w-6 -top-3 -right-3 text-white" />
-            <Icon className="absolute h-6 w-6 -bottom-3 -right-3 text-white" />
+            <Icon className="absolute h-6 w-6 -top-3 -left-3 text-violet-400" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -left-3 text-violet-400" />
+            <Icon className="absolute h-6 w-6 -top-3 -right-3 text-violet-400" />
+            <Icon className="absolute h-6 w-6 -bottom-3 -right-3 text-violet-400" />
 
             {/* Reveal animation */}
             <AnimatePresence>

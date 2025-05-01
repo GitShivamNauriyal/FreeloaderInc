@@ -4,9 +4,9 @@ import MerchScrollSection from "./ScrollObserver";
 
 const Merch = () => {
     return (
-        <div>
-            <div className="relative z-20 py-8 lg:py-16 max-w-5xl mx-auto">
-                <div className="px-8 mb-12 select-none">
+        <div className="border-t-[1px] border-t-white/10">
+            <div className="relative z-20 py-8 lg:pt-16 lg:pb-8 max-w-5xl mx-auto">
+                <div className="px-8 mb-4 select-none">
                     <motion.div
                         initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
                         whileInView={{
