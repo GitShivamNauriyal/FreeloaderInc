@@ -21,10 +21,17 @@ export default function ProjectsSection() {
                         <motion.div
                             key={item.id}
                             className="bg-gray-700 h-48 md:h-full flex items-center justify-center text-left p-6 rounded-lg"
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.1 }}
-                            viewport={{ once: true }}
+                            initial={{
+                                opacity: 0,
+                                y: 30,
+                                filter: "blur(15px)",
+                            }}
+                            whileInView={{
+                                opacity: 1,
+                                y: 0,
+                                filter: "blur(0)",
+                            }}
+                            transition={{ delay: item.id * 0.1 }}
                         >
                             <div>
                                 <h3 className="text-2xl font-bold text-white">

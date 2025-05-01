@@ -24,10 +24,17 @@ export default function ClientsSection() {
                     {clients.map((src, i) => (
                         <motion.div
                             key={i}
-                            initial={{ opacity: 0, y: 10 }}
-                            whileInView={{ opacity: 1, y: 0 }}
+                            initial={{
+                                opacity: 0,
+                                y: 10,
+                                filter: "blur(10px)",
+                            }}
+                            whileInView={{
+                                opacity: 1,
+                                y: 0,
+                                filter: "blur(0)",
+                            }}
                             transition={{ delay: i * 0.1 }}
-                            viewport={{ once: true }}
                         >
                             <Image
                                 src={src}

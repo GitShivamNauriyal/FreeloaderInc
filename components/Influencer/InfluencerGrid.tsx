@@ -16,7 +16,7 @@ const influencerData = [
 
 const InfluencerGrid = () => {
     return (
-        <div className="max-w-5xl mx-auto px-4 py-16 space-y-20">
+        <div className="max-w-5xl mx-auto px-4 pb-16 pt-8 space-y-20">
             {influencerData.map((item, index) => {
                 const isEven = index % 2 === 0;
                 const imageAnimation = {
