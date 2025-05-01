@@ -5,11 +5,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import BottomGradientHover from "../ui/text/bottom-gradient-hover";
+import { it } from "node:test";
 
 const menuItems = [
     "experiences",
-    "influencers",
     "merch",
+    "influencers",
     "about us",
     "contact",
 ];
@@ -45,13 +46,13 @@ const Navbar = () => {
                                     className={`px-3 py-2 text-sm font-medium transition-colors duration-300 ${
                                         item === "contact"
                                             ? "bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 text-white rounded-md"
-                                            : "text-gray-300 hover:text-white"
+                                            : "text-gray-200 hover:text-violet-200"
                                     }`}
                                 >
                                     {item.charAt(0).toUpperCase() +
                                         item.slice(1)}
                                 </Link>
-                                <BottomGradientHover />
+                                {item !== "contact" && <BottomGradientHover />}
                             </div>
                         ))}
                     </div>
@@ -106,7 +107,7 @@ const Navbar = () => {
                                     href={`#${item}`}
                                     className={`block  px-3 py-2 text-lg font-medium transition-colors duration-300 ${
                                         item === "contact"
-                                            ? "bg-gradient-to-r from-violet-500 to-purple-600 hover:bg-gradient-to-r hover:from-violet-600 hover:to-purple-700 transition-all text-white rounded-md"
+                                            ? "bg-gradient-to-r from-violet-400 to-purple-600 hover:bg-gradient-to-r hover:from-violet-600 hover:to-purple-700 transition-all text-white rounded-md"
                                             : "text-gray-300 hover:text-white"
                                     }`}
                                 >

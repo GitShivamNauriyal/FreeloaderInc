@@ -61,7 +61,8 @@ body {
     overflow-x: hidden;
     background: #0a0a0a; /* Dark background */
     color: white;
-    /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
 }
 
 /* h1 {

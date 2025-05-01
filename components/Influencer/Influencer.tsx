@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import { cn } from "@/lib/utils";
 import createGlobe from "cobe";
 import { useEffect, useRef } from "react";
@@ -34,63 +34,87 @@ const Influencer = () => {
 export function FeaturesSectionDemo() {
     const features = [
         {
-            title: "Track issues effectively",
+            title: "Manage Client Requests",
             description:
-                "Track and manage your project issues with ease using our intuitive interface.",
+                "Handle incoming project inquiries and client briefs effortlessly with our streamlined system.",
             skeleton: <SkeletonOne />,
             className:
-                "col-span-1 lg:col-span-4 border-b lg:border-r dark:border-neutral-800",
+                "col-span-1 lg:col-span-3 border-b lg:border-r dark:border-neutral-800",
         },
         {
-            title: "Capture the moment",
+            title: "Showcase Your Work",
             description:
-                "Capture stunning photos effortlessly using our advanced AI technology.",
+                "Upload and present your portfolio or recent works to attract potential collaborators or clients.",
             skeleton: <SkeletonTwo />,
             className:
-                "border-b col-span-1 lg:col-span-2 dark:border-neutral-800",
+                "border-b col-span-1 lg:col-span-3 dark:border-neutral-800",
         },
         {
-            title: "Watch our Events on YouTube",
+            title: "Explore Our YouTube Series",
             description:
-                "Whether its you or Tyler Durden, you can get to know about our product on YouTube",
+                "Watch behind-the-scenes content, agency showcases, and tutorials on our official YouTube channel.",
             skeleton: <SkeletonThree />,
             className:
-                "col-span-1 lg:col-span-3 lg:border-r  dark:border-neutral-800",
+                "col-span-1 lg:col-span-2 lg:border-r dark:border-neutral-800",
         },
         {
-            title: "Limitless Reach",
+            title: "Expand Your Network",
             description:
-                "Reach a global audience with our influencer events, no matter where you are.",
+                "Collaborate with creatives and brands worldwide through Free Loader’s curated events.",
             skeleton: <SkeletonFour />,
-            className: "col-span-1 lg:col-span-3 border-b lg:border-none",
+            className: "col-span-1 lg:col-span-4 border-b lg:border-none",
         },
     ];
-    return (
-        <div className="relative z-20 py-10 lg:py-20 max-w-7xl mx-auto">
-            <motion.div
-                initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
-                whileInView={{
-                    opacity: 1,
-                    y: [20, -5, 0],
-                    filter: "blur(0px)",
-                }}
-                transition={{
-                    duration: 0.6,
-                    ease: [0.4, 0, 0.2, 1],
-                    delay: 0.2,
-                }}
-                className="px-8"
-            >
-                <h4 className="text-3xl lg:text-5xl lg:leading-tight border-b-[1px] border-b-white tracking-tight font-medium text-black dark:text-white">
-                    Influencer Events
-                </h4>
 
-                <p className="text-sm lg:text-base  max-w-2xl  my-4 text-neutral-500 font-normal dark:text-neutral-300">
+    return (
+        <div className="relative z-20 py-16 lg:py-32 max-w-5xl mx-auto">
+            <div className="px-8">
+                <motion.div
+                    initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+                    whileInView={{
+                        opacity: 1,
+                        y: [20, -5, 0],
+                        filter: "blur(0px)",
+                    }}
+                    transition={{
+                        duration: 0.6,
+                        ease: [0.4, 0, 0.2, 1],
+                        delay: 0.2,
+                    }}
+                    className="relative border-b-[1px] border-b-violet-500 select-none"
+                >
+                    <span className="absolute cursor-grab -top-3 -left-6 -rotate-20 hover:-rotate-12 bg-violet-500 text-black text-md px-2 py-0.5 rounded transition-all">
+                        TOP 1%
+                    </span>
+                    <h4
+                        className="text-3xl lg:text-5xl  lg:leading-tight tracking-normal font-[900] text-transparent dark:text-transparent"
+                        style={{
+                            WebkitTextStroke: "0.6px #ffffffdd",
+                        }}
+                    >
+                        INFLUENCERS
+                    </h4>
+                </motion.div>
+
+                <motion.p
+                    initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+                    whileInView={{
+                        opacity: 1,
+                        y: [20, -5, 0],
+                        filter: "blur(0px)",
+                    }}
+                    transition={{
+                        duration: 0.6,
+                        ease: [0.4, 0, 0.1, 1],
+                        delay: 0.3,
+                    }}
+                    className="text-sm lg:text-base  max-w-2xl  my-4 text-neutral-500 font-normal dark:text-neutral-300"
+                >
                     Our Influencer Events are designed to help you connect with
                     your audience and build your brand. The perfect platform to
                     showcase your talent and reach new heights.
-                </p>
-            </motion.div>
+                </motion.p>
+            </div>
 
             <div className="relative ">
                 <div className="grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md dark:border-neutral-800">
@@ -146,7 +170,7 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
             }}
             className={cn(
                 "text-sm md:text-base  max-w-4xl text-left mx-auto",
-                "text-neutral-500 text-center font-normal dark:text-neutral-300",
+                "text-center font-normal text-neutral-400",
                 "text-left max-w-sm mx-0 md:text-sm my-2"
             )}
         >
@@ -158,13 +182,13 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
 export const SkeletonOne = () => {
     return (
         <div className="relative flex py-8 px-2 gap-10 h-full">
-            <div className="w-full p-5 mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full">
+            <div className="w-full p-5 mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-fill">
                 <div className="flex flex-1 w-full h-full flex-col space-y-2">
                     <Image
                         src="https://cached.imagescaler.hbpl.co.uk/resize/scaleWidth/1272/cached.offlinehbpl.hbpl.co.uk/news/ORP/GettyImages-1592937639.jpg"
                         alt="header"
                         width={800}
-                        height={400}
+                        height={800}
                         className="h-full w-full aspect-square object-cover object-left-top rounded-sm"
                         loading="lazy"
                         decoding="async"
@@ -202,7 +226,6 @@ export const SkeletonThree = () => {
         </a>
     );
 };
-
 export const SkeletonTwo = () => {
     const images = [
         "https://images.unsplash.com/photo-1517322048670-4fba75cbbb62?q=80&w=3000&auto=format&fit=crop",
@@ -212,10 +235,12 @@ export const SkeletonTwo = () => {
         "https://images.unsplash.com/photo-1546484475-7f7bd55792da?q=80&w=2581&auto=format&fit=crop",
     ];
 
-    const imageRotations = useMemo(
-        () => images.map(() => Math.random() * 20 - 10),
-        []
-    );
+    const [imageRotations, setImageRotations] = useState<number[]>([]);
+
+    useEffect(() => {
+        const rotations = images.map(() => Math.random() * 20 - 10);
+        setImageRotations(rotations);
+    }, []);
 
     const imageVariants = {
         whileHover: {
@@ -229,6 +254,8 @@ export const SkeletonTwo = () => {
             zIndex: 100,
         },
     };
+
+    if (imageRotations.length === 0) return null; // prevent hydration mismatch
 
     return (
         <div className="relative flex flex-col items-start p-8 gap-10 h-full overflow-hidden">
@@ -245,8 +272,8 @@ export const SkeletonTwo = () => {
                         <Image
                             src={image}
                             alt="bali images"
-                            width="500"
-                            height="500"
+                            width={500}
+                            height={500}
                             className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover shrink-0"
                             loading="lazy"
                             decoding="async"
@@ -267,8 +294,8 @@ export const SkeletonTwo = () => {
                         <Image
                             src={image}
                             alt="bali images"
-                            width="500"
-                            height="500"
+                            width={500}
+                            height={500}
                             className="rounded-lg h-20 w-20 md:h-40 md:w-40 object-cover shrink-0"
                             loading="lazy"
                             decoding="async"

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
 import { HeroHighlight, Highlight } from "../ui/backgrounds/dotted-highlight";
@@ -15,6 +15,7 @@ import {
     IconTableColumn,
 } from "@tabler/icons-react";
 import Image from "next/image";
+// import BottomGlowConstant from "../ui/text/bottom-glow-constant";
 
 // const data = [
 //     {
@@ -113,8 +114,14 @@ const SkeletonOne = () => {
     );
 };
 
-const SkeletonTwo = () => {
+export const SkeletonTwo = () => {
     const hasMounted = useHasMounted();
+    const arr = useMemo(() => new Array(6).fill(0), []);
+    const widths = useMemo(
+        () => arr.map(() => `${Math.random() * (100 - 40) + 40}%`),
+        []
+    );
+
     if (!hasMounted) return null;
 
     const variants = {
@@ -122,8 +129,6 @@ const SkeletonTwo = () => {
         animate: { width: "100%", transition: { duration: 0.2 } },
         hover: { width: ["0%", "100%"], transition: { duration: 2 } },
     };
-
-    const arr = new Array(6).fill(0);
 
     return (
         <motion.div
@@ -134,11 +139,9 @@ const SkeletonTwo = () => {
         >
             {arr.map((_, i) => (
                 <motion.div
-                    key={"skelenton-two" + i}
+                    key={`skeleton-two-${i}`}
                     variants={variants}
-                    style={{
-                        maxWidth: `${Math.random() * (100 - 40) + 40}%`,
-                    }}
+                    style={{ maxWidth: widths[i] }}
                     className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center space-x-2 bg-neutral-100 dark:bg-black w-full h-4"
                 />
             ))}
@@ -387,7 +390,7 @@ const FreeloaderIcon = () => (
     <Image
         src="/assets/images/logo.jpeg"
         alt="Freeloader Logo"
-        className="rounded-full scale-[0.3]"
+        className="rounded-full scale-[0.7]"
         height="100"
         width="100"
     />
@@ -479,55 +482,57 @@ const Experience = () => {
     return (
         <div id="experiences" className="w-full bg-black text-white">
             {/* heading */}
-            <HeroHighlight>
-                <motion.h1
-                    initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
-                    whileInView={{
-                        opacity: 1,
-                        y: [20, -5, 0],
-                        filter: "blur(0px)",
-                    }}
-                    transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
-                    className="text-2xl px-4 md:text-4xl lg:text-5xl font-bold max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto"
-                >
-                    Creating Unforgettable Experiences for Brands and their
-                    Audience.
-                    <div>
-                        <Highlight className="text-white">
-                            The Freeloader Experience
-                        </Highlight>
-                    </div>
-                </motion.h1>
-            </HeroHighlight>
-
             {/*Bento grid */}
-            {/* <Bento_Grid items={data} /> */}
-            <div className="relative z-20 py-10 lg:py-20 max-w-5xl mx-auto">
-                <motion.div
-                    initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
-                    whileInView={{
-                        opacity: 1,
-                        y: [20, -5, 0],
-                        filter: "blur(0px)",
-                    }}
-                    transition={{
-                        duration: 0.6,
-                        ease: [0.4, 0, 0.2, 1],
-                        delay: 0.2,
-                    }}
-                    className="px-8 mb-12"
-                >
-                    <h4 className="text-3xl lg:text-5xl lg:leading-tight border-b-[1px] border-b-white tracking-tight font-medium text-black dark:text-white">
-                        Experience Marketing
-                    </h4>
+            {/* <Bento_Grid items={data} /> */} {/*old bento grid */}
+            <div className="border-b-neutral-100/30 border-b-[1px] relative z-20 py-16 lg:py-32 max-w-5xl mx-auto">
+                <div className="px-8 mb-12">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+                        whileInView={{
+                            opacity: 1,
+                            y: [20, -5, 0],
+                            filter: "blur(0px)",
+                        }}
+                        transition={{
+                            duration: 0.6,
+                            ease: [0.4, 0, 0.2, 1],
+                            delay: 0.2,
+                        }}
+                        className="relative border-b-[1px] select-none  border-b-violet-500"
+                    >
+                        <span className="absolute cursor-grab -top-3 -left-8 -rotate-20 hover:-rotate-12 bg-violet-500 text-black text-md px-2 py-0.5 rounded transition-all">
+                            Exclusive
+                        </span>
+                        <h4
+                            className="text-3xl lg:text-5xl  lg:leading-tight tracking-normal font-[900] text-transparent dark:text-transparent"
+                            style={{
+                                WebkitTextStroke: "0.6px #ffffffdd",
+                            }}
+                        >
+                            EXPERIENCE MARKETING
+                        </h4>
+                    </motion.div>
 
-                    <p className="text-sm lg:text-base  max-w-3xl  my-4 text-neutral-500 font-normal dark:text-neutral-300">
+                    <motion.p
+                        initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+                        whileInView={{
+                            opacity: 1,
+                            y: [20, -5, 0],
+                            filter: "blur(0px)",
+                        }}
+                        transition={{
+                            duration: 0.6,
+                            ease: [0.4, 0, 0.1, 1],
+                            delay: 0.3,
+                        }}
+                        className="text-sm lg:text-base  max-w-3xl  my-4 text-neutral-500 font-normal dark:text-neutral-300"
+                    >
                         From conveptual brand launches, to theme based on-ground
                         campaigns, to the most happening night of the town...
                         on-ground experiences come in many flavors and a lot of
                         shades.
-                    </p>
-                </motion.div>
+                    </motion.p>
+                </div>
                 <motion.div
                     initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
                     whileInView={{
@@ -551,35 +556,64 @@ const Experience = () => {
                     </BentoGrid>
                 </motion.div>
             </div>
-
-            {/* Cards */}
-            <div className="py-20 px-8 flex flex-col bg lg:flex-row items-center justify-center gap-4 bg-black">
-                <Card title="Influencer Events" icon={<FreeloaderIcon />}>
-                    <CanvasRevealEffect
-                        animationSpeed={3}
-                        containerClassName="bg-emerald-900"
-                    />
-                </Card>
-                <Card title="Corporate Shows" icon={<FreeloaderIcon />}>
-                    <CanvasRevealEffect
-                        animationSpeed={3}
-                        containerClassName="bg-rose-900/30"
-                        colors={[
-                            [236, 72, 153],
-                            [232, 121, 249],
-                        ]}
-                        dotSize={3}
-                    />
-                </Card>
-                <Card title="Fashion Shows" icon={<FreeloaderIcon />}>
-                    <CanvasRevealEffect
-                        animationSpeed={3}
-                        containerClassName="bg-cyan-900"
-                        colors={[[125, 211, 252]]}
-                        dotSize={3}
-                    />
-                </Card>
-            </div>
+            <HeroHighlight>
+                {/* QUOTE */}
+                <motion.h1
+                    initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+                    whileInView={{
+                        opacity: 1,
+                        y: [20, -5, 0],
+                        filter: "blur(0px)",
+                    }}
+                    transition={{ duration: 0.6, ease: [0.4, 0, 0.2, 1] }}
+                    className="mt-20 text-2xl px-4 md:text-4xl lg:text-5xl font-bold max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto"
+                >
+                    Creating Unforgettable Experiences for Brands and their
+                    Audience.
+                    <div>
+                        <Highlight className="text-white">
+                            The Freeloader Experience
+                        </Highlight>
+                    </div>
+                </motion.h1>
+                {/* Cards */}
+                <div className="py-20 px-8 flex flex-col bg lg:flex-row items-center justify-center gap-4">
+                    <Card title="Influencer Events" icon={<FreeloaderIcon />}>
+                        <CanvasRevealEffect
+                            animationSpeed={2}
+                            containerClassName="bg-violet-900/30"
+                            colors={[
+                                // [231, 111, 92],
+                                // [255, 255, 255],
+                                [182, 121, 229],
+                                [94, 93, 235],
+                            ]}
+                        />
+                    </Card>
+                    <Card title="Corporate Shows" icon={<FreeloaderIcon />}>
+                        <CanvasRevealEffect
+                            animationSpeed={3}
+                            containerClassName="bg-violet-900/30"
+                            colors={[
+                                [236, 72, 153],
+                                [232, 121, 249],
+                            ]}
+                            dotSize={3}
+                        />
+                    </Card>
+                    <Card title="Fashion Shows" icon={<FreeloaderIcon />}>
+                        <CanvasRevealEffect
+                            animationSpeed={3}
+                            containerClassName="bg-purple-900/40"
+                            colors={[
+                                [125, 111, 252],
+                                [225, 111, 152],
+                            ]}
+                            dotSize={3}
+                        />
+                    </Card>
+                </div>
+            </HeroHighlight>
         </div>
     );
 };
