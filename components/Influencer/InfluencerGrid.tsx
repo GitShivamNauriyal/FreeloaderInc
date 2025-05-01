@@ -41,7 +41,6 @@ const InfluencerGrid = () => {
                             initial={imageAnimation.initial}
                             whileInView={imageAnimation.whileInView}
                             transition={{ duration: 0.6, ease: "easeOut" }}
-                            viewport={{ once: true }}
                         >
                             <Image
                                 src={item.image}
@@ -58,7 +57,6 @@ const InfluencerGrid = () => {
                             initial={textAnimation.initial}
                             whileInView={textAnimation.whileInView}
                             transition={{ duration: 0.6, ease: "easeOut" }}
-                            viewport={{ once: true }}
                         >
                             <h2 className="text-2xl md:text-3xl font-bold mb-4">
                                 {item.heading}
