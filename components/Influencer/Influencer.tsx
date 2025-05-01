@@ -7,6 +7,7 @@ import { useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import { IconBrandYoutubeFilled } from "@tabler/icons-react";
 import Image from "next/image";
+import InfluencerGrid from "./InfluencerGrid";
 // import { ContainerTextFlip } from "../ui/text/container-text-flip";
 
 const Influencer = () => {
@@ -27,6 +28,28 @@ const Influencer = () => {
                 </div>
             </div> */}
             <FeaturesSectionDemo />
+            <div className="relative z-20 pt-16 py-4 lg:pt-16 max-w-5xl mx-auto">
+                <motion.h2
+                    initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+                    whileInView={{
+                        opacity: 1,
+                        y: 0,
+                        filter: "blur(0px)",
+                    }}
+                    transition={{
+                        duration: 0.6,
+                        ease: [0.4, 0, 0.2, 1],
+                        delay: 0.2,
+                    }}
+                    className="text-2xl lg:text-3xl font-bold text-center text-neutral-300 max-w-3xl mx-auto"
+                >
+                    The Influencer Events You’ve Always <br />{" "}
+                    <span className="bg-violet-600  p-1 px-2 rounded-md">
+                        Dreamed Of
+                    </span>
+                </motion.h2>
+            </div>
+            <InfluencerGrid />
         </div>
     );
 };
@@ -67,7 +90,7 @@ export function FeaturesSectionDemo() {
     ];
 
     return (
-        <div className="relative z-20 py-16 lg:py-32 max-w-5xl mx-auto">
+        <div className="relative z-20 py-16 lg:pt-32 lg:pb-16 max-w-5xl mx-auto">
             <div className="px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}

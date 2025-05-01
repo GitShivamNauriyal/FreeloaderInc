@@ -81,7 +81,7 @@ const Merch = () => {
 
             {/* custom mader scroll section */}
             <MerchScrollSection />
-            <div className="relative z-20 pt-16 py-4 lg:pt-24 max-w-5xl mx-auto">
+            <div className="relative z-20 pt-16 pb-8 lg:pt-24 max-w-5xl mx-auto">
                 <motion.h2
                     initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
                     whileInView={{
@@ -96,9 +96,9 @@ const Merch = () => {
                     }}
                     className="text-2xl lg:text-3xl font-bold text-center text-neutral-300 max-w-3xl mx-auto"
                 >
-                    WE MAKE COOL & AUTHENTIC MERCH THAT YOUR AUDIENCE{" "}
+                    We make Cool & Authentic Merchandise that your Audience{" "}
                     <span className="bg-violet-600 p-1 pl-2 rounded-md">
-                        LOVES.
+                        Loves.
                     </span>
                 </motion.h2>
             </div>
