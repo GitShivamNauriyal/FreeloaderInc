@@ -61,14 +61,41 @@ body {
     overflow-x: hidden;
     background: #0a0a0a; /* Dark background */
     color: white;
+    /* font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
         "Lucida Sans", Arial, sans-serif;
 }
 
-/* h1 {
-    font-size: 12rem;
-    font-weight: bold;
-} */
+@font-face {
+    font-family: "freelogo";
+    src: url("/public/fonts/agrandir-wide.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+    /* font-display: swap; */
+}
+@font-face {
+    font-family: "freeheading";
+    src: url("/public/fonts/BDSans-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+    /* font-display: swap; */
+}
+@font-face {
+    font-family: "freepara";
+    src: url("/public/fonts/TelegrafRegular.otf") format("otf");
+    font-weight: normal;
+    font-style: normal;
+    /* font-display: swap; */
+}
 
 /* @layer utilities {
     .grad-fade-right {

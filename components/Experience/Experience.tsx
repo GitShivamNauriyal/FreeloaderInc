@@ -15,6 +15,13 @@ import {
     IconTableColumn,
 } from "@tabler/icons-react";
 import Image from "next/image";
+import localFont from "next/font/local";
+
+const freelogo = localFont({
+    src: "../../public/fonts/agrandir-wide.ttf",
+    display: "swap",
+    variable: "--font-freelogo",
+});
 // import BottomGlowConstant from "../ui/text/bottom-glow-constant";
 
 // const data = [
@@ -398,7 +405,7 @@ const FreeloaderIcon = () => (
     //     height="100"
     //     width="100"
     // />
-    <div className="relative text-white font-logo text-left text-xl font-bold">
+    <div className="relative text-white --font-freelogo text-left text-xl font-bold">
         <div className="raleway leading-5 glitch-text">Free</div>
         <div className="raleway leading-5 glitch-text">Loader</div>
         <div className="raleway leading-5 glitch-text">Agency</div>
@@ -513,7 +520,7 @@ const Experience = () => {
                             Exclusive
                         </span>
                         <h4
-                            className="text-3xl lg:text-5xl  lg:leading-tight tracking-normal font-[900] text-transparent dark:text-transparent"
+                            className="text-3xl lg:text-5xl --font-freelogo lg:leading-tight tracking-normal font-[900] text-transparent dark:text-transparent"
                             style={{
                                 WebkitTextStroke: "0.6px #ffffffdd",
                             }}

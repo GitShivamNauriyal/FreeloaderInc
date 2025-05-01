@@ -117,7 +117,7 @@ export default function MerchScrollSection() {
         <div className="bg-black text-white flex flex-col gap-0 pb-4 md:py-4">
             <div className="max-w-5xl w-full mx-auto flex">
                 {/* Left sticky image */}
-                <div className="w-1/2 sticky top-0 h-[300px] md:h-screen self-start flex items-center justify-center">
+                <div className="w-1/2 sticky top-0 h-[300px] md:h-[90vh] self-start flex items-center justify-center">
                     <motion.div
                         initial={{ opacity: 0, y: 10, filter: "blur(10px)" }}
                         animate={{
