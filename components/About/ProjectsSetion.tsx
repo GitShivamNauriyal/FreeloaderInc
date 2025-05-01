@@ -11,7 +11,7 @@ const projectItems = [
 
 export default function ProjectsSection() {
     return (
-        <section className="max-w-5xl mx-auto px-4 py-16 text-white">
+        <section className="border max-w-5xl mx-auto px-4 py-16 text-white">
             <h2 className="text-4xl font-semibold text-gray-300 mb-10">
                 Our Projects
             </h2>
@@ -32,7 +32,7 @@ export default function ProjectsSection() {
                                 </h3>
                                 <Link
                                     href="/projects/sample"
-                                    className="text-sm mt-2 inline-block text-white/70 hover:text-white transition"
+                                    className="text-sm mt-2 inline-block text-violet-300/70 hover:text-violet-200 transition"
                                 >
                                     VIEW MORE →
                                 </Link>
@@ -59,7 +59,7 @@ export default function ProjectsSection() {
             <div className="mt-10 flex justify-end">
                 <Link
                     href="/projects"
-                    className="bg-gray-900 text-white px-6 py-2 rounded-md hover:bg-gray-800 transition text-sm tracking-wide"
+                    className="bg-violet-600 text-white px-6 py-2 rounded-md hover:bg-violet-800 transition text-sm tracking-wide"
                 >
                     ALL PROJECTS →
                 </Link>

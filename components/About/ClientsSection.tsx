@@ -12,9 +12,9 @@ const clients = [
 
 export default function ClientsSection() {
     return (
-        <section className="bg-violet-500/10 py-16">
+        <section className="border-t border-b bg-violet-500/10 py-16">
             <div className="max-w-5xl mx-auto px-4 text-center">
-                <h2 className="text-3xl font-bold text-violet-600">
+                <h2 className="text-3xl font-bold text-violet-300">
                     Our Clients
                 </h2>
                 <p className="text-sm text-violet-400 mt-2">
