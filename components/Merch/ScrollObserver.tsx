@@ -78,7 +78,7 @@ export default function MerchScrollSection() {
     const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
     itemRefs.current = new Array(sections.length).fill(null);
 
-    const containerRef = useRef<HTMLDivElement | null>(null);
+    // const containerRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
         const observer = new IntersectionObserver(

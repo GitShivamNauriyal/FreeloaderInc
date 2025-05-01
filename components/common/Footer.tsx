@@ -11,7 +11,7 @@ export default function Footer() {
         <footer className="bg-black text-white px-6 md:px-12 lg:px-24 py-16">
             <div className="text-center md:text-left mb-16">
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold italic leading-tight">
-                    People don't connect with pixels,
+                    People don&apos;t connect with pixels,
                     <br className="hidden md:block" />
                     <span className="font-bold">
                         {" "}

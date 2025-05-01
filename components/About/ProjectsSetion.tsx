@@ -16,7 +16,7 @@ export default function ProjectsSection() {
                 Projects
             </h2>
             <div className="grid md:grid-cols-2 gap-6 mb-6">
-                {projectItems.map((item, i) =>
+                {projectItems.map((item) =>
                     item.isFeatured ? (
                         <motion.div
                             key={item.id}

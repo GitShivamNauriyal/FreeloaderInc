@@ -11,8 +11,8 @@ export default function MerchSubsection() {
             <p className="text-gray-400 max-w-2xl mx-auto mb-8">
                 Discover a curated collection of high-quality merch, hand-picked
                 accessories, and thoughtful gifts — all designed to reflect your
-                style and story. Whether you're repping the brand or surprising
-                someone special, there's something for everyone.
+                style and story. Whether you&apos;re repping the brand or
+                surprising someone special, there&apos;s something for everyone.
             </p>
             <Link
                 href="https://future-culture-next-js-frontend.vercel.app/"
