@@ -35,7 +35,7 @@ const imageSlides = [
 const layoutMaps = [
     // Slide 1 layout
     [
-        "col-span-2 row-span-2", // Big image top-left
+        "col-span-2 row-span-2",
         "col-span-1 row-span-1",
         "col-span-1 row-span-1",
         "col-span-1 row-span-1",
@@ -45,7 +45,7 @@ const layoutMaps = [
     [
         "col-span-1 row-span-1",
         "col-span-1 row-span-1",
-        "col-span-2 row-span-2", // Big image center
+        "col-span-2 row-span-2",
         "col-span-1 row-span-1",
         "col-span-1 row-span-1",
     ],
@@ -54,7 +54,7 @@ const layoutMaps = [
         "col-span-1 row-span-1",
         "col-span-1 row-span-1",
         "col-span-2 row-span-1",
-        "col-span-3 row-span-1", // Big image bottom-right
+        "col-span-3 row-span-1",
         "col-span-1 row-span-1",
     ],
 ];
@@ -69,7 +69,7 @@ export default function GallerySection() {
     const currentImages = imageSlides[page];
 
     return (
-        <section className="max-w-5xl mx-auto px-4 py-20">
+        <section className="border max-w-5xl mx-auto px-4 py-20">
             <h2 className="text-4xl font-semibold text-gray-100 mb-2">
                 Gallery
             </h2>

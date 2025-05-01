@@ -9,23 +9,23 @@ type TeamMember = {
 
 const team: TeamMember[] = [
     {
-        name: "John Doe",
-        credentials: "Lead Engineer",
+        name: "Bhavnesh S Manhas",
+        credentials: "Creative Director",
         img: "/assets/images/team1.jpg",
     },
     {
-        name: "Jane Smith",
-        credentials: "Product Manager",
+        name: "Nikhell Lall",
+        credentials: "Operations Director",
         img: "/assets/images/team2.jpg",
     },
     {
-        name: "Alex Ray",
-        credentials: "Designer",
+        name: "Saarthak Vig",
+        credentials: "Tech Lead",
         img: "/assets/images/team3.jpg",
     },
     {
-        name: "Lina Park",
-        credentials: "Developer",
+        name: "Surbhe Singgla",
+        credentials: "Sourcing Lead",
         img: "/assets/images/team4.jpg",
     },
 ];
