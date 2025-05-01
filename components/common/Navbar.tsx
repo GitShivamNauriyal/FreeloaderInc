@@ -24,15 +24,16 @@ const Navbar = () => {
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
                     <div className="flex-shrink-0">
-                        <Link href="/" className="relative glitch-container">
-                            <Image
-                                src={"/assets/images/logo.jpeg"}
-                                alt="Logo"
-                                className="h-12 rounded-full"
-                                width={48}
-                                height={48}
-                            />
-                            <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-0 glitch"></span>
+                        <Link
+                            href="/"
+                            className="relative text-white font-raleway text-xl font-bold glitch-container"
+                        >
+                            <div className="raleway translate-y-1 glitch-text">
+                                Free
+                            </div>
+                            <div className="raleway -translate-y-1 glitch-text">
+                                Loader
+                            </div>
                         </Link>
                     </div>
 

@@ -267,7 +267,7 @@ export const SkeletonTwo = () => {
                         style={{ rotate: imageRotations[idx] }}
                         whileHover="whileHover"
                         whileTap="whileTap"
-                        className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 shrink-0 overflow-hidden"
+                        className="rounded-xl -mr-4 mt-4 p-1 bg-purple-600/50 dark:border-neutral-700 border border-neutral-100 shrink-0 overflow-hidden"
                     >
                         <Image
                             src={image}
@@ -289,7 +289,7 @@ export const SkeletonTwo = () => {
                         variants={imageVariants}
                         whileHover="whileHover"
                         whileTap="whileTap"
-                        className="rounded-xl -mr-4 mt-4 p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 shrink-0 overflow-hidden"
+                        className="rounded-xl -mr-4 mt-4 p-1 bg-purple-600/50 dark:border-neutral-700 border border-neutral-100 shrink-0 overflow-hidden"
                     >
                         <Image
                             src={image}
@@ -345,11 +345,17 @@ export const Globe = ({ className }: { className?: string }) => {
             mapBrightness: 6,
             baseColor: [0.3, 0.3, 0.3],
             markerColor: [0.1, 0.8, 1],
-            glowColor: [1, 1, 1],
+            glowColor: [0.6, 0.6, 1],
             markers: [
                 // longitude latitude
-                { location: [37.7595, -122.4367], size: 0.03 },
-                { location: [40.7128, -74.006], size: 0.1 },
+                // { location: [37.7595, -122.4367], size: 0.03 },
+                // { location: [40.7128, -74.006], size: 0.06 },
+                { location: [28.6139, 77.209], size: 0.06 }, // Delhi
+                { location: [19.076, 72.8777], size: 0.06 }, // Mumbai
+                { location: [12.9716, 77.5946], size: 0.05 }, // Bangalore
+                { location: [13.0827, 80.2707], size: 0.05 }, // Chennai
+                { location: [17.385, 78.4867], size: 0.05 }, // Hyderabad
+                { location: [22.5726, 88.3639], size: 0.05 }, // Kolkata
             ],
             onRender: (state) => {
                 // Called on every animation frame.

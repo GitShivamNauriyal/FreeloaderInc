@@ -49,7 +49,7 @@
     --popover-background-color: #1a1a1a; /* Popover background */
     --popover-foreground-color: #ffffff; /* Popover text color */
     --border-color: #333333; /* Border color */
-    --primary-color: #5e17eb;
+    --primary-color: rgb(94, 23, 235); /**/
 }
 
 /* Custom styles */

@@ -1,10 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
+import MerchScrollSection from "./ScrollObserver";
 
 const Merch = () => {
     return (
         <div>
-            <div className="relative z-20 py-16 lg:py-32 max-w-5xl mx-auto">
+            <div className="relative z-20 py-8 lg:py-16 max-w-5xl mx-auto">
                 <div className="px-8 mb-12 select-none">
                     <motion.div
                         initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
@@ -54,6 +55,7 @@ const Merch = () => {
                     </motion.p>
                 </div>
             </div>
+            <MerchScrollSection />
         </div>
     );
 };
