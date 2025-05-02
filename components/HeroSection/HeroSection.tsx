@@ -1,6 +1,7 @@
 "use client";
 
 import Creation from "../Overview/Creation";
+import TangibleGap from "../Overview/TangibleGap";
 import VideoPlayback from "../Overview/VideoPlayback";
 
 // import { Boxes } from "../ui/backgrounds/background-boxes";
@@ -146,6 +147,7 @@ export default function HeroSection() {
             </main>
             <Creation />
             <VideoPlayback />
+            <TangibleGap />
         </div>
     );
 }
