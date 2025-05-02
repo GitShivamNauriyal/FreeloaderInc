@@ -1,6 +1,7 @@
 "use client";
 
 import Creation from "../Overview/Creation";
+import VideoPlayback from "../Overview/VideoPlayback";
 
 // import { Boxes } from "../ui/backgrounds/background-boxes";
 // import { HeroParallax } from "../ui/backgrounds/hero-parallax";
@@ -144,6 +145,7 @@ export default function HeroSection() {
                 </div>
             </main>
             <Creation />
+            <VideoPlayback />
         </div>
     );
 }
