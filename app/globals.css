@@ -59,10 +59,10 @@ body {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
-    background: #0a0a0a; /* Dark background */
+    background: #5e17eb; /* background required by client */
     color: white;
-    /* font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-        "Lucida Sans", Arial, sans-serif; */
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
 }
 
 h1,
@@ -75,20 +75,52 @@ h6 {
         "Lucida Sans", Arial, sans-serif;
 }
 
+.hero-container {
+    position: relative;
+    overflow: hidden;
+    z-index: 0; /* Ensure a stacking context */
+}
+
+.hero-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/assets/images/image1.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transform: scaleX(-1); /* Flip on X-axis */
+    transform-origin: center;
+
+    z-index: -1; /* Push behind content */
+    pointer-events: none;
+}
+
+.creation-background {
+    /* background-color: #4f00ff;  */
+    background-image: url("/assets/images/creation_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 @font-face {
     font-family: "freelogo";
-    src: url("/public/fonts/agrandir-wide.ttf") format("ttf");
+    src: url("/fonts/agrandir-wide.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
-    /* font-display: swap; */
+    font-display: swap;
 }
+
 @font-face {
     font-family: "freeheading";
-    src: url("/public/fonts/BDSans-Regular.ttf") format("ttf");
+    src: url("/fonts/BDSans-Regular.ttf") format("truetype");
     font-weight: normal;
     font-style: normal;
     /* font-display: swap; */
 }
+
 @font-face {
     font-family: "freepara";
     src: url("/public/fonts/TelegrafRegular.otf") format("otf");

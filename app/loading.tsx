@@ -46,12 +46,12 @@ export default function LoadingScreen({
                             {/* Soft glow behind text */}
                             <div className="absolute inset-0 blur-2xl opacity-30 rounded-full bg-violet-600"></div>
                             <motion.span
-                                initial={{ letterSpacing: "0.05em" }}
+                                initial={{ letterSpacing: "0.01em" }}
                                 animate={{
                                     letterSpacing: [
-                                        "0.05em",
-                                        "0.15em",
-                                        "0.05em",
+                                        "0.01em",
+                                        "0.04em",
+                                        "0.01em",
                                     ],
                                 }}
                                 transition={{

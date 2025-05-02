@@ -462,7 +462,7 @@ const Card = ({
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
             onClick={toggleHover}
-            className="group relative border border-white/20 bg-black h-[30rem] w-full max-w-sm p-4 overflow-hidden"
+            className="group relative border border-white/20 h-[30rem] w-full max-w-sm p-4 overflow-hidden"
         >
             {/* Corner Icons */}
             <Icon className="absolute h-6 w-6 -top-3 -left-3 text-violet-400" />
@@ -507,7 +507,7 @@ const Card = ({
 
 const Experience = () => {
     return (
-        <div id="experiences" className="w-full bg-black text-white">
+        <div id="experiences" className="w-full text-white">
             {/* heading */}
             {/*Bento grid */}
             {/* <Bento_Grid items={data} /> */} {/*old bento grid */}

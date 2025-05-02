@@ -8,7 +8,7 @@ import BottomGradientHover from "../ui/text/bottom-gradient-hover";
 
 const menuItems = [
     "experiences",
-    "merch",
+    "experiencial gifting",
     "influencers",
     "about us",
     "contact",
@@ -18,7 +18,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="fixed w-full bg-black/70 backdrop-blur-[8px] z-[999]">
+        <nav className="fixed w-full bg-black/10 backdrop-blur-[8px] z-[999]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
