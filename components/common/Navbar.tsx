@@ -4,14 +4,13 @@ import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 // import BottomGradientHover from "../ui/text/bottom-gradient-hover";
-// import { it } from "node:test";
 
 const menuItems = [
-    "overview",
-    "experiences",
-    "experiencial gifting",
-    "influencers",
-    "contact",
+    { label: "overview", path: "/" },
+    { label: "experiences", path: "experiences" },
+    { label: "experiencial gifting", path: "experiencial-gifting" },
+    { label: "influencers", path: "influencers" },
+    { label: "contact", path: "contact" },
 ];
 
 const Navbar = () => {
@@ -38,20 +37,20 @@ const Navbar = () => {
 
                     {/* Desktop menu */}
                     <div className="hidden md:flex md:items-center md:space-x-8">
-                        {menuItems.map((item) => (
-                            <div key={item} className="relative group">
+                        {menuItems.map(({ label, path }) => (
+                            <div key={label} className="relative group">
                                 <Link
-                                    href={item == "overview" ? `/` : `${item}`}
+                                    href={path}
                                     className={`px-3 py-2 text-sm font-medium transition-colors duration-300 ${
-                                        item === "contact"
+                                        label === "contact"
                                             ? "bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 text-white rounded-md"
                                             : "text-white hover:text-gray-100"
                                     }`}
                                 >
-                                    {item.charAt(0).toUpperCase() +
-                                        item.slice(1)}
+                                    {label.charAt(0).toUpperCase() +
+                                        label.slice(1)}
                                 </Link>
-                                {/* {item !== "contact" && <BottomGradientHover />} */}
+                                {/* {label !== "contact" && <BottomGradientHover />} */}
                             </div>
                         ))}
                     </div>
@@ -91,9 +90,9 @@ const Navbar = () => {
                         transition={{ duration: 0.3 }}
                         className="md:hidden bg-black/80 backdrop-blur-md absolute top-16 left-0 w-full px-4 py-4 space-y-2"
                     >
-                        {menuItems.map((item, i) => (
+                        {menuItems.map(({ label, path }, i) => (
                             <motion.div
-                                key={item}
+                                key={label}
                                 initial={{ opacity: 0, x: 30 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 exit={{ opacity: 0, x: 30 }}
@@ -103,15 +102,15 @@ const Navbar = () => {
                                 }}
                             >
                                 <Link
-                                    href={`${item}`}
-                                    className={`block  px-3 py-2 text-lg font-medium transition-colors duration-300 ${
-                                        item === "contact"
-                                            ? "bg-gradient-to-r from-violet-400 to-purple-600 hover:bg-gradient-to-r hover:from-violet-600 hover:to-purple-700 transition-all text-white rounded-md"
+                                    href={path}
+                                    className={`block px-3 py-2 text-lg font-medium transition-colors duration-300 ${
+                                        label === "contact"
+                                            ? "bg-gradient-to-r from-violet-400 to-purple-600 hover:from-violet-600 hover:to-purple-700 transition-all text-white rounded-md"
                                             : "text-gray-300 hover:text-white"
                                     }`}
                                 >
-                                    {item.charAt(0).toUpperCase() +
-                                        item.slice(1)}
+                                    {label.charAt(0).toUpperCase() +
+                                        label.slice(1)}
                                 </Link>
                             </motion.div>
                         ))}
