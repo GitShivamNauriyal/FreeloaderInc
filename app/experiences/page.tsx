@@ -8,7 +8,7 @@ import Footer from "@/components/common/Footer";
 
 const page = () => {
     return (
-        <div className="mt-4">
+        <div className="flex flex-col items-center justify-center">
             <BrandExperiences />
             <MidHeading />
             <ReelGlance />

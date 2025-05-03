@@ -26,9 +26,9 @@ const experiences = [
 
 const BrandExperiences = () => {
     return (
-        <section className="w-full py-16 mt-16">
+        <section className="w-full py-16">
             {/* Top Section: Grid for Heading and Text */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 px-4 md:px-16 max-w-screen-xl mx-auto relative">
+            <div className="grid grid-cols-1 my-16 md:grid-cols-2 gap-6 lg:gap-8 px-4 md:px-16 max-w-screen-xl mx-auto relative">
                 {/* Background Prop Image */}
                 <Image
                     src="/assets/images/TangibleBgProp.png"
@@ -51,7 +51,7 @@ const BrandExperiences = () => {
                 <div className="flex flex-col justify-center text-white">
                     <p className="text-lg mb-4">
                         From conceptual brand launches, to theme based on–ground
-                        campaigns, to the most happening night of the town…
+                        campaigns, to most happening night of the town…
                         on–ground experiences come in many flavors and a lot of
                         shades.
                     </p>
@@ -69,9 +69,11 @@ const BrandExperiences = () => {
                         key={index}
                         className="text-white border rounded lg:border-0 pb-2"
                     >
-                        <img
+                        <Image
                             src={item.image}
                             alt={item.title}
+                            width={200}
+                            height={200}
                             className="w-full h-auto object-cover rounded-md"
                         />
                         <h3 className="text-lg font-bold mt-4 pl-2">

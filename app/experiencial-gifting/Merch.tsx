@@ -33,9 +33,9 @@ const experiences = [
 
 const Merchandise = () => {
     return (
-        <section className="w-full py-16 mt-16">
+        <section className="w-full py-16 ">
             {/* Top Section: Grid for Heading and Text */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 px-4 md:px-16 max-w-screen-xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 mt-16 gap-6 lg:gap-8 px-4 md:px-16 max-w-screen-xl mx-auto">
                 {/* Left - Title */}
                 <div className="flex items-start md:items-center justify-start relative">
                     {/* Background Prop Image */}
@@ -75,9 +75,11 @@ const Merchandise = () => {
                         key={index}
                         className="text-white border rounded lg:border-0 pb-2"
                     >
-                        <img
+                        <Image
                             src={item.image}
                             alt={item.title}
+                            width={200}
+                            height={200}
                             className="w-full h-auto object-cover rounded-md"
                         />
                         <h3 className="text-lg font-bold mt-4 pl-2">

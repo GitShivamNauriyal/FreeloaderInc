@@ -26,9 +26,9 @@ const experiences = [
 
 const CoreTeam = () => {
     return (
-        <section className="w-full py-16 mt-16">
+        <section className="w-full py-16">
             {/* Top Section: Grid for Heading and Text */}
-            <div className=" px-4 md:px-16 max-w-screen-xl mx-auto">
+            <div className=" px-4 md:px-16  mt-16 max-w-screen-xl mx-auto">
                 {/* Left - Title */}
                 <div className="flex items-start md:items-center justify-start relative">
                     {/* Background Prop Image */}
@@ -55,7 +55,9 @@ const CoreTeam = () => {
                         key={index}
                         className="text-white border rounded lg:border-0 pb-2"
                     >
-                        <img
+                        <Image
+                            width={200}
+                            height={200}
                             src={item.image}
                             alt={item.title}
                             className="w-full h-auto object-cover rounded-md"

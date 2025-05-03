@@ -8,7 +8,7 @@ import MerchGlance from "./MerchGlance";
 
 const page = () => {
     return (
-        <div className="mt-16">
+        <div className="flex flex-col items-center justify-center">
             <Merchandise />
             <MidHeading />
             <MerchGlance />

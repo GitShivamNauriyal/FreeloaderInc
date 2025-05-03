@@ -1,5 +1,5 @@
 import React from "react";
-import { FaArrowDown } from "react-icons/fa";
+// import { FaArrowDown } from "react-icons/fa";
 
 const MidHeading = () => {
     return (
