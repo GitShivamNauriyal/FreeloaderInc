@@ -3,6 +3,7 @@
 import ClientsSection from "../About/ClientsSection";
 import Creation from "../Overview/Creation";
 import ExperienceMarketingSection from "../Overview/ExpMarket";
+import Process from "../Overview/Process";
 import TangibleGap from "../Overview/TangibleGap";
 import VideoPlayback from "../Overview/VideoPlayback";
 
@@ -152,6 +153,7 @@ export default function HeroSection() {
             <TangibleGap />
             <ExperienceMarketingSection />
             <ClientsSection />
+            <Process />
         </div>
     );
 }
