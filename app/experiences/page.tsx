@@ -4,7 +4,7 @@ import MidHeading from "./MidHeading";
 import ReelGlance from "./ReelGlance";
 import GallerySection from "@/components/About/GallerySection";
 import CokeGlance from "./CokeGlance";
-import Footer from "@/components/common/Footer";
+// import Footer from "@/components/common/Footer";
 
 const page = () => {
     return (
@@ -14,7 +14,7 @@ const page = () => {
             <ReelGlance />
             <GallerySection />
             <CokeGlance />
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 };

@@ -3,7 +3,7 @@ import Merchandise from "./Merch";
 import MidHeading from "./MidHeading";
 import GallerySection from "@/components/About/GallerySection";
 import MerchSubsection from "./Tangibles";
-import Footer from "@/components/common/Footer";
+// import Footer from "@/components/common/Footer";
 import MerchGlance from "./MerchGlance";
 
 const page = () => {
@@ -14,7 +14,7 @@ const page = () => {
             <MerchGlance />
             <GallerySection />
             <MerchSubsection />
-            <Footer />
+            {/* <Footer /> */}
         </div>
     );
 };

@@ -1,7 +1,7 @@
 "use client";
 
 // import About from "@/components/About/About";
-import Footer from "@/components/common/Footer";
+// import Footer from "@/components/common/Footer";
 // import ContactSection from "@/components/Contact/Contact";
 // import Experience from "@/components/Experience/Experience";
 import HeroSection from "@/components/HeroSection/HeroSection";
@@ -17,7 +17,7 @@ export default function Home() {
             {/* <Influencer /> */}
             {/* <About /> */}
             {/* <ContactSection /> */}
-            <Footer />
+            {/* <Footer /> */}
             {/* MORE to be added... */}
         </>
     );
