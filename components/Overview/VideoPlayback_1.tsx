@@ -2,9 +2,9 @@
 
 import React from "react";
 
-const VideoPlayback = () => {
+const OverviewVideoPlayback = () => {
     return (
-        <div className="relative w-full h-screen overflow-hidden">
+        <div className="relative w-full h-[90vh] lg:h-screen overflow-hidden">
             {/* Background Video */}
             <video
                 autoPlay
@@ -19,7 +19,7 @@ const VideoPlayback = () => {
 
             {/* Overlay */}
             <div className="relative z-10 flex items-center justify-center h-full px-4">
-                <div className="max-w-4xl text-center text-[#5e17eb] font-extralight text-xl sm:text-2xl md:text-4xl tracking-wide leading-relaxed sm:leading-10">
+                <div className="max-w-4xl text-center text-[#5e17eb] font-extralight text-xl sm:text-2xl md:text-5xl tracking-wide leading-6 sm:leading-10">
                     <p>
                         “YOU CAN’T HOLD A HASHTAG.{" "}
                         <br className="hidden sm:inline" />
@@ -40,4 +40,4 @@ const VideoPlayback = () => {
     );
 };
 
-export default VideoPlayback;
+export default OverviewVideoPlayback;

@@ -19,7 +19,7 @@ const TangibleGap = () => {
                     {/* Heading Block */}
                     <div className="relative z-10">
                         <div className="flex items-center gap-2">
-                            <h2 className="text-5xl font-extrabold leading-tight text-[#2a1114]">
+                            <h2 className="text-5xl font-extrabold leading-4 lg:leading-tight text-[#2a1114]">
                                 THE
                             </h2>
                             <span className="bg-[#5e17eb] text-white px-4 py-2 font-bold text-md rounded-md">
@@ -32,7 +32,7 @@ const TangibleGap = () => {
                     </div>
 
                     {/* Paragraphs */}
-                    <p className="mt-4 text-[#2a1114] text-base leading-relaxed">
+                    <p className="mt-4 text-[#2a1114] text-base leading-tight">
                         In an all digital era, brands are beginning to lose
                         tangible connection with their audience at an ever
                         increasing pace.

@@ -9,7 +9,7 @@ import {
 export default function Footer() {
     return (
         <footer className="bg-black text-white px-6 md:px-12 lg:px-24 py-16">
-            <div className="text-center md:text-left mb-16">
+            {/* <div className="text-center md:text-left mb-16">
                 <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold italic leading-tight">
                     People don&apos;t connect with pixels,
                     <br className="hidden md:block" />
@@ -24,7 +24,7 @@ export default function Footer() {
                         PHYSICAL WORLD.
                     </span>
                 </p>
-            </div>
+            </div> */}
 
             <div className="grid gap-10 md:grid-cols-4">
                 {/* Left - Brand */}

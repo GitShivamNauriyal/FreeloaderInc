@@ -5,7 +5,8 @@ import Creation from "../Overview/Creation";
 import ExperienceMarketingSection from "../Overview/ExpMarket";
 import Process from "../Overview/Process";
 import TangibleGap from "../Overview/TangibleGap";
-import VideoPlayback from "../Overview/VideoPlayback";
+import OverviewVideoPlayback from "../Overview/VideoPlayback_1";
+import OverviewVideoPlayback_2 from "../Overview/VideoPlayback_2";
 
 // import { Boxes } from "../ui/backgrounds/background-boxes";
 // import { HeroParallax } from "../ui/backgrounds/hero-parallax";
@@ -149,11 +150,12 @@ export default function HeroSection() {
                 </div>
             </main>
             <Creation />
-            <VideoPlayback />
+            <OverviewVideoPlayback />
             <TangibleGap />
             <ExperienceMarketingSection />
             <ClientsSection />
             <Process />
+            <OverviewVideoPlayback_2 />
         </div>
     );
 }
