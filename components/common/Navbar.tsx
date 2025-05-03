@@ -10,7 +10,7 @@ const menuItems = [
     { label: "experiences", path: "experiences" },
     { label: "experiencial gifting", path: "experiencial-gifting" },
     { label: "influencers", path: "influencers" },
-    { label: "contact", path: "contact" },
+    { label: "our team", path: "our-team" },
 ];
 
 const Navbar = () => {
@@ -41,11 +41,7 @@ const Navbar = () => {
                             <div key={label} className="relative group">
                                 <Link
                                     href={path}
-                                    className={`px-3 py-2 text-sm font-medium transition-colors duration-300 ${
-                                        label === "contact"
-                                            ? "bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 text-white rounded-md"
-                                            : "text-white hover:text-gray-100"
-                                    }`}
+                                    className="px-3 py-2 text-sm font-medium transition-colors duration-300 text-white hover:text-gray-100"
                                 >
                                     {label.charAt(0).toUpperCase() +
                                         label.slice(1)}

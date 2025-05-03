@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const experiences = [
     {
@@ -36,8 +37,16 @@ const Merchandise = () => {
             {/* Top Section: Grid for Heading and Text */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 px-4 md:px-16 max-w-screen-xl mx-auto">
                 {/* Left - Title */}
-                <div className="flex items-start md:items-center justify-start">
-                    <h2 className="text-5xl sm:text-6xl font-bold leading-10">
+                <div className="flex items-start md:items-center justify-start relative">
+                    {/* Background Prop Image */}
+                    <Image
+                        src="/assets/images/TangibleBgProp.png"
+                        alt="Tangible Background Prop"
+                        width={200}
+                        height={200}
+                        className="absolute -top-8 -left-10 w-32 h-32 object-contain z-0 opacity-100"
+                    />
+                    <h2 className="text-5xl sm:text-6xl font-bold leading-10 z-10">
                         <span className="block text-4xl italic font-medium">
                             Customised & Personalised
                         </span>

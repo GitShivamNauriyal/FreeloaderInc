@@ -4,12 +4,14 @@ import MidHeading from "./MidHeading";
 import GallerySection from "@/components/About/GallerySection";
 import MerchSubsection from "./Tangibles";
 import Footer from "@/components/common/Footer";
+import MerchGlance from "./MerchGlance";
 
 const page = () => {
     return (
         <div className="mt-16">
             <Merchandise />
             <MidHeading />
+            <MerchGlance />
             <GallerySection />
             <MerchSubsection />
             <Footer />
