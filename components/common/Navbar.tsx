@@ -41,7 +41,7 @@ const Navbar = () => {
                         {menuItems.map((item) => (
                             <div key={item} className="relative group">
                                 <Link
-                                    href={`${item}`}
+                                    href={item == "overview" ? `/` : `${item}`}
                                     className={`px-3 py-2 text-sm font-medium transition-colors duration-300 ${
                                         item === "contact"
                                             ? "bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 text-white rounded-md"

@@ -25,7 +25,7 @@ const experiences = [
 
 const BrandExperiences = () => {
     return (
-        <section className="w-full py-16">
+        <section className="w-full py-16 mt-16">
             {/* Top Section: Grid for Heading and Text */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 px-4 md:px-16 max-w-screen-xl mx-auto">
                 {/* Left - Title */}
