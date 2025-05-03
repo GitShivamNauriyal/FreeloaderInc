@@ -3,7 +3,7 @@ import React from "react";
 
 const MidHeading = () => {
     return (
-        <div className="px-6 py-12 md:p-16 lg:pt-24 pb-12 bg-white">
+        <div className="px-6 py-12 md:p-16 lg:py-28 bg-white">
             <h1 className="px-4 md:px-20 lg:px-56 max-w-screen-xl mx-auto text-lg sm:text-xl lg:text-4xl text-center text-[#5e17eb] font-bold leading-5 lg:leading-8 tracking-wide uppercase">
                 67% of Indians trust influencerS more than traditional ads,
                 highlighting the impact of authentic brand endorsements.

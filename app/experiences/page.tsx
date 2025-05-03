@@ -8,7 +8,7 @@ import CokeGlance from "./CokeGlance";
 
 const page = () => {
     return (
-        <div className="flex flex-col items-center justify-center">
+        <div>
             <BrandExperiences />
             <MidHeading />
             <ReelGlance />
