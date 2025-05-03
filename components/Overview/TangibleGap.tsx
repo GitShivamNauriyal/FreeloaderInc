@@ -57,7 +57,7 @@ const TangibleGap = () => {
                 {/* Phone Frame + Video */}
                 <div className="relative w-full max-w-72 aspect-[9/16]">
                     <Image
-                        src="/assets/images/PhoneFrame.png" // You can use any SVG phone mockup here
+                        src="/assets/images/PhoneFrame.png"
                         alt="Phone Frame"
                         width={400}
                         height={1200}
