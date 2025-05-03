@@ -1,9 +1,10 @@
 import React from "react";
+import BrandExperiences from "./BrandExp";
 
 const page = () => {
     return (
-        <div>
-            <h1>Experiences</h1>
+        <div className="mt-4">
+            <BrandExperiences />
         </div>
     );
 };
