@@ -84,7 +84,7 @@ const Navbar = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.3 }}
-                        className="md:hidden bg-black/80 backdrop-blur-md absolute top-16 left-0 w-full px-4 py-4 space-y-2"
+                        className="md:hidden bg-[#5e17eb]/80 backdrop-blur-md absolute top-16 left-0 w-full px-4 py-4 space-y-2"
                     >
                         {menuItems.map(({ label, path }, i) => (
                             <motion.div

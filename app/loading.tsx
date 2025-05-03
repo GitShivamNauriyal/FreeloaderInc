@@ -10,27 +10,38 @@ export default function LoadingScreen({
 }) {
     const [isLoading, setIsLoading] = useState(true);
     const [displayText, setDisplayText] = useState("");
-    const typingSpeed = 150; // ms per character
+    const typingSpeed = 150;
     const fullText = "Free Loader Agency";
 
     useEffect(() => {
         let index = 0;
+
         const typeInterval = setInterval(() => {
             setDisplayText(fullText.slice(0, index + 1));
             index++;
             if (index === fullText.length) clearInterval(typeInterval);
         }, typingSpeed);
 
-        const totalTypingDuration = fullText.length * typingSpeed + 300; // +300ms buffer
-        const loadTimeout = setTimeout(() => {
-            setIsLoading(false);
-        }, totalTypingDuration);
+        const handleLoad = () => {
+            const totalTypingDuration = fullText.length * typingSpeed + 300;
+            setTimeout(() => {
+                setIsLoading(false);
+            }, totalTypingDuration);
+        };
+
+        // Wait for entire page (images, etc.) to load
+        if (document.readyState === "complete") {
+            handleLoad();
+        } else {
+            window.addEventListener("load", handleLoad);
+        }
 
         return () => {
             clearInterval(typeInterval);
-            clearTimeout(loadTimeout);
+            window.removeEventListener("load", handleLoad);
         };
     }, []);
+
     return (
         <>
             <AnimatePresence>
@@ -43,7 +54,6 @@ export default function LoadingScreen({
                         transition={{ duration: 1.4, ease: "easeInOut" }}
                     >
                         <div className="relative">
-                            {/* Soft glow behind text */}
                             <div className="absolute inset-0 blur-2xl opacity-30 rounded-full bg-violet-600"></div>
                             <motion.span
                                 initial={{ letterSpacing: "0.01em" }}
@@ -71,7 +81,7 @@ export default function LoadingScreen({
             <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: isLoading ? 0 : 1 }}
-                transition={{ delay: 1.2, duration: 0.8 }}
+                transition={{ delay: 0.2, duration: 0.8 }}
             >
                 {children}
             </motion.div>

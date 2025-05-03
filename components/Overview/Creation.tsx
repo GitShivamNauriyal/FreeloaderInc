@@ -16,7 +16,7 @@ const Creation = () => {
                         {/* Left Side */}
                         <div className="flex-1 w-full">
                             <div className="mt-6 sm:mt-10">
-                                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold leading-6 lg:leading-10 uppercase">
+                                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold leading-5 lg:leading-8 uppercase">
                                     Freeloader <br />
                                     Incorporated <br />
                                     Communications <br />

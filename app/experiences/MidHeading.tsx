@@ -12,8 +12,8 @@ const MidHeading = () => {
 
             {/* Arrow and "Showreel" text */}
             <div className="mt-4 lg:mt-6 flex flex-col items-center">
-                <span className="text-cyan-500 font-medium">Showreel</span>
-                <FaArrowDown className="text-cyan-500 text-xl mb-1" />
+                <span className="text-[#5e17eb] font-medium">Showreel</span>
+                <FaArrowDown className="text-cyan-500  mb-1" />
             </div>
         </div>
     );

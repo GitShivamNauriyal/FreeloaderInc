@@ -75,14 +75,14 @@ export default function GallerySection() {
             </h2>
             <hr className="border-t border-gray-200/30 mb-10" />
 
-            <div className="grid grid-cols-3 md:grid-cols-4 gap-4 auto-rows-[200px]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
                 {currentImages.map((src, index) => {
                     const className =
                         layoutMaps[page][index] || "col-span-1 row-span-1";
                     return (
                         <motion.div
                             key={index}
-                            className={`${className} bg-gray-900 rounded-lg overflow-hidden`}
+                            className={`${className} rounded-lg overflow-hidden`}
                             initial={{
                                 opacity: 0,
                                 y: 20,

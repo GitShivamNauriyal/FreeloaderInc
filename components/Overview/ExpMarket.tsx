@@ -6,16 +6,18 @@ import Image from "next/image";
 const ExperienceMarketingSection = () => {
     return (
         <div className="w-full bg-white py-20 px-4">
-            <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between relative">
+            <div className="max-w-6xl mx-auto flex flex-col gap-8 lg:gap-0 md:flex-row items-center justify-between relative">
                 {/* Left Content */}
                 <div className="w-full md:w-2/3 relative">
                     {/* Ribbon */}
 
-                    <h2 className="relative text-5xl md:text-6xl font-[900] text-[#2e0e0e] leading-10 lg:leading-15 mb-6">
-                        <div className="absolute -top-4 right-2/5 rotate-[12deg] bg-[#5e17eb] text-white font-semibold px-6 py-2 text-sm shadow-lg">
-                            OUR SOLUTION
+                    <h2 className="text-5xl md:text-6xl font-[900] text-[#2e0e0e] leading-10 lg:leading-[4rem] mb-6">
+                        <div className="relative inline-block">
+                            <span>EXPERIENCE</span>
+                            <div className="absolute -top-4 -right-12 rotate-8 bg-[#5e17eb] text-white font-semibold px-4 py-1 text-xs sm:text-sm shadow-lg">
+                                OUR SOLUTION
+                            </div>
                         </div>
-                        EXPERIENCE
                         <br />
                         MARKETING
                     </h2>

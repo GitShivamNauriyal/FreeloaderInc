@@ -47,7 +47,7 @@ const Merchandise = () => {
                         className="absolute -top-8 -left-10 w-32 h-32 object-contain z-0 opacity-100"
                     />
                     <h2 className="text-5xl sm:text-6xl font-bold leading-10 z-10">
-                        <span className="block text-4xl italic font-medium">
+                        <span className="block text-4xl italic font-medium mb-0.5">
                             Customised & Personalised
                         </span>
                         MERCHANDISE
