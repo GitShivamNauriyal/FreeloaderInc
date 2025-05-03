@@ -1,5 +1,6 @@
 "use client";
 
+import ClientsSection from "../About/ClientsSection";
 import Creation from "../Overview/Creation";
 import ExperienceMarketingSection from "../Overview/ExpMarket";
 import TangibleGap from "../Overview/TangibleGap";
@@ -150,6 +151,7 @@ export default function HeroSection() {
             <VideoPlayback />
             <TangibleGap />
             <ExperienceMarketingSection />
+            <ClientsSection />
         </div>
     );
 }

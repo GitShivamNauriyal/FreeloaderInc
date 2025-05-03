@@ -97,7 +97,7 @@ h6 {
     pointer-events: none;
 }
 
-.creation-background {
+.wavy-background {
     /* background-color: #4f00ff;  */
     background-image: url("/assets/images/creation_bg.png");
     background-size: cover;

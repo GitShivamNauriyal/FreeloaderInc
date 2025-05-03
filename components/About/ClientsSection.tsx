@@ -1,49 +1,33 @@
-import { motion } from "framer-motion";
 import Image from "next/image";
+import Marquee from "react-fast-marquee";
 
-const clients = [
-    "/assets/clients/client1.svg",
-    "/assets/clients/client2.svg",
-    "/assets/clients/client3.svg",
-    "/assets/clients/client4.svg",
-    "/assets/clients/client5.svg",
-    "/assets/clients/client6.svg",
-];
+const clients = Array.from(
+    { length: 30 },
+    (_, i) => `/assets/clients/client${i + 1}.svg`
+);
 
 export default function ClientsSection() {
     return (
-        <section className="border-t border-b bg-violet-500/10 py-16">
-            <div className="max-w-5xl mx-auto px-4 text-center">
-                <h2 className="text-3xl font-bold text-violet-300">
-                    Our Clients
-                </h2>
-                <p className="text-sm text-violet-400 mt-2">
-                    We have been working with some Fortune 500+ clients
-                </p>
-                <div className="mt-10 flex flex-wrap justify-center gap-6">
-                    {clients.map((src, i) => (
-                        <motion.div
-                            key={i}
-                            initial={{
-                                opacity: 0,
-                                y: 10,
-                                filter: "blur(10px)",
-                            }}
-                            whileInView={{
-                                opacity: 1,
-                                y: 0,
-                                filter: "blur(0)",
-                            }}
-                            transition={{ delay: i * 0.1 }}
-                        >
-                            <Image
-                                src={src}
-                                alt={`Client ${i + 1}`}
-                                width={60}
-                                height={60}
-                            />
-                        </motion.div>
-                    ))}
+        <section className="border-t border-b w-screen py-24 wavy-background overflow-hidden">
+            <div className="max-w-6xl mx-auto px-4 text-center">
+                <h2 className="text-6xl font-bold text-white">OUR CLIENTS</h2>
+
+                <div className="mt-10">
+                    <Marquee speed={50} gradient={false} pauseOnHover={true}>
+                        {clients.map((src, i) => (
+                            <div
+                                key={i}
+                                className="mx-6 flex items-center justify-center"
+                            >
+                                <Image
+                                    src={src}
+                                    alt={`Client ${i + 1}`}
+                                    width={60}
+                                    height={60}
+                                />
+                            </div>
+                        ))}
+                    </Marquee>
                 </div>
             </div>
         </section>

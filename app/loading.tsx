@@ -11,7 +11,7 @@ export default function LoadingScreen({
     const [isLoading, setIsLoading] = useState(true);
     const [displayText, setDisplayText] = useState("");
     const typingSpeed = 150; // ms per character
-    const fullText = "FREE LOADER AGENCY";
+    const fullText = "Free Loader Agency";
 
     useEffect(() => {
         let index = 0;

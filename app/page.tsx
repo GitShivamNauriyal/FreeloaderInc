@@ -12,7 +12,7 @@ export default function Home() {
     return (
         <>
             <HeroSection />
-            <Experience />
+            {/* <Experience /> */}
             <Merch />
             <Influencer />
             <About />

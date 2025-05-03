@@ -3,14 +3,14 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import BottomGradientHover from "../ui/text/bottom-gradient-hover";
+// import BottomGradientHover from "../ui/text/bottom-gradient-hover";
 // import { it } from "node:test";
 
 const menuItems = [
+    "overview",
     "experiences",
     "experiencial gifting",
     "influencers",
-    "about us",
     "contact",
 ];
 
@@ -18,7 +18,7 @@ const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="fixed w-full bg-black/10 backdrop-blur-[8px] z-[999]">
+        <nav className="fixed w-full bg-black/20 backdrop-blur-[8px] z-[999]">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
@@ -37,22 +37,21 @@ const Navbar = () => {
                     </div>
 
                     {/* Desktop menu */}
-                    {/* Desktop menu */}
                     <div className="hidden md:flex md:items-center md:space-x-8">
                         {menuItems.map((item) => (
                             <div key={item} className="relative group">
                                 <Link
-                                    href={`#${item}`}
+                                    href={`${item}`}
                                     className={`px-3 py-2 text-sm font-medium transition-colors duration-300 ${
                                         item === "contact"
                                             ? "bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-600 hover:to-purple-700 text-white rounded-md"
-                                            : "text-gray-200 hover:text-violet-200"
+                                            : "text-white hover:text-gray-100"
                                     }`}
                                 >
                                     {item.charAt(0).toUpperCase() +
                                         item.slice(1)}
                                 </Link>
-                                {item !== "contact" && <BottomGradientHover />}
+                                {/* {item !== "contact" && <BottomGradientHover />} */}
                             </div>
                         ))}
                     </div>
@@ -104,7 +103,7 @@ const Navbar = () => {
                                 }}
                             >
                                 <Link
-                                    href={`#${item}`}
+                                    href={`${item}`}
                                     className={`block  px-3 py-2 text-lg font-medium transition-colors duration-300 ${
                                         item === "contact"
                                             ? "bg-gradient-to-r from-violet-400 to-purple-600 hover:bg-gradient-to-r hover:from-violet-600 hover:to-purple-700 transition-all text-white rounded-md"

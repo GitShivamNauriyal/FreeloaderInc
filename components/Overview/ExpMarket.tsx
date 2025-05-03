@@ -5,8 +5,8 @@ import Image from "next/image";
 
 const ExperienceMarketingSection = () => {
     return (
-        <div className="w-full bg-[#fffaf5] py-20 px-4">
-            <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-4 md:px-8 relative">
+        <div className="w-full bg-white py-20 px-4">
+            <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between relative">
                 {/* Left Content */}
                 <div className="w-full md:w-2/3 relative">
                     {/* Ribbon */}

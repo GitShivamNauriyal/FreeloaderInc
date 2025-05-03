@@ -5,7 +5,7 @@ import React from "react";
 const Creation = () => {
     return (
         <div>
-            <div className="w-screen creation-background">
+            <div className="w-screen wavy-background">
                 <section className="max-w-7xl mx-auto gap-8 px-4 sm:px-6 md:px-20 py-16 text-white">
                     <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-[60px] xl:text-[72px] font-extrabold leading-8 lg:leading-16 tracking-tight uppercase">
                         Creating Tangible Brand{" "}
