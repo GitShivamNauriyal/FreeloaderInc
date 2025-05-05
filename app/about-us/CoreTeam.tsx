@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const experiences = [
     {
@@ -27,11 +29,14 @@ const experiences = [
 const CoreTeam = () => {
     return (
         <section className="w-full py-16">
-            {/* Top Section: Grid for Heading and Text */}
-            <div className=" px-4 md:px-16  mt-16 max-w-screen-xl mx-auto">
-                {/* Left - Title */}
+            {/* Top Section: Heading */}
+            <motion.div
+                initial={{ opacity: 0, x: 20, filter: "blur(10px)" }}
+                whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                transition={{ duration: 0.6, ease: "easeOut" }}
+                className="px-4 md:px-16 mt-16 max-w-screen-xl mx-auto"
+            >
                 <div className="flex items-start md:items-center justify-start relative">
-                    {/* Background Prop Image */}
                     <Image
                         src="/assets/images/TangibleBgProp.png"
                         alt="Tangible Background Prop"
@@ -46,13 +51,20 @@ const CoreTeam = () => {
                         CORE TEAM
                     </h2>
                 </div>
-            </div>
+            </motion.div>
 
-            {/* Bottom Section: Grid for Images and Captions */}
+            {/* Bottom Section: Team Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6 px-4 md:px-16 mt-12 max-w-screen-xl mx-auto">
                 {experiences.map((item, index) => (
-                    <div
+                    <motion.div
                         key={index}
+                        initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+                        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                        transition={{
+                            duration: 0.3,
+                            ease: "easeOut",
+                            delay: index * 0.1,
+                        }}
                         className="text-white border rounded lg:border-0 pb-2"
                     >
                         <Image
@@ -66,11 +78,11 @@ const CoreTeam = () => {
                             <h3 className="text-xl text-center font-bold freeheading">
                                 {item.title}
                             </h3>
-                            <p className="text-md text-center italic opacity-80 ">
+                            <p className="text-md text-center italic opacity-80">
                                 {item.subtitle}
                             </p>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </section>

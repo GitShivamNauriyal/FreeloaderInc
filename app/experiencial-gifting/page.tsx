@@ -6,13 +6,18 @@ import MerchSubsection from "./Tangibles";
 // import Footer from "@/components/common/Footer";
 import MerchGlance from "./MerchGlance";
 
+const imageList = Array.from(
+    { length: 16 },
+    (_, i) => `/assets/images/merchandise/gal${i + 1}.png`
+);
+
 const page = () => {
     return (
         <div>
             <Merchandise />
             <MidHeading />
             <MerchGlance />
-            <GallerySection />
+            <GallerySection images={imageList} title="Event Moments" />
             <MerchSubsection />
             {/* <Footer /> */}
         </div>

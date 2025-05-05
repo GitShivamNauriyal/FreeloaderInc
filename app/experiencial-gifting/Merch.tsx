@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const experiences = [
     {
@@ -33,11 +35,16 @@ const experiences = [
 
 const Merchandise = () => {
     return (
-        <section className="w-full py-16 ">
+        <section className="w-full py-16">
             {/* Top Section: Grid for Heading and Text */}
             <div className="grid grid-cols-1 lg:grid-cols-3 mt-16 gap-6 lg:gap-0 px-4 md:px-16 max-w-screen-xl mx-auto">
                 {/* Left - Title */}
-                <div className="flex lg:col-span-2 items-start md:items-center justify-start relative">
+                <motion.div
+                    className="flex lg:col-span-2 items-start md:items-center justify-start relative"
+                    initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+                    whileInView={{ opacity: 1, y: 0, filter: "blur(0)" }}
+                    transition={{ delay: 0, ease: "easeIn" }}
+                >
                     {/* Background Prop Image */}
                     <Image
                         src="/assets/images/TangibleBgProp.png"
@@ -52,10 +59,15 @@ const Merchandise = () => {
                         </span>
                         EXPERIENCIAL GIFTING
                     </h2>
-                </div>
+                </motion.div>
 
                 {/* Right - Description */}
-                <div className="flex flex-col justify-center text-white">
+                <motion.div
+                    className="flex flex-col justify-center text-white"
+                    initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+                    whileInView={{ opacity: 1, y: 0, filter: "blur(0)" }}
+                    transition={{ delay: 0.2, ease: "easeIn" }}
+                >
                     <p className="text-lg mb-4">
                         Our team has deep specialization in creating brand
                         experience oriented hamper kits, fashion wear,
@@ -65,15 +77,21 @@ const Merchandise = () => {
                     <p className="font-bold uppercase">
                         WE MAKE COOL & AUTHENTIC MERCH THAT YOUR AUDIENCE LOVES.
                     </p>
-                </div>
+                </motion.div>
             </div>
 
             {/* Bottom Section: Grid for Images and Captions */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6 px-4 md:px-16 mt-12 max-w-screen-xl mx-auto">
                 {experiences.map((item, index) => (
-                    <div
+                    <motion.div
                         key={index}
                         className="text-white border rounded lg:border-0 pb-2"
+                        initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+                        whileInView={{ opacity: 1, y: 0, filter: "blur(0)" }}
+                        transition={{
+                            delay: index * 0.1, // Index based delay for animation
+                            ease: "easeIn",
+                        }}
                     >
                         <Image
                             src={item.image}
@@ -88,7 +106,7 @@ const Merchandise = () => {
                         <p className="text-sm opacity-80 pl-2">
                             {item.subtitle}
                         </p>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </section>

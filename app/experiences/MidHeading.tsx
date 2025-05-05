@@ -6,17 +6,17 @@ import { motion } from "framer-motion";
 
 const MidHeading = () => {
     return (
-        <motion.div
-            className="px-6 py-12 md:p-16 lg:pt-24 pb-12 bg-white"
-            initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
-            whileInView={{ opacity: 1, y: 0, filter: "blur(0)" }}
-            transition={{ duration: 0.6 }}
-        >
-            <h1 className="px-4 md:px-20 lg:px-56 max-w-screen-xl mx-auto text-lg sm:text-xl lg:text-4xl text-center text-[#5e17eb] font-bold leading-5 lg:leading-8 tracking-wide uppercase">
+        <div className="px-6 py-12 md:p-16 lg:pt-24 pb-12 bg-white">
+            <motion.h1
+                initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+                whileInView={{ opacity: 1, y: 0, filter: "blur(0)" }}
+                transition={{ duration: 0.6 }}
+                className="px-4 md:px-20 lg:px-56 max-w-screen-xl mx-auto text-lg sm:text-xl lg:text-4xl text-center text-[#5e17eb] font-bold leading-5 lg:leading-8 tracking-wide uppercase"
+            >
                 95% of marketers agree that live events provide attendees with a
                 valuable opportunity to form in-person connections in an
                 increasingly digital world
-            </h1>
+            </motion.h1>
 
             {/* Arrow and "Showreel" text */}
             <Link href="#exp-reel">
@@ -25,7 +25,7 @@ const MidHeading = () => {
                     <FaArrowDown className="text-cyan-500 mb-1" />
                 </div>
             </Link>
-        </motion.div>
+        </div>
     );
 };
 

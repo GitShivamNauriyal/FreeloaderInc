@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const MerchGlance = () => {
     return (
@@ -9,9 +11,19 @@ const MerchGlance = () => {
             </h2> */}
 
             <div className="flex flex-col md:flex-row items-center justify-center gap-12">
-                {["1", "2", "3"].map((num) => (
-                    <div key={num} className="flex flex-col items-center">
-                        <div className="relative w-64 md:w-72 aspect-[1/2]">
+                {["1", "2", "3"].map((num, index) => (
+                    <motion.div
+                        key={num}
+                        className="flex flex-col items-center overflow-visible"
+                        initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+                        whileInView={{ opacity: 1, y: 0, filter: "blur(0)" }}
+                        transition={{
+                            delay: index * 0.2, // Index-based delay for staggered animation
+                            ease: "easeIn",
+                            duration: 0.6,
+                        }}
+                    >
+                        <div className="relative w-64 md:w-72 aspect-[1/2] overflow-visible">
                             <video
                                 src={`/assets/video/experiencial_gifting/exp_reel_${num}.mp4`}
                                 className="absolute inset-0 w-full h-full object-cover rounded-4xl z-0"
@@ -27,7 +39,7 @@ const MerchGlance = () => {
                                 className="object-cover rounded-xl z-10 pointer-events-none"
                             />
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </div>

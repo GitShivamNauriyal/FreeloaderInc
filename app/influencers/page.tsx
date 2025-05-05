@@ -3,12 +3,17 @@ import TopInfluencers from "./TopInf";
 import MidHeading from "./MidHeading";
 import GallerySection from "@/components/About/GallerySection";
 
+const imageList = Array.from(
+    { length: 9 },
+    (_, i) => `/assets/images/influencer/gal${i + 1}.png`
+);
+
 const page = () => {
     return (
         <div>
             <TopInfluencers />
             <MidHeading />
-            <GallerySection />
+            <GallerySection images={imageList} title="Event Moments" />
         </div>
     );
 };
