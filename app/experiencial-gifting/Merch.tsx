@@ -35,7 +35,7 @@ const Merchandise = () => {
     return (
         <section className="w-full py-16 ">
             {/* Top Section: Grid for Heading and Text */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 mt-16 gap-6 lg:gap-4 px-4 md:px-16 max-w-screen-xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-3 mt-16 gap-6 lg:gap-0 px-4 md:px-16 max-w-screen-xl mx-auto">
                 {/* Left - Title */}
                 <div className="flex lg:col-span-2 items-start md:items-center justify-start relative">
                     {/* Background Prop Image */}
@@ -82,7 +82,7 @@ const Merchandise = () => {
                             height={200}
                             className="w-full h-auto object-cover rounded-md"
                         />
-                        <h3 className="text-lg font-bold mt-4 pl-2">
+                        <h3 className="text-lg font-bold mt-4 pl-2 freeheading">
                             {item.title}
                         </h3>
                         <p className="text-sm opacity-80 pl-2">

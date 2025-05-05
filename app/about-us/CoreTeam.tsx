@@ -62,8 +62,8 @@ const CoreTeam = () => {
                             alt={item.title}
                             className="w-full h-auto object-cover rounded-md"
                         />
-                        <div className="border border-white rounded-full mt-4 px-2 py-3">
-                            <h3 className="text-xl text-center font-bold ">
+                        <div className="border-2 border-white rounded-full mt-4 px-2 py-3">
+                            <h3 className="text-xl text-center font-bold freeheading">
                                 {item.title}
                             </h3>
                             <p className="text-md text-center italic opacity-80 ">

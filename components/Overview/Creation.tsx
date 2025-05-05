@@ -12,7 +12,7 @@ const Creation = () => {
                         <br className="hidden sm:block" />
                         Experiences Since 2009
                     </h2>
-                    <div className="flex flex-col md:flex-row justify-between items-start gap-12 lg:gap-6 lg:py-10">
+                    <div className="flex flex-col md:flex-row justify-between items-start gap-12 lg:gap-0 lg:py-10">
                         {/* Left Side */}
                         <div className="flex-1 w-full">
                             <div className="mt-6 sm:mt-10">

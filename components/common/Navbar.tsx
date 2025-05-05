@@ -10,7 +10,7 @@ const menuItems = [
     { label: "experiences", path: "experiences" },
     { label: "experiencial gifting", path: "experiencial-gifting" },
     { label: "influencers", path: "influencers" },
-    { label: "our team", path: "our-team" },
+    { label: "about us", path: "about-us" },
 ];
 
 const Navbar = () => {
@@ -41,7 +41,7 @@ const Navbar = () => {
                             <div key={label} className="relative group">
                                 <Link
                                     href={path}
-                                    className="px-3 py-2 text-sm font-medium transition-colors duration-300 text-white hover:text-gray-100"
+                                    className="px-3 py-2 text-sm font-medium uppercase transition-colors duration-300 text-white hover:text-gray-100"
                                 >
                                     {label.charAt(0).toUpperCase() +
                                         label.slice(1)}

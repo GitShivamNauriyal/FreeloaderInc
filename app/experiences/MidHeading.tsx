@@ -1,3 +1,5 @@
+"use client";
+import Link from "next/link";
 import React from "react";
 import { FaArrowDown } from "react-icons/fa";
 
@@ -11,10 +13,12 @@ const MidHeading = () => {
             </h1>
 
             {/* Arrow and "Showreel" text */}
-            <div className="mt-4 lg:mt-6 flex flex-col items-center">
-                <span className="text-[#5e17eb] font-medium">Showreel</span>
-                <FaArrowDown className="text-cyan-500  mb-1" />
-            </div>
+            <Link href="#exp-reel">
+                <div className="mt-4 lg:mt-6 flex flex-col items-center">
+                    <span className="text-[#5e17eb] font-medium">Showreel</span>
+                    <FaArrowDown className="text-cyan-500  mb-1" />
+                </div>
+            </Link>
         </div>
     );
 };

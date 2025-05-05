@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const CokeGlance = () => {
     return (
-        <div className="wavy-background py-12 px-4 md:px-16 lg:px-32">
+        <div className="wavy-background py-12 px-4 md:px-16 lg:px-32 freeheading">
             {/* <h2 className="text-white text-3xl sm:text-5xl font-semibold text-center mb-12">
                 Coke Glance
             </h2> */}

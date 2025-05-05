@@ -28,7 +28,7 @@ const BrandExperiences = () => {
     return (
         <section className="w-full py-16">
             {/* Top Section: Grid for Heading and Text */}
-            <div className="grid grid-cols-1 my-16 md:grid-cols-2 gap-6 lg:gap-8 px-4 md:px-16 max-w-screen-xl mx-auto relative">
+            <div className="grid grid-cols-1 my-16 lg:grid-cols-2 gap-6 lg:gap-8 px-4 md:px-16 max-w-screen-xl mx-auto relative">
                 {/* Background Prop Image */}
                 <Image
                     src="/assets/images/TangibleBgProp.png"
@@ -39,8 +39,8 @@ const BrandExperiences = () => {
                 />
                 {/* Left - Title */}
                 <div className="flex items-start md:items-center justify-start z-10">
-                    <h2 className="text-5xl sm:text-6xl font-bold leading-10">
-                        <span className="block text-4xl italic font-medium">
+                    <h2 className="text-5xl sm:text-7xl font-bold leading-10 lg:leading-14">
+                        <span className="block text-3xl italic font-medium">
                             Brand
                         </span>
                         EXPERIENCES
@@ -48,8 +48,8 @@ const BrandExperiences = () => {
                 </div>
 
                 {/* Right - Description */}
-                <div className="flex flex-col justify-center text-white">
-                    <p className="text-lg mb-4">
+                <div className="flex flex-col justify-center text-white freeheading">
+                    <p className="text-base mb-4">
                         From conceptual brand launches, to theme based on–ground
                         campaigns, to most happening night of the town…
                         on–ground experiences come in many flavors and a lot of
@@ -76,7 +76,7 @@ const BrandExperiences = () => {
                             height={200}
                             className="w-full h-auto object-cover rounded-md"
                         />
-                        <h3 className="text-lg font-bold mt-4 pl-2">
+                        <h3 className="text-lg freeheading font-bold mt-4 pl-2">
                             {item.title}
                         </h3>
                         <p className="text-sm opacity-80 pl-2">

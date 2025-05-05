@@ -24,7 +24,7 @@ const TopInfluencers = () => {
     return (
         <section className="w-full py-16">
             {/* Top Section: Grid for Heading and Text */}
-            <div className="grid grid-cols-1  mt-16 md:grid-cols-2 gap-6 lg:gap-8 px-4 md:px-16 max-w-screen-xl mx-auto relative">
+            <div className="grid grid-cols-1  mt-16 md:grid-cols-2 gap-6 lg:gap-0 px-4 md:px-16 max-w-screen-xl mx-auto relative">
                 {/* Background Prop Image */}
                 <Image
                     src="/assets/images/TangibleBgProp.png"
@@ -35,7 +35,7 @@ const TopInfluencers = () => {
                 />
                 {/* Left - Title */}
                 <div className="flex items-start md:items-center justify-start z-10">
-                    <h2 className="text-5xl sm:text-6xl font-bold leading-10">
+                    <h2 className="text-5xl sm:text-7xl font-bold leading-10 lg:leading-14">
                         <span className="block text-4xl italic font-medium">
                             Top
                         </span>
@@ -72,7 +72,7 @@ const TopInfluencers = () => {
                             alt={item.title}
                             className="w-full h-auto object-cover rounded-md"
                         />
-                        <h3 className="text-lg font-bold mt-4 pl-2">
+                        <h3 className="text-lg font-bold mt-4 pl-2 freeheading">
                             {item.title}
                         </h3>
                         <p className="text-sm opacity-80 pl-2">

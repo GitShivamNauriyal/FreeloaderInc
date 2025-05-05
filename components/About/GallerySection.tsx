@@ -69,7 +69,7 @@ export default function GallerySection() {
     const currentImages = imageSlides[page];
 
     return (
-        <section className="border max-w-5xl mx-auto px-4 py-20">
+        <section className="border max-w-5xl mx-auto px-4 py-20 freeheading">
             <h2 className="text-4xl font-semibold text-gray-100 mb-2">
                 Gallery
             </h2>

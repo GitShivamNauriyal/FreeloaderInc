@@ -2,12 +2,6 @@
 import React from "react";
 
 import Image from "next/image";
-// import nConsolidatedLogo from "@/assets/n_consolidated.png";
-// import hammerLogo from "@/assets/hammer.png";
-// import koverifyLogo from "@/assets/koverify.png";
-// import wardrobeLogo from "@/assets/wardrobe.png";
-// import marvinnoLogo from "@/assets/marvinno.png";
-// import headwayLogo from "@/assets/headway.png";
 import tempLogo from "@/public/assets/images/cubes_0.png"; // Import the placeholder image once
 
 const PartnerAllianceSection = () => {
@@ -16,7 +10,7 @@ const PartnerAllianceSection = () => {
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
                 {/* Left: Text */}
                 <div>
-                    <h2 className="text-4xl freeheading md:text-6xl font-bold leading-8 lg:leading-12">
+                    <h2 className="text-5xl lg:text-7xl freeheading md:text-6xl font-bold leading-10 lg:leading-16">
                         First <br />
                         Preference <br />
                         Alliance

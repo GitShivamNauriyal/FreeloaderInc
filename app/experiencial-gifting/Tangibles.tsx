@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function MerchSubsection() {
     return (
-        <div className="bg-white w-screen">
+        <div className="bg-white w-screen wavy-light-background">
             <section className="max-w-5xl mx-auto px-4 py-32 text-center">
                 <motion.h2
                     initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}

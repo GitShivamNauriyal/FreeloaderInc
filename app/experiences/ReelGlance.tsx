@@ -6,12 +6,16 @@ const ReelGlance = () => {
         <div className="border-t-2 border-white wavy-background py-2 lg:py-8 relative">
             <div className="flex flex-col items-center justify-center h-full px-4 md:px-16 lg:px-32 xl:px-64">
                 <div className="w-full mt-6 flex justify-center mb-6">
-                    <span className="text-white text-3xl sm:text-5xl font-medium">
+                    <span className="text-white text-3xl sm:text-5xl font-medium freeheading">
                         Quick glance at
                         <span className="block">our recent work</span>
                     </span>
                 </div>
-                <div className="relative w-full max-w-72 aspect-[9/18]">
+
+                <div
+                    id="exp-reel"
+                    className="relative w-full max-w-72 aspect-[9/18]"
+                >
                     <Image
                         src="/assets/images/PhoneFrame.png"
                         alt="Phone Frame"

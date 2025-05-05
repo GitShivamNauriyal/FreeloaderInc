@@ -136,6 +136,23 @@ h6 {
     background-repeat: no-repeat;
     background-position: center;
 }
+.wavy-light-background {
+    position: relative;
+    background-color: #fff; /* or any solid background */
+    z-index: 0;
+}
+
+.wavy-light-background::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("/assets/images/creation_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.2; /* Adjust this for lighter/darker image */
+    z-index: -1;
+}
 
 @font-face {
     font-family: "freelogo";
