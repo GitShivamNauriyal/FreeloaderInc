@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { motion } from "framer-motion";
 
 const steps = [
     {
@@ -36,37 +39,70 @@ const Process = () => {
                     ))}
                 </div>
             </div>
+
             <section id="process" className="text-white overflow-hidden">
-                <div className="container mx-auto px-4 relative z-10">
+                <div className="container mx-auto lg:px-4 relative z-10">
                     {/* Header */}
-                    <div className="max-w-4xl mx-auto text-center mb-16">
-                        <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
+                    <motion.div
+                        initial={{ opacity: 0, y: -20, filter: "blur(10px)" }}
+                        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        className="max-w-4xl mx-auto text-center mb-16"
+                    >
+                        <h2 className="text-4xl freeheading md:text-6xl lg:text-7xl font-bold leading-tight">
                             OUR PROCESS
                         </h2>
-                        <p className="text-xl opacity-80">
+                        <p className="text-base md:text-xl opacity-80">
                             FOR BUILDING WORLD-CLASS EXPERIENCES
                         </p>
-                    </div>
+                    </motion.div>
 
                     {/* Timeline container */}
                     <div className="relative max-w-5xl mx-auto">
                         {/* Vertical center line */}
-                        <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-white opacity-20 transform -translate-x-1/2" />
+                        <motion.div
+                            initial={{
+                                opacity: 0,
+                                scaleY: 0.8,
+                                filter: "blur(10px)",
+                            }}
+                            whileInView={{
+                                opacity: 1,
+                                scaleY: 1,
+                                filter: "blur(0px)",
+                            }}
+                            transition={{ duration: 0.6, ease: "easeOut" }}
+                            className="absolute left-1/2 top-0 bottom-0 w-1 bg-white opacity-20 transform -translate-x-1/2 origin-top"
+                        />
 
                         <div className="flex flex-col space-y-16">
                             {steps.map((step, index) => {
                                 const isRight = index % 2 === 0;
+
                                 return (
-                                    <div
+                                    <motion.div
                                         key={index}
-                                        className={`flex justify-between items-start w-full relative`}
+                                        initial={{
+                                            opacity: 0,
+                                            x: isRight ? -30 : 30,
+                                            filter: "blur(10px)",
+                                        }}
+                                        whileInView={{
+                                            opacity: 1,
+                                            x: 0,
+                                            filter: "blur(0px)",
+                                        }}
+                                        transition={{
+                                            duration: 0.6,
+                                            ease: "easeOut",
+                                        }}
+                                        className="flex justify-between items-start w-full relative"
                                     >
-                                        {/* Left side content */}
                                         {isRight ? (
                                             <>
                                                 <div className="w-1/2 pr-8 text-right freeheading">
                                                     <div className="inline-block text-left">
-                                                        <h3 className="text-xl lg:text-2xl font-bold mb-2">
+                                                        <h3 className="text-xl lg:text-2xl font-medium md:font-bold mb-2">
                                                             {step.title}
                                                         </h3>
                                                         <div className="hidden md:block">
@@ -85,9 +121,23 @@ const Process = () => {
                                                 </div>
 
                                                 {/* Marker */}
-                                                <div className="w-0 flex items-center justify-center relative">
+                                                <motion.div
+                                                    initial={{
+                                                        scale: 0,
+                                                        filter: "blur(10px)",
+                                                    }}
+                                                    whileInView={{
+                                                        scale: 1,
+                                                        filter: "blur(0px)",
+                                                    }}
+                                                    transition={{
+                                                        duration: 0.6,
+                                                        ease: "easeOut",
+                                                    }}
+                                                    className="w-0 flex items-center justify-center relative"
+                                                >
                                                     <div className="w-5 h-5 bg-white border-4 border-black rounded-full z-10"></div>
-                                                </div>
+                                                </motion.div>
 
                                                 <div className="w-1/2" />
                                             </>
@@ -96,13 +146,27 @@ const Process = () => {
                                                 <div className="w-1/2" />
 
                                                 {/* Marker */}
-                                                <div className="w-0 flex items-center justify-center relative">
+                                                <motion.div
+                                                    initial={{
+                                                        scale: 0,
+                                                        filter: "blur(10px)",
+                                                    }}
+                                                    whileInView={{
+                                                        scale: 1,
+                                                        filter: "blur(0px)",
+                                                    }}
+                                                    transition={{
+                                                        duration: 0.6,
+                                                        ease: "easeOut",
+                                                    }}
+                                                    className="w-0 flex items-center justify-center relative"
+                                                >
                                                     <div className="w-5 h-5 bg-white border-4 border-black rounded-full z-10"></div>
-                                                </div>
+                                                </motion.div>
 
-                                                <div className="w-1/2 pl-8 text-left">
+                                                <div className="w-1/2 pl-4 lg:pl-8 text-left freeheading">
                                                     <div>
-                                                        <h3 className="text-2xl font-bold mb-2">
+                                                        <h3 className="text-xl md:text-2xl font-medium md:font-bold mb-2">
                                                             {step.title}
                                                         </h3>
                                                         <div className="hidden md:block">
@@ -121,7 +185,7 @@ const Process = () => {
                                                 </div>
                                             </>
                                         )}
-                                    </div>
+                                    </motion.div>
                                 );
                             })}
                         </div>

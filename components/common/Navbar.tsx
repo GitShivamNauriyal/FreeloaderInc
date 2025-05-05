@@ -102,7 +102,7 @@ const Navbar = () => {
                                     className={`block px-3 py-2 text-lg font-medium transition-colors duration-300 ${
                                         label === "contact"
                                             ? "bg-gradient-to-r from-violet-400 to-purple-600 hover:from-violet-600 hover:to-purple-700 transition-all text-white rounded-md"
-                                            : "text-gray-300 hover:text-white"
+                                            : "text-white"
                                     }`}
                                 >
                                     {label.charAt(0).toUpperCase() +

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
     FaInstagram,
     FaLinkedinIn,
@@ -34,26 +35,40 @@ export default function Footer() {
                         LOADER <br />
                         AGENCY
                     </h3>
-                    <p className="text-gray-400">Brand Experience Agency</p>
-                    <p className="text-gray-400">Since 2009</p>
+                    <p className="text-gray-400 text-sm freeheading">
+                        Freeloader Agency is an inclusive workplace. We welcome
+                        people of all colors, genders, and beliefs.
+                    </p>
                 </div>
 
                 {/* Navigation */}
                 <div>
-                    <h4 className="font-semibold mb-3 text-white">
+                    <h4 className="font-semibold text-lg mb-3 text-white">
                         Navigation
                     </h4>
                     <ul className="space-y-2 text-gray-300">
-                        <li>Experiences</li>
-                        <li>Merch</li>
-                        <li>Influencers</li>
-                        <li>About Us</li>
+                        <li>
+                            <Link href="/experiences">Experiences</Link>
+                        </li>
+                        <li>
+                            <Link href="/experiencial gifting">
+                                Experiencial Gifting
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/influencers">Influencers</Link>
+                        </li>
+                        <li>
+                            <Link href="/about-us">About Us</Link>
+                        </li>
                     </ul>
                 </div>
 
                 {/* More */}
                 <div>
-                    <h4 className="font-semibold mb-3 text-white">More</h4>
+                    <h4 className="font-semibold text-lg mb-3 text-white">
+                        More
+                    </h4>
                     <ul className="space-y-2 text-gray-300">
                         <li>Our Services</li>
                         <li>Our Work</li>
@@ -63,15 +78,21 @@ export default function Footer() {
 
                 {/* Get in Touch */}
                 <div>
-                    <h4 className="font-semibold mb-3 text-white">
+                    <h4 className="font-semibold text-lg mb-3 text-white">
                         Get in Touch
                     </h4>
                     <a
                         href="mailto:hi@freeloader.in"
-                        className="text-violet-400 hover:underline block mb-4"
+                        className="text-violet-400 hover:underline block mb-1"
                     >
-                        hi@freeloader.in
+                        info@freeloader.in
                     </a>
+                    <div className="mb-4">+91 9818848485</div>
+                    <ul className="mb-4 list-disc ml-4">
+                        <li>NEW DELHI</li>
+                        <li>MUMBAI</li>
+                        <li>BENGALURU</li>
+                    </ul>
                     <div className="flex gap-4">
                         <a
                             href="#"

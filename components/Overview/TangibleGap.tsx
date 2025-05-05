@@ -1,12 +1,20 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 const TangibleGap = () => {
     return (
         <div className="bg-white w-full py-16 px-4">
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
                 {/* Text Content */}
-                <div className="max-w-2xl relative freepara">
+                <motion.div
+                    initial={{ opacity: 0, x: -30, filter: "blur(10px)" }}
+                    whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                    className="max-w-2xl relative freepara"
+                >
                     {/* Background Prop Image */}
                     <Image
                         src="/assets/images/TangibleBgProp.png"
@@ -17,33 +25,55 @@ const TangibleGap = () => {
                     />
 
                     {/* Heading Block */}
-                    <div className="relative z-10 freelogo font-[900]">
+                    <motion.div
+                        initial={{ opacity: 0, y: -20, filter: "blur(10px)" }}
+                        whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        className="relative z-10 freelogo font-[900] freeheading"
+                    >
                         <div className="flex items-center gap-2">
-                            <h2 className="text-7xl font-extrabold leading-4 lg:leading-tight text-[#2a1114]">
+                            <h2 className="text-4xl lg:text-7xl font-extrabold leading-4 text-[#2a1114]">
                                 THE
                             </h2>
-                            <span className="bg-[#5e17eb] text-2xl text-white px-4 py-2 font-bold text-md rounded-md">
+                            <span className="bg-[#5e17eb] text-sm md:text-2xl text-white px-2 lg:px-4 py-2 font-bold text-md rounded-md">
                                 WE HAVE A REAL PROBLEM
                             </span>
                         </div>
-                        <h2 className="text-7xl font-extrabold text-[#2a1114] mt-1">
+                        <h2 className="text-4xl lg:text-7xl font-extrabold text-[#2a1114]">
                             TANGIBLE GAP
                         </h2>
-                    </div>
+                    </motion.div>
 
                     {/* Paragraphs */}
-                    <p className="mt-4 text-[#2a1114] text-lg leading-tight">
+                    <motion.p
+                        initial={{ opacity: 0, x: -20, filter: "blur(10px)" }}
+                        whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        className="mt-4 text-[#2a1114] text-lg leading-5 md:leading-tight"
+                    >
                         In an all digital era, brands are beginning to lose
                         tangible connection with their audience at an ever
                         increasing pace.
-                    </p>
-                    <p className="mt-4 text-[#2a1114] text-lg leading-tight">
+                    </motion.p>
+
+                    <motion.p
+                        initial={{ opacity: 0, x: -20, filter: "blur(10px)" }}
+                        whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        className="mt-4 text-[#2a1114] text-lg leading-5 md:leading-tight"
+                    >
                         Instead of reactive & ad-hoc solutions to reconnect with
                         the audience, the demand for well thought out
                         experiences is increasing with every new marketing
                         initiative.
-                    </p>
-                    <p className="mt-4 text-[#2a1114] text-lg leading-tight">
+                    </motion.p>
+
+                    <motion.p
+                        initial={{ opacity: 0, x: -20, filter: "blur(10px)" }}
+                        whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        className="mt-4 text-[#2a1114] text-lg leading-5 md:leading-tight"
+                    >
                         Since 2009, we at FIC have constantly evolved towards
                         innovating and building new age{" "}
                         <strong>
@@ -51,11 +81,16 @@ const TangibleGap = () => {
                         </strong>{" "}
                         solutions, pushing the boundaries of what an experience
                         really means.
-                    </p>
-                </div>
+                    </motion.p>
+                </motion.div>
 
-                {/* Phone Frame + Video */}
-                <div className="relative w-full max-w-80 aspect-[1/2]">
+                {/* Phone Frame + (optional video) */}
+                <motion.div
+                    initial={{ opacity: 0, x: 50, filter: "blur(10px)" }}
+                    whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    className="relative w-full max-w-80 aspect-[1/2]"
+                >
                     <Image
                         src="/assets/images/PhoneFrame.png"
                         alt="Phone Frame"
@@ -63,6 +98,8 @@ const TangibleGap = () => {
                         height={1200}
                         className="absolute inset-0 w-full h-full z-10 pointer-events-none"
                     />
+
+                    {/* Optional Video — uncomment to use */}
                     {/* <video
                         src="/assets/tangable.mp4"
                         autoPlay
@@ -71,7 +108,7 @@ const TangibleGap = () => {
                         playsInline
                         className="absolute inset-[7%] w-[86%] h-[86%] object-cover rounded-[2rem] z-0"
                     /> */}
-                </div>
+                </motion.div>
             </div>
         </div>
     );

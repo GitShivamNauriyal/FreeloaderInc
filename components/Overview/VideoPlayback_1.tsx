@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 
 const OverviewVideoPlayback = () => {
     return (
@@ -17,9 +18,14 @@ const OverviewVideoPlayback = () => {
                 Your browser does not support the video tag.
             </video>
 
-            {/* Overlay */}
+            {/* Overlay Text with Motion */}
             <div className="relative z-10 flex items-center justify-center h-full px-4">
-                <div className="max-w-4xl text-center text-[#5e17eb] font-extralight text-xl sm:text-2xl md:text-5xl tracking-wide leading-6 sm:leading-10">
+                <motion.div
+                    initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
+                    whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
+                    className="max-w-4xl text-center text-[#5e17eb] font-extralight text-xl sm:text-2xl md:text-5xl tracking-wide leading-6 sm:leading-10"
+                >
                     <p>
                         “YOU CAN’T HOLD A HASHTAG.{" "}
                         <br className="hidden sm:inline" />
@@ -34,7 +40,7 @@ const OverviewVideoPlayback = () => {
                         <br />
                         PART OF SOMEONE’S LIFE.”
                     </p>
-                </div>
+                </motion.div>
             </div>
         </div>
     );

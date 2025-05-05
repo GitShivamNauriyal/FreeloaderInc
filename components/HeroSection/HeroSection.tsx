@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
 import ClientsSection from "../About/ClientsSection";
 import Creation from "../Overview/Creation";
 import ExperienceMarketingSection from "../Overview/ExpMarket";
@@ -135,7 +136,7 @@ export default function HeroSection() {
         // {/* Optional: <HeroParallax products={products} /> */}
 
         <div className="flex flex-col items-center justify-center">
-            <main className="w-full h-[80vh] lg:h-[90vh] mt-16 flex flex-col justify-between px-4 lg:px-12 py-10 hero-container">
+            <main className="w-full h-[50vh] lg:h-[90vh] mt-16 flex flex-col justify-between px-4 lg:px-12 py-10 hero-container">
                 <div /> {/* Spacer */}
                 <div className="text-left">
                     <h1 className="z-10 text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] font-[900] leading-[0.8] tracking-[0.1rem] text-white freelogo">
@@ -147,16 +148,22 @@ export default function HeroSection() {
                     </h1>
                     <p className="text-sm sm:text-lg font-light tracking-[4px] text-gray-300 mt-2 freeheading">
                         <Link href="/experiences">EXPERIENCES</Link> •{" "}
-                        <Link href="/experiencial-gifting">MERCH</Link> •{" "}
-                        <Link href="/influencers">INFLUENCERS</Link>
+                        <Link href="/experiencial-gifting">
+                            EXPERIENCIAL GIFTING
+                        </Link>{" "}
+                        • <Link href="/influencers">INFLUENCERS</Link>
                     </p>
                 </div>
             </main>
             <div className="w-screen bg-cyan-400 text-[#5e17eb] font-bold tracking-wider text-center freelogo py-4 px-4 text-sm sm:text-lg lg:text-2xl">
-                <h2>
+                <motion.h2
+                    initial={{ x: 20, filter: "blur(10px)" }}
+                    whileInView={{ x: 0, filter: "blur(0px)" }}
+                    transition={{ ease: "easeIn", duration: 0.4 }}
+                >
                     16+ YEAR JOURNEY • 500+ EXPERIENCES DELIVERED • OVER 60
                     BRANDS
-                </h2>
+                </motion.h2>
             </div>
             <Creation />
             <OverviewVideoPlayback />
