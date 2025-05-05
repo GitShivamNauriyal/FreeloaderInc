@@ -9,38 +9,26 @@ const MerchGlance = () => {
             </h2> */}
 
             <div className="flex flex-col md:flex-row items-center justify-center gap-12">
-                <div className="flex flex-col items-center">
-                    <div className="relative w-64 md:w-72 aspect-[1/2]">
-                        <Image
-                            src="/assets/images/PhoneFrame.png"
-                            alt="Merch Glance 1"
-                            fill
-                            className="object-cover rounded-xl shadow-lg"
-                        />
+                {["1", "2", "3"].map((num) => (
+                    <div key={num} className="flex flex-col items-center">
+                        <div className="relative w-64 md:w-72 aspect-[1/2]">
+                            <video
+                                src={`/assets/video/experiencial_gifting/exp_reel_${num}.mp4`}
+                                className="absolute inset-0 w-full h-full object-cover rounded-4xl z-0"
+                                autoPlay
+                                muted
+                                loop
+                                playsInline
+                            />
+                            <Image
+                                src="/assets/images/PhoneFrame.png"
+                                alt={`Merch Glance ${num}`}
+                                fill
+                                className="object-cover rounded-xl z-10 pointer-events-none"
+                            />
+                        </div>
                     </div>
-                </div>
-
-                <div className="flex flex-col items-center">
-                    <div className="relative w-64 md:w-72 aspect-[1/2]">
-                        <Image
-                            src="/assets/images/PhoneFrame.png"
-                            alt="Merch Glance 2"
-                            fill
-                            className="object-cover rounded-xl shadow-lg"
-                        />
-                    </div>
-                </div>
-
-                <div className="flex flex-col items-center">
-                    <div className="relative w-64 md:w-72 aspect-[1/2]">
-                        <Image
-                            src="/assets/images/PhoneFrame.png"
-                            alt="Merch Glance 3"
-                            fill
-                            className="object-cover rounded-xl shadow-lg"
-                        />
-                    </div>
-                </div>
+                ))}
             </div>
         </div>
     );

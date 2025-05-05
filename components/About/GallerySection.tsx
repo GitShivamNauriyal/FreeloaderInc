@@ -1,88 +1,91 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const imageSlides = [
-    [
-        // Slide 1
-        "/assets/gallery/img1.jpg",
-        "/assets/gallery/img2.jpg",
-        "/assets/gallery/img3.jpg",
-        "/assets/gallery/img4.jpg",
-        "/assets/gallery/img5.jpg",
-    ],
-    [
-        // Slide 2
-        "/assets/gallery/img6.jpg",
-        "/assets/gallery/img7.jpg",
-        "/assets/gallery/img8.jpg",
-        "/assets/gallery/img9.jpg",
-        "/assets/gallery/img10.jpg",
-    ],
-    [
-        // Slide 3
-        "/assets/gallery/img11.jpg",
-        "/assets/gallery/img12.jpg",
-        "/assets/gallery/img13.jpg",
-        "/assets/gallery/img14.jpg",
-        "/assets/gallery/img15.jpg",
-    ],
-];
+function chunkArray<T>(array: T[], chunkSize: number): T[][] {
+    const chunks: T[][] = [];
+    for (let i = 0; i < array.length; i += chunkSize) {
+        chunks.push(array.slice(i, i + chunkSize));
+    }
+    return chunks;
+}
 
-const layoutMaps = [
-    // Slide 1 layout
+interface GallerySectionProps {
+    images: string[];
+    title?: string;
+    imagesPerSlide?: number;
+}
+
+const defaultLayouts = [
+    // Layout 1: Big hero tile top-left
     [
         "col-span-2 row-span-2",
         "col-span-1 row-span-1",
         "col-span-1 row-span-1",
-        "col-span-1 row-span-1",
-        "col-span-1 row-span-1",
-    ],
-    // Slide 2 layout
-    [
-        "col-span-1 row-span-1",
-        "col-span-1 row-span-1",
-        "col-span-2 row-span-2",
-        "col-span-1 row-span-1",
-        "col-span-1 row-span-1",
-    ],
-    // Slide 3 layout
-    [
         "col-span-1 row-span-1",
         "col-span-1 row-span-1",
         "col-span-2 row-span-1",
-        "col-span-3 row-span-1",
+    ],
+
+    // Layout 2: Big one in the center
+    [
+        "col-span-1 row-span-1",
+        "col-span-2 row-span-2",
+        "col-span-1 row-span-1",
+        "col-span-1 row-span-1",
+        "col-span-1 row-span-1",
+        "col-span-2 row-span-1",
+    ],
+
+    // Layout 3: Horizontal big tile
+    [
+        "col-span-4 row-span-1",
+        "col-span-2 row-span-1",
+        "col-span-1 row-span-1",
+        "col-span-1 row-span-1",
+        "col-span-1 row-span-1",
         "col-span-1 row-span-1",
     ],
 ];
 
-export default function GallerySection() {
+export default function GallerySection({
+    images,
+    title = "Gallery",
+    imagesPerSlide = 6,
+}: GallerySectionProps) {
     const [page, setPage] = useState(0);
+
+    const imageSlides = useMemo(
+        () => chunkArray(images, imagesPerSlide),
+        [images, imagesPerSlide]
+    );
     const totalPages = imageSlides.length;
+    const currentImages = imageSlides[page];
+
+    const currentLayout = defaultLayouts[page % defaultLayouts.length];
 
     const handlePrev = () => setPage((p) => Math.max(p - 1, 0));
     const handleNext = () => setPage((p) => Math.min(p + 1, totalPages - 1));
 
-    const currentImages = imageSlides[page];
-
     return (
         <section className="border max-w-5xl mx-auto px-4 py-20 freeheading">
             <h2 className="text-4xl font-semibold text-gray-100 mb-2">
-                Gallery
+                {title}
             </h2>
             <hr className="border-t border-gray-200/30 mb-10" />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
                 {currentImages.map((src, index) => {
                     const className =
-                        layoutMaps[page][index] || "col-span-1 row-span-1";
+                        currentLayout[index] || "col-span-1 row-span-1";
+
                     return (
                         <motion.div
                             key={index}
-                            className={`${className} rounded-lg overflow-hidden`}
+                            className={`rounded-lg overflow-hidden ${className}`}
                             initial={{
                                 opacity: 0,
                                 y: 20,
@@ -107,7 +110,7 @@ export default function GallerySection() {
                 })}
             </div>
 
-            {/* Pagination */}
+            {/* Pagination Controls */}
             <div className="flex items-center justify-center mt-10 gap-4 text-sm text-gray-500">
                 <span className="font-mono">
                     {String(page + 1).padStart(2, "0")} /{" "}
