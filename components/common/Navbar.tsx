@@ -77,6 +77,7 @@ const Navbar = () => {
             </div>
 
             {/* Mobile menu with animation */}
+            {/* Mobile menu with animation */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
@@ -104,6 +105,7 @@ const Navbar = () => {
                                             ? "bg-gradient-to-r from-violet-400 to-purple-600 hover:from-violet-600 hover:to-purple-700 transition-all text-white rounded-md"
                                             : "text-white"
                                     }`}
+                                    onClick={() => setIsOpen(false)} // Close the menu on click
                                 >
                                     {label.charAt(0).toUpperCase() +
                                         label.slice(1)}

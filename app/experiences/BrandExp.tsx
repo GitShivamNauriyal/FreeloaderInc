@@ -42,7 +42,7 @@ const BrandExperiences = () => {
                 <motion.div
                     initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
                     whileInView={{ opacity: 1, y: 0, filter: "blur(0)" }}
-                    transition={{ delay: 0, ease: "easeIn" }}
+                    transition={{ delay: 0, ease: "easeIn", duration: 0.4 }}
                     className="flex items-start md:items-center justify-start z-10"
                 >
                     <h2 className="text-5xl sm:text-7xl font-bold leading-10 lg:leading-14">
@@ -56,7 +56,7 @@ const BrandExperiences = () => {
                 <motion.div
                     initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
                     whileInView={{ opacity: 1, y: 0, filter: "blur(0)" }}
-                    transition={{ delay: 0.2, ease: "easeIn" }}
+                    transition={{ delay: 0.2, ease: "easeIn", duration: 0.4 }}
                     className="flex flex-col justify-center text-white freeheading"
                 >
                     <p className="text-base mb-4">
@@ -80,7 +80,7 @@ const BrandExperiences = () => {
                         className="text-white border rounded lg:border-0 pb-2"
                         initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, y: 0, filter: "blur(0)" }}
-                        transition={{ delay: index * 0.1 }}
+                        transition={{ delay: index * 0.1, duration: 0.4 }}
                     >
                         <Image
                             src={item.image}

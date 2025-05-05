@@ -17,7 +17,7 @@ const page = () => {
             <Merchandise />
             <MidHeading />
             <MerchGlance />
-            <GallerySection images={imageList} title="Event Moments" />
+            <GallerySection images={imageList} title="Showcase" />
             <MerchSubsection />
             {/* <Footer /> */}
         </div>

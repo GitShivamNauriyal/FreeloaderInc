@@ -11,7 +11,7 @@ export default function LoadingScreen({
     const [isLoading, setIsLoading] = useState(true);
     const [displayText, setDisplayText] = useState("");
     const typingSpeed = 150;
-    const fullText = "Free Loader Agency";
+    const fullText = "FREE LOADER AGENCY";
 
     useEffect(() => {
         let index = 0;
@@ -50,7 +50,7 @@ export default function LoadingScreen({
                         className="fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-br from-[#1e1b4b] via-black to-[#0f0f1f] text-white text-4xl sm:text-5xl font-mono font-bold tracking-widest"
                         initial={{ opacity: 1 }}
                         animate={{ opacity: 1 }}
-                        exit={{ y: "-100%", opacity: 0 }}
+                        exit={{ y: "-10%", opacity: 0 }}
                         transition={{ duration: 1.4, ease: "easeInOut" }}
                     >
                         <div className="relative">
@@ -69,9 +69,9 @@ export default function LoadingScreen({
                                     repeat: Infinity,
                                     ease: "easeInOut",
                                 }}
-                                className="relative text-violet-400 drop-shadow-lg"
+                                className="relative text-violet-400 drop-shadow-lg whitespace-pre-line"
                             >
-                                {displayText}
+                                {displayText.replace(/ /g, "\n")}
                             </motion.span>
                         </div>
                     </motion.div>

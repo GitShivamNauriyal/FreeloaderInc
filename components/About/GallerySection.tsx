@@ -72,7 +72,7 @@ export default function GallerySection({
 
     return (
         <section className="border max-w-5xl mx-auto px-4 py-20 freeheading">
-            <h2 className="text-4xl font-semibold text-gray-100 mb-2">
+            <h2 className="text-3xl md:text-4xl font-semibold text-gray-100 mb-2">
                 {title}
             </h2>
             <hr className="border-t border-gray-200/30 mb-10" />

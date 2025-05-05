@@ -43,7 +43,7 @@ const Merchandise = () => {
                     className="flex lg:col-span-2 items-start md:items-center justify-start relative"
                     initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
                     whileInView={{ opacity: 1, y: 0, filter: "blur(0)" }}
-                    transition={{ delay: 0, ease: "easeIn" }}
+                    transition={{ delay: 0, ease: "easeIn", duration: 0.4 }}
                 >
                     {/* Background Prop Image */}
                     <Image
@@ -66,7 +66,7 @@ const Merchandise = () => {
                     className="flex flex-col justify-center text-white"
                     initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
                     whileInView={{ opacity: 1, y: 0, filter: "blur(0)" }}
-                    transition={{ delay: 0.2, ease: "easeIn" }}
+                    transition={{ delay: 0.2, ease: "easeIn", duration: 0.4 }}
                 >
                     <p className="text-lg mb-4">
                         Our team has deep specialization in creating brand
@@ -91,6 +91,7 @@ const Merchandise = () => {
                         transition={{
                             delay: index * 0.1, // Index based delay for animation
                             ease: "easeIn",
+                            duration: 0.4,
                         }}
                     >
                         <Image

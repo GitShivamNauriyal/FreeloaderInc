@@ -13,7 +13,7 @@ const page = () => {
         <div>
             <TopInfluencers />
             <MidHeading />
-            <GallerySection images={imageList} title="Event Moments" />
+            <GallerySection images={imageList} title="Influencers Gallery" />
         </div>
     );
 };

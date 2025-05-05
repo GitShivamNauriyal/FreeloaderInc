@@ -16,7 +16,7 @@ export default function MerchSubsection() {
                     Explore Our Merch & Gift Shop
                 </motion.h2>
                 <motion.p
-                    initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+                    initial={{ opacity: 0, y: 100, filter: "blur(100px)" }}
                     whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                     transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
                     className="text-[#5e17ebdd] max-w-2xl mx-auto mb-8"
@@ -27,14 +27,20 @@ export default function MerchSubsection() {
                     the brand or surprising someone special, there&apos;s
                     something for everyone.
                 </motion.p>
-                <Link
-                    href="https://future-culture-next-js-frontend.vercel.app/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block px-6 py-3 text-sm font-semibold rounded-md bg-violet-600 hover:bg-violet-500 text-white transition"
+                <motion.div
+                    initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+                    whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                    transition={{ duration: 0.5, delay: 0.4, ease: "easeOut" }}
                 >
-                    Tangibles →
-                </Link>
+                    <Link
+                        href="https://future-culture-next-js-frontend.vercel.app/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block px-6 py-3 text-sm font-semibold rounded-md bg-violet-600 hover:bg-violet-700 hover:-translate-y-1 text-white transition"
+                    >
+                        Tangibles →
+                    </Link>
+                </motion.div>
             </section>
         </div>
     );

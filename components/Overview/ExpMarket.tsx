@@ -28,12 +28,12 @@ const ExperienceMarketingSection = () => {
                     <motion.h2
                         initial={{ opacity: 0, y: -20, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                        transition={{ duration: 0.3, ease: "easeOut" }}
-                        className="text-4xl md:text-7xl font-[900] text-[#2e0e0e] leading-10 lg:leading-[4rem] mb-6 z-10 freeheading"
+                        transition={{ duration: 0.5, ease: "easeOut" }}
+                        className="text-4xl md:text-7xl font-extrabold text-black/80 leading-10 lg:leading-[4rem] mb-6 z-10 freeheading"
                     >
                         <div className="relative inline-block z-10">
                             <span>EXPERIENCE</span>
-                            <div className="absolute -top-4 -right-12 rotate-8 bg-[#5e17eb] text-white font-semibold px-4 py-1 text-xs sm:text-sm shadow-lg">
+                            <div className="absolute -top-4 -right-12 rotate-8 bg-[#5e17eb] text-white font-semibold px-4 py-1 text-xs sm:text-base shadow-lg rounded-lg">
                                 OUR SOLUTION
                             </div>
                         </div>
@@ -45,7 +45,7 @@ const ExperienceMarketingSection = () => {
                     <motion.p
                         initial={{ opacity: 0, x: -20, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        transition={{ duration: 0.5, ease: "easeOut" }}
                         className="text-[#2e0e0e] text-lg leading-normal mb-3"
                     >
                         Experience Marketing is our way to solve various
@@ -56,7 +56,7 @@ const ExperienceMarketingSection = () => {
                     <motion.p
                         initial={{ opacity: 0, x: -20, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        transition={{ duration: 0.5, ease: "easeOut" }}
                         className="text-[#2e0e0e] text-lg leading-normal mb-3"
                     >
                         As per our philosophy, a brand experience takes place
@@ -70,7 +70,7 @@ const ExperienceMarketingSection = () => {
                     <motion.p
                         initial={{ opacity: 0, x: -20, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        transition={{ duration: 0.5, ease: "easeOut" }}
                         className="text-[#2e0e0e] text-lge leading-normal"
                     >
                         It is in that moment when your audience experiences your
@@ -82,7 +82,7 @@ const ExperienceMarketingSection = () => {
                 <motion.div
                     initial={{ opacity: 0, x: 50, filter: "blur(10px)" }}
                     whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    transition={{ duration: 0.7, ease: "easeOut" }}
                     className="relative w-full max-w-80 aspect-[1/2]"
                 >
                     <Image

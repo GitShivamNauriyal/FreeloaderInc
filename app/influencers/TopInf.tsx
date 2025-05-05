@@ -45,7 +45,7 @@ const TopInfluencers = () => {
                     className="flex items-start md:items-center justify-start z-10"
                 >
                     <h2 className="text-5xl sm:text-7xl font-bold leading-10 lg:leading-14">
-                        <span className="block text-4xl italic font-medium">
+                        <span className="block text-5xl italic font-medium">
                             Top
                         </span>
                         INFLUENCERS
@@ -57,9 +57,9 @@ const TopInfluencers = () => {
                     initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
                     whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                     transition={{ duration: 0.6, delay: 0.1 }}
-                    className="flex flex-col justify-center text-white"
+                    className="flex flex-col justify-center text-white freeheading"
                 >
-                    <p className="text-lg mb-4">
+                    <p className="text-base mb-4">
                         We work closely with influencers from various fields,
                         for your Social Media campaigns, events, parties,
                         endorsement, shoots & more.
@@ -77,9 +77,9 @@ const TopInfluencers = () => {
                 {experiences.map((item, index) => (
                     <motion.div
                         key={index}
-                        initial={{ opacity: 0, y: 40, filter: "blur(10px)" }}
+                        initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        transition={{ duration: 0.5, delay: index * 0.2 }}
                         className="text-white border rounded lg:border-0 pb-2"
                     >
                         <Image
