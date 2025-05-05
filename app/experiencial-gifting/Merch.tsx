@@ -35,9 +35,9 @@ const Merchandise = () => {
     return (
         <section className="w-full py-16 ">
             {/* Top Section: Grid for Heading and Text */}
-            <div className="grid grid-cols-1 md:grid-cols-2 mt-16 gap-6 lg:gap-8 px-4 md:px-16 max-w-screen-xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-3 mt-16 gap-6 lg:gap-4 px-4 md:px-16 max-w-screen-xl mx-auto">
                 {/* Left - Title */}
-                <div className="flex items-start md:items-center justify-start relative">
+                <div className="flex lg:col-span-2 items-start md:items-center justify-start relative">
                     {/* Background Prop Image */}
                     <Image
                         src="/assets/images/TangibleBgProp.png"
@@ -46,11 +46,11 @@ const Merchandise = () => {
                         height={200}
                         className="absolute -top-8 -left-10 w-32 h-32 object-contain z-0 opacity-100"
                     />
-                    <h2 className="text-5xl sm:text-6xl font-bold leading-10 z-10">
+                    <h2 className="text-5xl sm:text-6xl font-bold leading-10 lg:leading-14 z-10">
                         <span className="block text-4xl italic font-medium mb-0.5">
                             Customised & Personalised
                         </span>
-                        MERCHANDISE
+                        EXPERIENCIAL GIFTING
                     </h2>
                 </div>
 

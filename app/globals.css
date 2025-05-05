@@ -1,7 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600&family=Outfit:wght@400;700&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=agrandir:700,500,400&display=swap");
+@import url("https://db.onlinewebfonts.com/c/35170cf1718ed22ad98e6f262b827249?family=Agrandir+Wide+Light");
+@import url("https://db.onlinewebfonts.com/c/1dc7840abb13fcda12aa8d1cb21fb832?family=Agrandir");
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700;900&display=swap");
+@import url("https://db.onlinewebfonts.com/c/cd7b05ba22e73021e0a390f532a72589?family=PP+Telegraf");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&display=swap");
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
 /* Removed @custom-variant as it is not a standard CSS rule */
+
+:root {
+    --font-logo: "Anton", sans-serif;
+    --font-heading: "Barlow", sans-serif;
+    --font-para: "Outfit", sans-serif;
+}
 
 :root {
     --color-background: var(--background);
@@ -61,11 +77,27 @@ body {
     overflow-x: hidden;
     background: #5e17eb; /* background required by client */
     color: white;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-        "Lucida Sans", Arial, sans-serif;
+    /* font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif; */
+    /* font-family: "Outfit", sans-serif; */
+    /* font-family: "Anton", sans-serif; */
+    font-family: "Agrandir", sans-serif;
 }
 
-h1,
+.freelogo {
+    font-family: "Agrandir", sans-serif;
+    /* font-family: "Poppins", sans-serif; */
+    /* font-family: "Space Grotesk", sans-serif; */
+    /* font-family: "Outfit", sans-serif; */
+}
+.freeheading {
+    font-family: "Encode Sans Expanded", sans-serif;
+}
+/* .freepara {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+} */
+
+/* h1,
 h2,
 h3,
 h4,
@@ -73,7 +105,7 @@ h5,
 h6 {
     font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
         "Lucida Sans", Arial, sans-serif;
-}
+} */
 
 .hero-container {
     position: relative;

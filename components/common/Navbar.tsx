@@ -24,7 +24,7 @@ const Navbar = () => {
                     <div className="flex-shrink-0">
                         <Link
                             href="/"
-                            className="relative text-white font-freelogo text-xl font-medium glitch-container"
+                            className="relative text-white  text-xl font-extrabold glitch-container"
                         >
                             <div className="raleway translate-y-1 glitch-text">
                                 FREE

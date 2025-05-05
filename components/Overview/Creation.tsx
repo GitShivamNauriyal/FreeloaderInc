@@ -7,16 +7,16 @@ const Creation = () => {
         <div>
             <div className="w-screen wavy-background">
                 <section className="max-w-7xl mx-auto gap-8 px-4 sm:px-6 md:px-20 py-16 text-white">
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-[60px] xl:text-[72px] font-extrabold leading-8 lg:leading-16 tracking-tight uppercase">
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-[60px] xl:text-[72px] font-extrabold leading-8 lg:leading-16 tracking-normal uppercase">
                         Creating Tangible Brand{" "}
                         <br className="hidden sm:block" />
                         Experiences Since 2009
                     </h2>
-                    <div className="flex flex-col md:flex-row justify-between items-start gap-6 lg:gap-12 lg:py-10">
+                    <div className="flex flex-col md:flex-row justify-between items-start gap-12 lg:gap-6 lg:py-10">
                         {/* Left Side */}
                         <div className="flex-1 w-full">
                             <div className="mt-6 sm:mt-10">
-                                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-extrabold leading-5 lg:leading-8 uppercase">
+                                <h3 className="text-lg freelogo sm:text-xl md:text-2xl lg:text-3xl font-extrabold leading-5  lg:leading-8 uppercase">
                                     Freeloader <br />
                                     Incorporated <br />
                                     Communications <br />
@@ -29,7 +29,7 @@ const Creation = () => {
                         </div>
 
                         {/* Right Side */}
-                        <div className="flex-1 w-full max-w-xl text-sm sm:text-base text-gray-100 space-y-6">
+                        <div className="flex-1 w-full max-w-xl leading-tight text-sm sm:text-base text-gray-100 space-y-4 lg:space-y-6">
                             <p>
                                 Founded in 2009, by Bhuvanesh S Manhas, FIC came
                                 into inception with the same vision that we

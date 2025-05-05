@@ -138,21 +138,21 @@ export default function HeroSection() {
             <main className="w-full h-[80vh] lg:h-[90vh] mt-16 flex flex-col justify-between px-4 lg:px-12 py-10 hero-container">
                 <div /> {/* Spacer */}
                 <div className="text-left">
-                    <h1 className="z-10 text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] font-extrabold leading-[0.8] tracking-[0.1rem] text-white font-freelogo">
+                    <h1 className="z-10 text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] font-[900] leading-[0.8] tracking-[0.1rem] text-white freelogo">
                         FREE
                         <br />
                         LOADER
                         <br />
                         AGENCY
                     </h1>
-                    <p className="text-sm sm:text-lg font-light tracking-[4px] text-gray-300 mt-2 font-freeheading">
+                    <p className="text-sm sm:text-lg font-light tracking-[4px] text-gray-300 mt-2 freeheading">
                         <Link href="/experiences">EXPERIENCES</Link> •{" "}
                         <Link href="/experiencial-gifting">MERCH</Link> •{" "}
                         <Link href="/influencers">INFLUENCERS</Link>
                     </p>
                 </div>
             </main>
-            <div className="w-screen bg-cyan-400 text-[#5e17eb] font-bold text-center py-4 text-sm sm:text-lg lg:text-xl">
+            <div className="w-screen bg-cyan-400 text-[#5e17eb] font-bold tracking-wider text-center freelogo py-4 px-4 text-sm sm:text-lg lg:text-2xl">
                 <h2>
                     16+ YEAR JOURNEY • 500+ EXPERIENCES DELIVERED • OVER 60
                     BRANDS

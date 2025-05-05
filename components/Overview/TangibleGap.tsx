@@ -4,9 +4,9 @@ import React from "react";
 const TangibleGap = () => {
     return (
         <div className="bg-white w-full py-16 px-4">
-            <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
+            <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
                 {/* Text Content */}
-                <div className="max-w-3xl relative">
+                <div className="max-w-2xl relative freepara">
                     {/* Background Prop Image */}
                     <Image
                         src="/assets/images/TangibleBgProp.png"
@@ -17,33 +17,33 @@ const TangibleGap = () => {
                     />
 
                     {/* Heading Block */}
-                    <div className="relative z-10">
+                    <div className="relative z-10 freelogo font-[900]">
                         <div className="flex items-center gap-2">
-                            <h2 className="text-5xl font-extrabold leading-4 lg:leading-tight text-[#2a1114]">
+                            <h2 className="text-7xl font-extrabold leading-4 lg:leading-tight text-[#2a1114]">
                                 THE
                             </h2>
-                            <span className="bg-[#5e17eb] text-white px-4 py-2 font-bold text-md rounded-md">
+                            <span className="bg-[#5e17eb] text-2xl text-white px-4 py-2 font-bold text-md rounded-md">
                                 WE HAVE A REAL PROBLEM
                             </span>
                         </div>
-                        <h2 className="text-6xl font-extrabold text-[#2a1114] mt-1">
+                        <h2 className="text-7xl font-extrabold text-[#2a1114] mt-1">
                             TANGIBLE GAP
                         </h2>
                     </div>
 
                     {/* Paragraphs */}
-                    <p className="mt-4 text-[#2a1114] text-base leading-tight">
+                    <p className="mt-4 text-[#2a1114] text-lg leading-tight">
                         In an all digital era, brands are beginning to lose
                         tangible connection with their audience at an ever
                         increasing pace.
                     </p>
-                    <p className="mt-4 text-[#2a1114] text-base leading-tight">
+                    <p className="mt-4 text-[#2a1114] text-lg leading-tight">
                         Instead of reactive & ad-hoc solutions to reconnect with
                         the audience, the demand for well thought out
                         experiences is increasing with every new marketing
                         initiative.
                     </p>
-                    <p className="mt-4 text-[#2a1114] text-base leading-tight">
+                    <p className="mt-4 text-[#2a1114] text-lg leading-tight">
                         Since 2009, we at FIC have constantly evolved towards
                         innovating and building new age{" "}
                         <strong>
@@ -55,7 +55,7 @@ const TangibleGap = () => {
                 </div>
 
                 {/* Phone Frame + Video */}
-                <div className="relative w-full max-w-72 aspect-[9/16]">
+                <div className="relative w-full max-w-80 aspect-[1/2]">
                     <Image
                         src="/assets/images/PhoneFrame.png"
                         alt="Phone Frame"

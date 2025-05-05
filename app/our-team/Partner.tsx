@@ -12,11 +12,11 @@ import tempLogo from "@/public/assets/images/cubes_0.png"; // Import the placeho
 
 const PartnerAllianceSection = () => {
     return (
-        <section className="bg-[#661eff] text-white py-20 px-6 md:px-16">
+        <section className="bg-[#661eff] text-white py-20 px-6 md:px-16 wavy-background">
             <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
                 {/* Left: Text */}
                 <div>
-                    <h2 className="text-4xl md:text-6xl font-bold leading-8 lg:leading-12">
+                    <h2 className="text-4xl freeheading md:text-6xl font-bold leading-8 lg:leading-12">
                         First <br />
                         Preference <br />
                         Alliance

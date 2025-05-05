@@ -27,23 +27,16 @@ const steps = [
 
 const Process = () => {
     return (
-        <div className="w-full py-20 px-4">
-            <section
-                id="process"
-                className="text-white relative overflow-hidden"
-            >
-                {/* Optional grid background, low opacity */}
-                <div className="absolute inset-0 opacity-10 pointer-events-none">
-                    <div className="grid grid-cols-12 h-full">
-                        {Array.from({ length: 12 }).map((_, i) => (
-                            <div
-                                key={i}
-                                className="border-r border-white"
-                            ></div>
-                        ))}
-                    </div>
+        <div className="w-full py-20 px-4 relative">
+            {/* Optional grid background, low opacity */}
+            <div className="absolute inset-0 opacity-10 pointer-events-none">
+                <div className="grid grid-cols-12 h-full">
+                    {Array.from({ length: 12 }).map((_, i) => (
+                        <div key={i} className="border-r-2 border-white"></div>
+                    ))}
                 </div>
-
+            </div>
+            <section id="process" className="text-white overflow-hidden">
                 <div className="container mx-auto px-4 relative z-10">
                     {/* Header */}
                     <div className="max-w-4xl mx-auto text-center mb-16">
