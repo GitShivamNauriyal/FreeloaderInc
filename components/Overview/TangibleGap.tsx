@@ -84,30 +84,31 @@ const TangibleGap = () => {
                     </motion.p>
                 </motion.div>
 
-                {/* Phone Frame + (optional video) */}
                 <motion.div
-                    initial={{ opacity: 0, x: 50, filter: "blur(10px)" }}
-                    whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
-                    transition={{ duration: 0.7, ease: "easeOut" }}
-                    className="relative w-full max-w-80 aspect-[1/2]"
+                    className="flex flex-col items-center overflow-visible"
+                    initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+                    whileInView={{ opacity: 1, y: 0, filter: "blur(0)" }}
+                    transition={{
+                        ease: "easeIn",
+                        duration: 0.6,
+                    }}
                 >
-                    <Image
-                        src="/assets/images/PhoneFrame.png"
-                        alt="Phone Frame"
-                        width={400}
-                        height={1200}
-                        className="absolute inset-0 w-full h-full z-10 pointer-events-none"
-                    />
-
-                    {/* Optional Video — uncomment to use */}
-                    {/* <video
-                        src="/assets/tangable.mp4"
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="absolute inset-[7%] w-[86%] h-[86%] object-cover rounded-[2rem] z-0"
-                    /> */}
+                    <div className="relative w-64 md:w-80 aspect-[1/2]">
+                        <video
+                            src={`/assets/video/tangible_gap.mp4`}
+                            className="absolute inset-0 left-2 w-[94%] h-full object-cover rounded-4xl z-0"
+                            controls
+                            loop
+                            muted
+                            playsInline
+                        />
+                        <Image
+                            src="/assets/images/PhoneFrame.png"
+                            alt={`Work Glance`}
+                            fill
+                            className="object-contain rounded-xl z-10 pointer-events-none"
+                        />
+                    </div>
                 </motion.div>
             </div>
         </div>

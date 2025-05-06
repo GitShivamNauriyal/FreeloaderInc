@@ -28,6 +28,12 @@ const HeroSection = () => {
                 transition={{ duration: 0.5 }}
                 viewport={{ once: false, amount: 0.2 }}
                 className="w-full md:min-h-[500px] h-[50vh] lg:h-[90vh] mt-16 flex flex-col justify-between px-4 lg:px-12 py-10 hero-container"
+                style={{
+                    backgroundImage:
+                        "repeating-linear-gradient(45deg, #5e17eb 1px, #6e47ee66 10px, #5915dc66 10px, #5328ac33 20px)",
+                    backgroundSize: "auto",
+                    backgroundRepeat: "repeat",
+                }}
             >
                 <div /> {/* Spacer */}
                 <div className="text-left pl-2 md:pl-8">

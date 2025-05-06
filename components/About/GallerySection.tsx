@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 
 function chunkArray<T>(array: T[], chunkSize: number): T[][] {
@@ -20,30 +20,27 @@ interface GallerySectionProps {
 }
 
 const defaultLayouts = [
-    // Layout 1: Big hero tile top-left
     [
-        "col-span-2 row-span-2",
-        "col-span-1 row-span-1",
-        "col-span-1 row-span-1",
-        "col-span-1 row-span-1",
-        "col-span-1 row-span-1",
         "col-span-2 row-span-1",
+        "col-span-1 row-span-2",
+        "col-span-1 row-span-1",
+        "col-span-1 row-span-1",
+        "col-span-1 row-span-1",
+        "col-span-1 row-span-1",
     ],
 
-    // Layout 2: Big one in the center
     [
-        "col-span-1 row-span-1",
-        "col-span-2 row-span-2",
-        "col-span-1 row-span-1",
-        "col-span-1 row-span-1",
-        "col-span-1 row-span-1",
+        "col-span-1 row-span-2",
         "col-span-2 row-span-1",
+        "col-span-1 row-span-1",
+        "col-span-1 row-span-1",
+        "col-span-1 row-span-1",
+        "col-span-1 row-span-1",
     ],
 
-    // Layout 3: Horizontal big tile
     [
-        "col-span-4 row-span-1",
-        "col-span-2 row-span-1",
+        "col-span-3 row-span-1",
+        "col-span-1 row-span-1",
         "col-span-1 row-span-1",
         "col-span-1 row-span-1",
         "col-span-1 row-span-1",
@@ -81,7 +78,6 @@ export default function GallerySection({
                 {currentImages.map((src, index) => {
                     const className =
                         currentLayout[index] || "col-span-1 row-span-1";
-
                     return (
                         <motion.div
                             key={index}
@@ -96,7 +92,10 @@ export default function GallerySection({
                                 y: 0,
                                 filter: "blur(0)",
                             }}
-                            transition={{ delay: index * 0.1 }}
+                            transition={{
+                                delay: index * 0.1,
+                                duration: 0.4,
+                            }}
                         >
                             <Image
                                 src={src}
