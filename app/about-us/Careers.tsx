@@ -47,7 +47,7 @@ const Careers = () => {
                                 and Doers
                             </h3>
                             <div className="cursor-pointer inline-block bg-black text-white text-xs sm:text-sm font-bold px-3 py-1 mt-2">
-                                WE'RE HIRING
+                                WE&apos;RE HIRING
                             </div>
                         </div>
                     </motion.div>
@@ -72,9 +72,9 @@ const Careers = () => {
                         className="flex-1 w-full max-w-xl leading-tight text-sm sm:text-base text-gray-100 space-y-4 lg:space-y-6"
                     >
                         <p>
-                            At Freeloader, we don't just build experiences — we
-                            build legacies. If you're passionate about bold
-                            ideas, innovative execution, and creating
+                            At Freeloader, we don&apos;t just build experiences
+                            — we build legacies. If you&apos;re passionate about
+                            bold ideas, innovative execution, and creating
                             out-of-the-box campaigns, this is the place for you.
                         </p>
                         <p>
