@@ -23,20 +23,20 @@ const MerchGlance = () => {
                             duration: 0.6,
                         }}
                     >
-                        <div className="relative w-64 md:w-72 aspect-[1/2] overflow-visible">
+                        <div className="relative w-64 md:w-72 aspect-[1/2]">
                             <video
                                 src={`/assets/video/experiencial_gifting/exp_reel_${num}.mp4`}
-                                className="absolute inset-0 w-full h-full object-cover rounded-4xl z-0"
-                                autoPlay
-                                muted
+                                className="absolute inset-0 left-2 w-[94%] h-full object-cover rounded-4xl z-0"
+                                controls
                                 loop
+                                muted
                                 playsInline
                             />
                             <Image
                                 src="/assets/images/PhoneFrame.png"
                                 alt={`Merch Glance ${num}`}
                                 fill
-                                className="object-cover rounded-xl z-10 pointer-events-none"
+                                className="object-contain rounded-xl z-10 pointer-events-none"
                             />
                         </div>
                     </motion.div>

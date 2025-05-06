@@ -38,10 +38,10 @@ const OverviewVideoPlayback_2 = () => {
                 </motion.div>
 
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.95, rotate: -8 }}
-                    whileInView={{ opacity: 1, scale: 1, rotate: -6 }}
-                    transition={{ duration: 0.3, delay: 0.3, ease: "easeOut" }}
-                    className="bg-cyan-500 text-[#5e17eb] px-4 py-2 -rotate-6 mt-4 font-semibold shadow-lg"
+                    initial={{ opacity: 0, scale: 0.9, rotate: -4 }}
+                    whileInView={{ opacity: 1, scale: 1, rotate: -2 }}
+                    transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
+                    className="bg-cyan-500 text-[#5e17eb] px-4 py-2 -rotate-2 mt-4 font-semibold shadow-lg"
                 >
                     LET’S WORK TOGETHER
                 </motion.div>

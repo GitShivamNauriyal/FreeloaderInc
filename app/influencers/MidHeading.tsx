@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 // import { FaArrowDown } from "react-icons/fa";
 

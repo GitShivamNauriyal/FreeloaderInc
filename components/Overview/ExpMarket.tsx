@@ -46,7 +46,7 @@ const ExperienceMarketingSection = () => {
                         initial={{ opacity: 0, x: -20, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
                         transition={{ duration: 0.5, ease: "easeOut" }}
-                        className="text-[#2e0e0e] text-lg leading-normal mb-3"
+                        className="mt-4 text-[#2a1114] text-base md:text-lg leading-5 md:leading-tight"
                     >
                         Experience Marketing is our way to solve various
                         problems faced by brands today, from reduced brand
@@ -57,7 +57,7 @@ const ExperienceMarketingSection = () => {
                         initial={{ opacity: 0, x: -20, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
                         transition={{ duration: 0.5, ease: "easeOut" }}
-                        className="text-[#2e0e0e] text-lg leading-normal mb-3"
+                        className="mt-4 text-[#2a1114] text-base md:text-lg leading-5 md:leading-tight"
                     >
                         As per our philosophy, a brand experience takes place
                         when your audience makes a tangible & physical contact
@@ -71,7 +71,7 @@ const ExperienceMarketingSection = () => {
                         initial={{ opacity: 0, x: -20, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
                         transition={{ duration: 0.5, ease: "easeOut" }}
-                        className="text-[#2e0e0e] text-lge leading-normal"
+                        className="mt-4 text-[#2a1114] text-base md:text-lg leading-5 md:leading-tight"
                     >
                         It is in that moment when your audience experiences your
                         brand with full attention and their whole being.

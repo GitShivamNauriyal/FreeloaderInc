@@ -105,12 +105,39 @@ const Process = () => {
                                                         <h3 className="text-xl lg:text-2xl font-medium md:font-bold mb-2">
                                                             {step.title}
                                                         </h3>
+                                                        {/* <div className="hidden md:block">
+                                                            <p className="opacity-80 mb-2">
+                                                                {step.content1}
+                                                            </p>
+                                                            {step.content2 && (
+                                                                <p className="opacity-80">
+                                                                    {
+                                                                        step.content2
+                                                                    }
+                                                                </p>
+                                                            )}
+                                                        </div> */}
+                                                        {/* Desktop (md+) view */}
                                                         <div className="hidden md:block">
                                                             <p className="opacity-80 mb-2">
                                                                 {step.content1}
                                                             </p>
                                                             {step.content2 && (
                                                                 <p className="opacity-80">
+                                                                    {
+                                                                        step.content2
+                                                                    }
+                                                                </p>
+                                                            )}
+                                                        </div>
+
+                                                        {/* Mobile-only view */}
+                                                        <div className="block md:hidden mt-2">
+                                                            <p className="opacity-80 text-xs mb-2">
+                                                                {step.content1}
+                                                            </p>
+                                                            {step.content2 && (
+                                                                <p className="opacity-80 text-xs">
                                                                     {
                                                                         step.content2
                                                                     }
@@ -169,12 +196,39 @@ const Process = () => {
                                                         <h3 className="text-xl md:text-2xl font-medium md:font-bold mb-2">
                                                             {step.title}
                                                         </h3>
+                                                        {/* <div className="hidden md:block">
+                                                            <p className="opacity-80 mb-2">
+                                                                {step.content1}
+                                                            </p>
+                                                            {step.content2 && (
+                                                                <p className="opacity-80">
+                                                                    {
+                                                                        step.content2
+                                                                    }
+                                                                </p>
+                                                            )}
+                                                        </div> */}
+                                                        {/* Desktop (md+) view */}
                                                         <div className="hidden md:block">
                                                             <p className="opacity-80 mb-2">
                                                                 {step.content1}
                                                             </p>
                                                             {step.content2 && (
                                                                 <p className="opacity-80">
+                                                                    {
+                                                                        step.content2
+                                                                    }
+                                                                </p>
+                                                            )}
+                                                        </div>
+
+                                                        {/* Mobile-only view */}
+                                                        <div className="block md:hidden mt-2">
+                                                            <p className="opacity-80 text-xs mb-2">
+                                                                {step.content1}
+                                                            </p>
+                                                            {step.content2 && (
+                                                                <p className="opacity-80 text-xs">
                                                                     {
                                                                         step.content2
                                                                     }

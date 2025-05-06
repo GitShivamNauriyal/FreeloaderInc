@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const experiences = [
     {
-        title: "Bhavnesh S Manhas",
+        title: "Bhuvnesh S Manhas",
         subtitle: "Creative Director",
         image: "/assets/images/team/Picture1.png",
     },
@@ -15,7 +15,7 @@ const experiences = [
         image: "/assets/images/team/Picture2.png",
     },
     {
-        title: "Saarthak Vig",
+        title: "Sarthak Vig",
         subtitle: "Tech Lead",
         image: "/assets/images/team/Picture3.png",
     },
@@ -28,7 +28,7 @@ const experiences = [
 
 const CoreTeam = () => {
     return (
-        <section className="w-full py-16">
+        <section className="w-full py-4">
             {/* Top Section: Heading */}
             <motion.div
                 initial={{ opacity: 0, x: 20, filter: "blur(10px)" }}

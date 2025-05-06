@@ -19,7 +19,7 @@ export default function MerchSubsection() {
                     initial={{ opacity: 0, y: 100, filter: "blur(100px)" }}
                     whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                     transition={{ duration: 0.5, delay: 0.2, ease: "easeOut" }}
-                    className="text-[#5e17ebdd] max-w-2xl mx-auto mb-8"
+                    className="text-[#5e17ebbb] max-w-2xl mx-auto mb-8"
                 >
                     Discover a curated collection of high-quality merch,
                     hand-picked accessories, and thoughtful gifts — all designed

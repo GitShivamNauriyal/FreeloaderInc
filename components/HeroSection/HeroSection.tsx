@@ -3,12 +3,13 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import ClientsSection from "../About/ClientsSection";
-import Creation from "../Overview/Creation";
+// import Creation from "../Overview/Creation";
 import ExperienceMarketingSection from "../Overview/ExpMarket";
 import Process from "../Overview/Process";
 import TangibleGap from "../Overview/TangibleGap";
 import OverviewVideoPlayback from "../Overview/VideoPlayback_1";
 import OverviewVideoPlayback_2 from "../Overview/VideoPlayback_2";
+import History from "../Overview/History";
 
 // Move animation props outside JSX for optimization
 const motionSpanProps = {
@@ -26,10 +27,10 @@ const HeroSection = () => {
                 whileInView={{ filter: "blur(0px)", opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
                 viewport={{ once: false, amount: 0.2 }}
-                className="w-full h-[50vh] lg:h-[90vh] mt-16 flex flex-col justify-between px-4 lg:px-12 py-10 hero-container"
+                className="w-full md:min-h-[500px] h-[50vh] lg:h-[90vh] mt-16 flex flex-col justify-between px-4 lg:px-12 py-10 hero-container"
             >
                 <div /> {/* Spacer */}
-                <div className="text-left">
+                <div className="text-left pl-2 md:pl-8">
                     <h1 className="z-10 text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] font-[900] leading-[0.8] tracking-[0.1rem] text-white freelogo">
                         FREE
                         <br />
@@ -79,7 +80,8 @@ const HeroSection = () => {
             </div>
 
             {/* Other sections */}
-            <Creation />
+            {/* <Creation /> */}
+            <History />
             <OverviewVideoPlayback />
             <TangibleGap />
             <ClientsSection />

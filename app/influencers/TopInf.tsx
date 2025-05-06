@@ -82,13 +82,16 @@ const TopInfluencers = () => {
                         transition={{ duration: 0.5, delay: index * 0.2 }}
                         className="text-white border rounded lg:border-0 pb-2"
                     >
-                        <Image
-                            width={200}
-                            height={200}
-                            src={item.image}
-                            alt={item.title}
-                            className="w-full h-auto object-cover rounded-md"
-                        />
+                        <div className="relative w-full aspect-[3/2] rounded-md overflow-hidden">
+                            <Image
+                                src={item.image}
+                                alt={item.title}
+                                fill
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 300px"
+                                className="object-cover"
+                            />
+                        </div>
+
                         <h3 className="text-lg font-bold mt-4 pl-2 freeheading">
                             {item.title}
                         </h3>

@@ -49,7 +49,7 @@ const TangibleGap = () => {
                         initial={{ opacity: 0, x: -20, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
                         transition={{ duration: 0.5, ease: "easeOut" }}
-                        className="mt-4 text-[#2a1114] text-lg leading-5 md:leading-tight"
+                        className="mt-4 text-[#2a1114] text-base md:text-lg leading-5 md:leading-tight"
                     >
                         In an all digital era, brands are beginning to lose
                         tangible connection with their audience at an ever
@@ -60,7 +60,7 @@ const TangibleGap = () => {
                         initial={{ opacity: 0, x: -20, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
                         transition={{ duration: 0.5, ease: "easeOut" }}
-                        className="mt-4 text-[#2a1114] text-lg leading-5 md:leading-tight"
+                        className="mt-4 text-[#2a1114] text-base md:text-lg leading-5 md:leading-tight"
                     >
                         Instead of reactive & ad-hoc solutions to reconnect with
                         the audience, the demand for well thought out
@@ -72,7 +72,7 @@ const TangibleGap = () => {
                         initial={{ opacity: 0, x: -20, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, x: 0, filter: "blur(0px)" }}
                         transition={{ duration: 0.5, ease: "easeOut" }}
-                        className="mt-4 text-[#2a1114] text-lg leading-5 md:leading-tight"
+                        className="mt-4 text-[#2a1114] text-base md:text-lg leading-5 md:leading-tight"
                     >
                         Since 2009, we at FIC have constantly evolved towards
                         innovating and building new age{" "}

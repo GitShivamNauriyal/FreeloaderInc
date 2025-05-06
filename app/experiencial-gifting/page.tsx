@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Merchandise from "./Merch";
 import MidHeading from "./MidHeading";

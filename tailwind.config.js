@@ -12,6 +12,7 @@ module.exports = {
                 logo: ['"Agrandir"', "sans-serif"],
                 heading: ['"Barlow"', "sans-serif"],
                 para: ['"Telegraf"', "sans-serif"],
+                agrandir: ["AgrandirWide", "sans-serif"],
             },
         },
     },

@@ -93,6 +93,13 @@ body {
 .freeheading {
     font-family: "Encode Sans Expanded", sans-serif;
 }
+@font-face {
+    font-family: "AgrandirWide";
+    src: url("/fonts/agrandir-wide.ttf") format("truetype");
+    font-weight: 900;
+    font-display: swap;
+}
+
 /* .freepara {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 } */
@@ -107,10 +114,10 @@ h6 {
         "Lucida Sans", Arial, sans-serif;
 } */
 
-.hero-container {
+/* .hero-container {
     position: relative;
     overflow: hidden;
-    z-index: 0; /* Ensure a stacking context */
+    z-index: 0;
 }
 
 .hero-container::before {
@@ -122,12 +129,12 @@ h6 {
     background-position: center;
     background-repeat: no-repeat;
 
-    transform: scaleX(-1); /* Flip on X-axis */
+    transform: scaleX(-1);
     transform-origin: center;
 
-    z-index: -1; /* Push behind content */
+    z-index: -1;
     pointer-events: none;
-}
+} */
 
 .wavy-background {
     /* background-color: #4f00ff;  */

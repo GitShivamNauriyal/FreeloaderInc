@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const ReelGlance = () => {
     return (
@@ -16,13 +18,32 @@ const ReelGlance = () => {
                     id="exp-reel"
                     className="relative w-full max-w-72 aspect-[9/18]"
                 >
-                    <Image
-                        src="/assets/images/PhoneFrame.png"
-                        alt="Phone Frame"
-                        width={400}
-                        height={1200}
-                        className="absolute inset-0 w-full h-full z-10 pointer-events-none"
-                    />
+                    <motion.div
+                        className="flex flex-col items-center overflow-visible"
+                        initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
+                        whileInView={{ opacity: 1, y: 0, filter: "blur(0)" }}
+                        transition={{
+                            ease: "easeIn",
+                            duration: 0.6,
+                        }}
+                    >
+                        <div className="relative w-64 md:w-72 aspect-[1/2]">
+                            <video
+                                src={`/assets/video/experiences/exp_reel_glance.mp4`}
+                                className="absolute inset-0 left-2 w-[94%] h-full object-cover rounded-4xl z-0"
+                                controls
+                                loop
+                                muted
+                                playsInline
+                            />
+                            <Image
+                                src="/assets/images/PhoneFrame.png"
+                                alt={`Work Glance`}
+                                fill
+                                className="object-contain rounded-xl z-10 pointer-events-none"
+                            />
+                        </div>
+                    </motion.div>
                 </div>
             </div>
         </div>
