@@ -19,7 +19,11 @@ const page = () => {
             <Merchandise />
             <MidHeading />
             <MerchGlance />
-            <GallerySection images={imageList} title="Showcase" />
+            <GallerySection
+                images={imageList}
+                title="Showcase"
+                imagesPerSlide={8}
+            />
             <MerchSubsection />
             {/* <Footer /> */}
         </div>

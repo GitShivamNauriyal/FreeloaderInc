@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
@@ -14,17 +14,20 @@ function chunkArray<T>(array: T[], chunkSize: number): T[][] {
     return chunks;
 }
 
-// Custom hook for media queries
 function useMediaQuery(query: string): boolean {
     const [matches, setMatches] = useState(false);
 
-    useState(() => {
+    useEffect(() => {
+        if (typeof window === "undefined") return;
+
         const media = window.matchMedia(query);
         const handleChange = () => setMatches(media.matches);
-        handleChange(); // Set initial state
+
+        handleChange(); // Initial check
         media.addEventListener("change", handleChange);
+
         return () => media.removeEventListener("change", handleChange);
-    });
+    }, [query]);
 
     return matches;
 }
