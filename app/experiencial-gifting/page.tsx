@@ -22,7 +22,7 @@ const page = () => {
             <GallerySection
                 images={imageList}
                 title="Showcase"
-                imagesPerSlide={8}
+                imagesPerSlide={6}
             />
             <MerchSubsection />
             {/* <Footer /> */}

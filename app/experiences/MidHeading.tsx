@@ -11,7 +11,7 @@ const MidHeading = () => {
                 initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
                 whileInView={{ opacity: 1, y: 0, filter: "blur(0)" }}
                 transition={{ duration: 0.6 }}
-                className="px-4 md:px-20 lg:px-56 max-w-screen-xl mx-auto text-lg sm:text-xl lg:text-4xl text-center text-[#5e17eb] font-bold leading-5 lg:leading-8 tracking-wide uppercase"
+                className="px-4 md:px-20 lg:px-40 max-w-screen-xl mx-auto text-lg sm:text-xl lg:text-5xl text-center text-[#5e17eb] font-bold leading-5 md:leading-6 lg:leading-11 tracking-wide uppercase"
             >
                 95% of marketers agree that live events provide attendees with a
                 valuable opportunity to form in-person connections in an

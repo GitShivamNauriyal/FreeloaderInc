@@ -41,7 +41,7 @@ const OverviewVideoPlayback_2 = () => {
                     initial={{ opacity: 0, scale: 0.9, rotate: -4 }}
                     whileInView={{ opacity: 1, scale: 1, rotate: -2 }}
                     transition={{ duration: 0.5, delay: 0.3, ease: "easeOut" }}
-                    className="bg-cyan-500 text-[#5e17eb] px-4 py-2 -rotate-2 mt-4 font-semibold shadow-lg"
+                    className="bg-cyan-500 text-[#5e17eb] px-4 py-2 -rotate-2 mt-2 font-semibold shadow-lg"
                 >
                     LET’S WORK TOGETHER
                 </motion.div>

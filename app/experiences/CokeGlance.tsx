@@ -6,15 +6,15 @@ import { motion } from "framer-motion";
 
 const CokeGlance = () => {
     return (
-        <div className="wavy-background py-12 px-4 md:px-16 lg:px-32 freeheading">
+        <div className="wavy-background py-16 mb-8 px-4 md:px-16 lg:px-32 freeheading">
             {/* <h2 className="text-white text-3xl sm:text-5xl font-semibold text-center mb-12">
                 Coke Glance
             </h2> */}
 
-            <div className="flex flex-col md:flex-row items-center justify-center gap-12 freeheading">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-16 lg:gap-44 freeheading">
                 {/* Coke Glance 2024 */}
                 <div className="flex flex-col items-center">
-                    <span className="text-white mb-4 text-2xl font-bold">
+                    <span className="text-white mb-4 lg:mb-8 text-2xl lg:text-4xl font-bold">
                         COKE MAGIC 2024
                     </span>
                     <div className="relative w-64 md:w-72 aspect-[1/2]">
@@ -58,7 +58,7 @@ const CokeGlance = () => {
                 </div>
                 {/* Coke Glance 2023 */}
                 <div className="flex flex-col items-center">
-                    <span className="text-white mb-4 text-2xl font-bold">
+                    <span className="text-white mb-4 lg:mb-8 text-2xl lg:text-4xl font-bold">
                         COKE MAGIC 2023
                     </span>
                     <motion.div

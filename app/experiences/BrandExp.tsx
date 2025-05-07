@@ -45,7 +45,7 @@ const BrandExperiences = () => {
                     transition={{ delay: 0, ease: "easeIn", duration: 0.4 }}
                     className="flex items-start md:items-center justify-start z-10"
                 >
-                    <h2 className="text-5xl sm:text-7xl font-bold leading-10 lg:leading-14">
+                    <h2 className="text-5xl sm:text-7xl font-bold leading-12 lg:leading-16">
                         <span className="block text-3xl italic font-medium">
                             Brand
                         </span>
@@ -77,7 +77,7 @@ const BrandExperiences = () => {
                 {experiences.map((item, index) => (
                     <motion.div
                         key={index}
-                        className="text-white border rounded lg:border-0 pb-2"
+                        className="text-white border-[1px] border-white/20 rounded lg:border-0 pb-2"
                         initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
                         whileInView={{ opacity: 1, y: 0, filter: "blur(0)" }}
                         transition={{ delay: index * 0.1, duration: 0.4 }}

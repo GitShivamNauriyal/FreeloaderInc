@@ -1,23 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600&family=Outfit:wght@400;700&display=swap");
-@import url("https://api.fontshare.com/v2/css?f[]=agrandir:700,500,400&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600&family=Outfit:wght@400;700&display=swap"); */
+/* @import url("https://api.fontshare.com/v2/css?f[]=agrandir:700,500,400&display=swap"); */
 @import url("https://db.onlinewebfonts.com/c/35170cf1718ed22ad98e6f262b827249?family=Agrandir+Wide+Light");
 @import url("https://db.onlinewebfonts.com/c/1dc7840abb13fcda12aa8d1cb21fb832?family=Agrandir");
 @import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700;900&display=swap");
-@import url("https://db.onlinewebfonts.com/c/cd7b05ba22e73021e0a390f532a72589?family=PP+Telegraf");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&display=swap");
+/* @import url("https://db.onlinewebfonts.com/c/cd7b05ba22e73021e0a390f532a72589?family=PP+Telegraf"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800&display=swap"); */
 
 @import "tailwindcss";
 @import "tw-animate-css";
 
 /* Removed @custom-variant as it is not a standard CSS rule */
 
-:root {
-    --font-logo: "Anton", sans-serif;
-    --font-heading: "Barlow", sans-serif;
-    --font-para: "Outfit", sans-serif;
-}
+/* :root { */
+/* --font-logo: "Anton", sans-serif; */
+/* --font-heading: "Barlow", sans-serif; */
+/* --font-para: "Outfit", sans-serif; */
+/* } */
 
 :root {
     --color-background: var(--background);
@@ -271,11 +271,6 @@ h6 {
     --sidebar-ring: oklch(0.556 0 0);
 }
 
-@layer base {
-    * {
-        @apply border-border outline-ring/50;
-    }
-    body {
-        @apply bg-background text-foreground;
-    }
+body {
+    font-family: "Agrandir", sans-serif;
 }

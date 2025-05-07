@@ -15,7 +15,11 @@ const page = () => {
         <div>
             <TopInfluencers />
             <MidHeading />
-            <GallerySection images={imageList} title="Influencers Gallery" />
+            <GallerySection
+                images={imageList}
+                title="Influencers Gallery"
+                imagesPerSlide={6}
+            />
         </div>
     );
 };

@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 
 const ReelGlance = () => {
     return (
-        <div className="border-t-2 border-white wavy-background py-2 lg:py-8 relative">
+        <div className="border-t-2 border-white wavy-background pt-8 lg:py-16 relative">
             <div className="flex md:flex-row flex-col items-center justify-center h-full px-4 md:px-16 lg:px-32 xl:px-64">
-                <div className="w-full mt-6 flex justify-center mb-6">
-                    <span className="text-white text-3xl sm:text-5xl font-bold freeheading">
+                <div className="w-full mt-6 flex justify-center lg:justify-start mb-6">
+                    <span className="text-white text-3xl sm:text-5xl lg:text-6xl font-bold freeheading">
                         Quick glance at
                         <span className="block">our recent work</span>
                     </span>
@@ -16,7 +16,7 @@ const ReelGlance = () => {
 
                 <div
                     id="exp-reel"
-                    className="relative w-full max-w-72 aspect-[9/18]"
+                    className="relative w-full max-w-72 aspect-[9/18] lg:mx-16"
                 >
                     <motion.div
                         className="flex flex-col items-center overflow-visible"

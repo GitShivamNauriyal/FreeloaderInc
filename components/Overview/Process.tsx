@@ -58,7 +58,7 @@ const Process = () => {
                     </motion.div>
 
                     {/* Timeline container */}
-                    <div className="relative max-w-5xl mx-auto">
+                    <div className="relative max-w-6xl mx-auto">
                         {/* Vertical center line */}
                         <motion.div
                             initial={{
@@ -75,7 +75,7 @@ const Process = () => {
                             className="absolute left-1/2 top-0 bottom-0 w-1 bg-white opacity-20 transform -translate-x-1/2 origin-top"
                         />
 
-                        <div className="flex flex-col space-y-16">
+                        <div className="flex flex-col space-y-4">
                             {steps.map((step, index) => {
                                 const isRight = index % 2 === 0;
 

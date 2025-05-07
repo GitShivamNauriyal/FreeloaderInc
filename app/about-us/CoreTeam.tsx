@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const experiences = [
     {
-        title: "Bhuvnesh S Manhas",
+        title: "Bhuvanesh S Manhas",
         subtitle: "Creative Director",
         image: "/assets/images/team/Picture1.png",
     },

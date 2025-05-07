@@ -101,8 +101,8 @@ export default function GallerySection({
     const handleNext = () => setPage((p) => Math.min(p + 1, totalPages - 1));
 
     return (
-        <section className="border max-w-5xl mx-auto px-4 py-20 freeheading">
-            <h2 className="text-3xl md:text-4xl font-semibold text-gray-100 mb-2">
+        <section className="max-w-5xl mx-auto px-4 py-12 md:py-20 freeheading">
+            <h2 className="text-3xl md:text-5xl font-semibold text-gray-100 mb-2">
                 {title}
             </h2>
             <hr className="border-t border-gray-200/30 mb-10" />

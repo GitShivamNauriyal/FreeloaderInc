@@ -92,7 +92,7 @@ const ExperienceMarketingSection = () => {
                         <div className="absolute inset-0 h-[95%] top-2 z-0">
                             <video
                                 src={`/assets/video/exp_marketing.mp4`}
-                                className="w-full h-full object-cover rounded-3xl"
+                                className="w-full h-full object-cover rounded-4xl"
                                 autoPlay
                                 loop
                                 muted

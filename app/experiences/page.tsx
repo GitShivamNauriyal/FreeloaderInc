@@ -19,7 +19,11 @@ const page = () => {
             <BrandExperiences />
             <MidHeading />
             <ReelGlance />
-            <GallerySection images={imageList} title="Event Moments" />
+            <GallerySection
+                images={imageList}
+                title="Event Moments"
+                imagesPerSlide={6}
+            />
             <CokeGlance />
             {/* <Footer /> */}
         </div>

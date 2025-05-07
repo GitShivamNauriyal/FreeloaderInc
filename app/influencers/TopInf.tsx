@@ -44,7 +44,7 @@ const TopInfluencers = () => {
                     transition={{ duration: 0.5 }}
                     className="flex items-start md:items-center justify-start z-10"
                 >
-                    <h2 className="text-5xl sm:text-7xl font-bold leading-10 lg:leading-14">
+                    <h2 className="text-5xl sm:text-7xl font-bold leading-12 lg:leading-16">
                         <span className="block text-5xl italic font-medium">
                             Top
                         </span>
