@@ -10,7 +10,7 @@ const MerchGlance = () => {
                 Coke Glance
             </h2> */}
 
-            <div className="flex flex-col md:flex-row items-center justify-center gap-12">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-12 lg:gap-24">
                 {["1", "2", "3"].map((num, index) => (
                     <motion.div
                         key={num}

@@ -6,13 +6,13 @@ import { motion } from "framer-motion";
 const Careers = () => {
     return (
         <div className="w-screen wavy-background pt-16">
-            <section className="max-w-7xl mx-auto gap-8 px-4 sm:px-6 md:px-20 py-16 text-white">
+            <section className="max-w-6xl mx-auto gap-8 px-4 lg:px-0 py-6 md:py-16 text-white">
                 {/* Heading */}
                 <motion.h2
                     initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
                     whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    className="freeheading text-4xl sm:text-5xl md:text-6xl lg:text-[60px] xl:text-[72px] font-extrabold leading-8 lg:leading-16 tracking-normal uppercase"
+                    className="freeheading text-4xl sm:text-5xl md:text-6xl lg:text-[60px] xl:text-[72px] font-extrabold leading-8 md:leading-12 lg:leading-16 tracking-normal uppercase"
                 >
                     Careers at <br className="hidden sm:block" />
                     Freeloader Inc.

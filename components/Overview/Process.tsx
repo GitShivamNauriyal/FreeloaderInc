@@ -100,9 +100,9 @@ const Process = () => {
                                     >
                                         {isRight ? (
                                             <>
-                                                <div className="w-1/2 pr-8 text-right freeheading">
+                                                <div className="w-1/2 pr-2 md:pr-8 text-right freeheading">
                                                     <div className="inline-block text-left">
-                                                        <h3 className="text-xl lg:text-2xl font-medium md:font-bold mb-2">
+                                                        <h3 className="text-xl lg:text-2xl font-medium md:font-bold mb-2 leading-tight">
                                                             {step.title}
                                                         </h3>
                                                         {/* <div className="hidden md:block">

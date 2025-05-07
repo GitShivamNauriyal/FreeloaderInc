@@ -42,7 +42,7 @@ const CoreTeam = () => {
                         alt="Tangible Background Prop"
                         width={200}
                         height={200}
-                        className="absolute -top-8 -left-10 w-32 h-32 object-contain z-0 opacity-100"
+                        className="absolute -top-8 -left-16 w-32 h-32 object-contain z-0 opacity-100"
                     />
                     <h2 className="text-5xl sm:text-6xl font-bold leading-10 z-10">
                         <span className="block text-4xl italic font-medium">
@@ -65,7 +65,7 @@ const CoreTeam = () => {
                             ease: "easeOut",
                             delay: index * 0.1,
                         }}
-                        className="text-white border rounded lg:border-0 pb-2"
+                        className="text-white border border-white/20 rounded lg:border-0 pb-2"
                     >
                         <Image
                             width={200}

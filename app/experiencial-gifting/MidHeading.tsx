@@ -19,7 +19,7 @@ const MidHeading = () => {
                     filter: "blur(0)",
                 }}
                 transition={{ ease: "easeInOut", duration: 0.3 }}
-                className="px-4 md:px-20 lg:px-56 max-w-screen-xl mx-auto text-lg sm:text-xl lg:text-4xl text-center text-[#5e17eb] font-bold leading-5 lg:leading-8 tracking-wide uppercase"
+                className="px-4 md:px-20 lg:px-44 max-w-screen-xl mx-auto text-lg sm:text-xl lg:text-5xl text-center text-[#5e17eb] font-bold leading-5 md:leading-8 lg:leading-10 tracking-wide uppercase"
             >
                 Physical merchandise provides a tangible way for YOUR AUDIENCE
                 to interact with a brand, often leading to a more memorable and

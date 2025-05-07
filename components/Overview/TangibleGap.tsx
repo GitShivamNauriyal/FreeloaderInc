@@ -21,7 +21,7 @@ const TangibleGap = () => {
                         alt="Tangible Background Prop"
                         width={200}
                         height={200}
-                        className="absolute -top-8 -left-8 w-32 h-32 object-contain z-0 opacity-70"
+                        className="absolute -top-8 -left-16 w-32 h-32 object-contain z-0 opacity-80"
                     />
 
                     {/* Heading Block */}

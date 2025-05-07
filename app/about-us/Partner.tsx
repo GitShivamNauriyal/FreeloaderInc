@@ -11,7 +11,7 @@ const imageList = Array.from(
 const PartnerAllianceSection = () => {
     return (
         <section className="bg-[#661eff] text-white py-20 px-6 md:px-16 wavy-background">
-            <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
                 {/* Left: Text */}
                 <motion.div
                     initial={{ opacity: 0, y: 20, filter: "blur(10px)" }}
