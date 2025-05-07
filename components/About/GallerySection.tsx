@@ -5,6 +5,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+// Utility to chunk images into slides
 function chunkArray<T>(array: T[], chunkSize: number): T[][] {
     const chunks: T[][] = [];
     for (let i = 0; i < array.length; i += chunkSize) {
@@ -13,12 +14,28 @@ function chunkArray<T>(array: T[], chunkSize: number): T[][] {
     return chunks;
 }
 
+// Custom hook for media queries
+function useMediaQuery(query: string): boolean {
+    const [matches, setMatches] = useState(false);
+
+    useState(() => {
+        const media = window.matchMedia(query);
+        const handleChange = () => setMatches(media.matches);
+        handleChange(); // Set initial state
+        media.addEventListener("change", handleChange);
+        return () => media.removeEventListener("change", handleChange);
+    });
+
+    return matches;
+}
+
 interface GallerySectionProps {
     images: string[];
     title?: string;
     imagesPerSlide?: number;
 }
 
+// Desktop layouts (cycle through these)
 const defaultLayouts = [
     [
         "col-span-2 row-span-1",
@@ -28,7 +45,6 @@ const defaultLayouts = [
         "col-span-1 row-span-1",
         "col-span-1 row-span-1",
     ],
-
     [
         "col-span-1 row-span-2",
         "col-span-2 row-span-1",
@@ -37,9 +53,20 @@ const defaultLayouts = [
         "col-span-1 row-span-1",
         "col-span-1 row-span-1",
     ],
-
     [
         "col-span-3 row-span-1",
+        "col-span-1 row-span-1",
+        "col-span-1 row-span-1",
+        "col-span-1 row-span-1",
+        "col-span-1 row-span-1",
+        "col-span-1 row-span-1",
+    ],
+];
+
+// Mobile layout (uniform 1-column layout)
+const mobileLayouts = [
+    [
+        "col-span-1 row-span-1",
         "col-span-1 row-span-1",
         "col-span-1 row-span-1",
         "col-span-1 row-span-1",
@@ -62,7 +89,10 @@ export default function GallerySection({
     const totalPages = imageSlides.length;
     const currentImages = imageSlides[page];
 
-    const currentLayout = defaultLayouts[page % defaultLayouts.length];
+    const isMobile = useMediaQuery("(max-width: 640px)");
+    const currentLayout = isMobile
+        ? mobileLayouts[page % mobileLayouts.length]
+        : defaultLayouts[page % defaultLayouts.length];
 
     const handlePrev = () => setPage((p) => Math.max(p - 1, 0));
     const handleNext = () => setPage((p) => Math.min(p + 1, totalPages - 1));
@@ -74,7 +104,11 @@ export default function GallerySection({
             </h2>
             <hr className="border-t border-gray-200/30 mb-10" />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+            <div
+                className={`grid ${
+                    isMobile ? "grid-cols-2" : "sm:grid-cols-2 md:grid-cols-4"
+                } gap-4 auto-rows-[200px]`}
+            >
                 {currentImages.map((src, index) => {
                     const className =
                         currentLayout[index] || "col-span-1 row-span-1";
