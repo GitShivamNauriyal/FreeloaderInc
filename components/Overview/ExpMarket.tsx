@@ -93,7 +93,7 @@ const ExperienceMarketingSection = () => {
                             <video
                                 src={`/assets/video/exp_marketing.mp4`}
                                 className="w-full h-full object-cover rounded-3xl"
-                                controls
+                                autoPlay
                                 loop
                                 muted
                                 playsInline
@@ -106,6 +106,7 @@ const ExperienceMarketingSection = () => {
                                 src="/assets/images/PhoneFrameRotated.png"
                                 alt="Work Glance"
                                 fill
+                                priority
                                 className="object-contain rounded-xl"
                             />
                         </div>

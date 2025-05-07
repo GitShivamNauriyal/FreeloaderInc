@@ -28,6 +28,7 @@ const MerchGlance = () => {
                                 src={`/assets/video/experiencial_gifting/exp_reel_${num}.mp4`}
                                 className="absolute inset-0 left-2 w-[94%] h-full object-cover rounded-4xl z-0"
                                 controls
+                                autoPlay
                                 loop
                                 muted
                                 playsInline
@@ -36,6 +37,7 @@ const MerchGlance = () => {
                                 src="/assets/images/PhoneFrame.png"
                                 alt={`Merch Glance ${num}`}
                                 fill
+                                priority
                                 className="object-contain rounded-xl z-10 pointer-events-none"
                             />
                         </div>

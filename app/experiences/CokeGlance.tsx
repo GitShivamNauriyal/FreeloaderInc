@@ -40,6 +40,7 @@ const CokeGlance = () => {
                                     src={`/assets/video/experiences/coke_glance_1.mp4`}
                                     className="absolute inset-0 left-2 w-[94%] h-full object-cover rounded-4xl z-0"
                                     controls
+                                    autoPlay
                                     loop
                                     muted
                                     playsInline
@@ -48,6 +49,7 @@ const CokeGlance = () => {
                                     src="/assets/images/PhoneFrame.png"
                                     alt={`Work Glance`}
                                     fill
+                                    priority
                                     className="object-contain rounded-xl z-10 pointer-events-none"
                                 />
                             </div>
@@ -73,6 +75,7 @@ const CokeGlance = () => {
                                 src={`/assets/video/experiences/coke_glance_2.mp4`}
                                 className="absolute inset-0 left-2 w-[94%] h-full object-cover rounded-4xl z-0"
                                 controls
+                                autoPlay
                                 loop
                                 muted
                                 playsInline
@@ -81,6 +84,7 @@ const CokeGlance = () => {
                                 src="/assets/images/PhoneFrame.png"
                                 alt={`Work Glance`}
                                 fill
+                                priority
                                 className="object-contain rounded-xl z-10 pointer-events-none"
                             />
                         </div>

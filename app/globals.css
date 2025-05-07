@@ -124,7 +124,7 @@ h6 {
     content: "";
     position: absolute;
     inset: 0;
-    background-image: url("/assets/images/image1.gif");
+    background-image: url("/assets/video/hero_bg.mp4");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
