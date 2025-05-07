@@ -29,7 +29,7 @@ export default function Footer() {
                 </p>
             </div> */}
 
-            <div className="grid gap-10 md:grid-cols-4">
+            <div className="grid gap-10 md:grid-cols-3">
                 {/* Left - Brand */}
                 <div>
                     <h3 className="text-xl leading-5 font-bold tracking-widest mb-2">
@@ -67,7 +67,7 @@ export default function Footer() {
                 </div>
 
                 {/* More */}
-                <div>
+                {/* <div>
                     <h4 className="font-semibold text-lg mb-3 text-white">
                         More
                     </h4>
@@ -76,7 +76,7 @@ export default function Footer() {
                         <li>Our Work</li>
                         <li>Our Team & Partners</li>
                     </ul>
-                </div>
+                </div> */}
 
                 {/* Get in Touch */}
                 <div>

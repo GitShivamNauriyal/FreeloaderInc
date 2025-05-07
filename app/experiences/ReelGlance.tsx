@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 const ReelGlance = () => {
     return (
         <div className="border-t-2 border-white wavy-background py-2 lg:py-8 relative">
-            <div className="flex flex-col items-center justify-center h-full px-4 md:px-16 lg:px-32 xl:px-64">
+            <div className="flex md:flex-row flex-col items-center justify-center h-full px-4 md:px-16 lg:px-32 xl:px-64">
                 <div className="w-full mt-6 flex justify-center mb-6">
-                    <span className="text-white text-3xl sm:text-5xl font-medium freeheading">
+                    <span className="text-white text-3xl sm:text-5xl font-bold freeheading">
                         Quick glance at
                         <span className="block">our recent work</span>
                     </span>
