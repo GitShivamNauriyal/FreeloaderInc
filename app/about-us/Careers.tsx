@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Careers = () => {
     return (
-        <div className="w-screen wavy-background pt-16">
+        <div className="w-screen wavy-background pt-8">
             <section className="max-w-6xl mx-auto gap-8 px-4 lg:px-0 py-6 md:py-16 text-white">
                 {/* Heading */}
                 <motion.h2
