@@ -45,7 +45,10 @@ const HeroSection = () => {
                 />
                 <div /> {/* Spacer */}
                 <div className="text-left pl-2 md:pl-8">
-                    <h1 className="z-10 text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] font-[900] leading-[0.8] tracking-[0.1rem] text-white freelogo">
+                    <h1
+                        className="z-10 text-7xl sm:text-8xl md:text-9xl lg:text-[10rem] font-[900] leading-[0.8] tracking-[0.1rem] text-white font-freelogo freelogo"
+                        style={{ fontFamily: "AgrandirWide, sans-serif" }}
+                    >
                         FREE
                         <br />
                         LOADER

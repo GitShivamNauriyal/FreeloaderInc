@@ -10,7 +10,7 @@ import Careers from "./Careers";
 
 const page = () => {
     return (
-        <div>
+        <div style={{ fontFamily: "AgrandirWide, sans-serif" }}>
             <Creation />
             <TeamVideoPlayback />ś
             <CoreTeam />

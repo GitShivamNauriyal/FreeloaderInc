@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "AgrandirWide";
+    src: url("/fonts/agrandir-wide.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "freelogo";
+    src: url("/fonts/agrandir-wide.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "freeheading";
+    src: url("/fonts/BDSans-Regular.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "freepara";
+    src: url("/fonts/TelegrafRegular.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

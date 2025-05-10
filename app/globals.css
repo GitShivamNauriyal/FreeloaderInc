@@ -1,9 +1,9 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;600&family=Outfit:wght@400;700&display=swap"); */
 /* @import url("https://api.fontshare.com/v2/css?f[]=agrandir:700,500,400&display=swap"); */
-@import url("https://db.onlinewebfonts.com/c/35170cf1718ed22ad98e6f262b827249?family=Agrandir+Wide+Light");
-@import url("https://db.onlinewebfonts.com/c/1dc7840abb13fcda12aa8d1cb21fb832?family=Agrandir");
+/* @import url("https://db.onlinewebfonts.com/c/35170cf1718ed22ad98e6f262b827249?family=Agrandir+Wide+Light"); */
+/* @import url("https://db.onlinewebfonts.com/c/1dc7840abb13fcda12aa8d1cb21fb832?family=Agrandir"); */
 /* @import url("https://db.onlinewebfonts.com/c/1dc7840abb13fcda12aa8d1cb21fb832?family=Agrandir") */
-@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700;900&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@400;700;900&display=swap"); */
 /* @import url("https://db.onlinewebfonts.com/c/cd7b05ba22e73021e0a390f532a72589?family=PP+Telegraf"); */
 /* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700;800&display=swap"); */
 /* @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&display=swap"); */
@@ -19,6 +19,38 @@
 /* --font-heading: "Barlow", sans-serif; */
 /* --font-para: "Outfit", sans-serif; */
 /* } */
+
+@font-face {
+    font-family: "AgrandirWide";
+    src: url("/fonts/agrandir-wide.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "freelogo";
+    src: url("/fonts/agrandir-wide.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "freeheading";
+    src: url("/fonts/BDSans-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "freepara";
+    src: url("/public/fonts/TelegrafRegular.otf") format("otf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 :root {
     --color-background: var(--background);
@@ -67,6 +99,7 @@
     --popover-foreground-color: #ffffff; /* Popover text color */
     --border-color: #333333; /* Border color */
     --primary-color: rgb(94, 23, 235); /**/
+    font-family: "AgrandirWide, sans-serif";
 }
 
 /* Custom styles */
@@ -82,24 +115,16 @@ body {
         "Lucida Sans", Arial, sans-serif; */
     /* font-family: "Outfit", sans-serif; */
     /* font-family: "Anton", sans-serif; */
-    font-family: "Agrandir", sans-serif;
+    /* font-family: "Agrandir", sans-serif; */
+    font-family: "AgrandirWide", sans-serif;
 }
 
-.freelogo {
+/* .freelogo {
     font-family: "Agrandir", sans-serif;
-    /* font-family: "Poppins", sans-serif; */
-    /* font-family: "Space Grotesk", sans-serif; */
-    /* font-family: "Outfit", sans-serif; */
-}
-.freeheading {
+} */
+/* .freeheading {
     font-family: "Encode Sans Expanded", sans-serif;
-}
-@font-face {
-    font-family: "AgrandirWide";
-    src: url("/fonts/agrandir-wide.ttf") format("truetype");
-    font-weight: 900;
-    font-display: swap;
-}
+} */
 
 /* .freepara {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -160,30 +185,6 @@ h6 {
     background-position: center;
     opacity: 0.2; /* Adjust this for lighter/darker image */
     z-index: -1;
-}
-
-@font-face {
-    font-family: "freelogo";
-    src: url("/fonts/agrandir-wide.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "freeheading";
-    src: url("/fonts/BDSans-Regular.ttf") format("truetype");
-    font-weight: normal;
-    font-style: normal;
-    /* font-display: swap; */
-}
-
-@font-face {
-    font-family: "freepara";
-    src: url("/public/fonts/TelegrafRegular.otf") format("otf");
-    font-weight: normal;
-    font-style: normal;
-    /* font-display: swap; */
 }
 
 /* @layer utilities {

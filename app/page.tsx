@@ -10,7 +10,7 @@ import HeroSection from "@/components/HeroSection/HeroSection";
 
 export default function Home() {
     return (
-        <>
+        <div style={{ fontFamily: "AgrandirWide, sans-serif" }}>
             <HeroSection />
             {/* <Experience /> */}
             {/* <Merch /> */}
@@ -19,6 +19,6 @@ export default function Home() {
             {/* <ContactSection /> */}
             {/* <Footer /> */}
             {/* MORE to be added... */}
-        </>
+        </div>
     );
 }

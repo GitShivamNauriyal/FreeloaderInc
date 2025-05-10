@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/common/Navbar";
 // import LoadingScreen from "./loading";
+import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 
 const geistSans = Geist({
@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-    title: "FREE LOADER AGENCY",
+    title: "Free Loader Agency",
     description:
         "Free Loader Agency - Since 2009, Tangible Memories Crafted, Gifted and Felt.",
 };

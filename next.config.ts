@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
     async headers() {
         return [
             {
-                source: "/(.*)", // cache everything
+                source: "/fonts/(.*)", //
                 headers: [
                     {
                         key: "Cache-Control",
