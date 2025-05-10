@@ -29,7 +29,10 @@ export default function Footer() {
                 </p>
             </div> */}
 
-            <div className="grid gap-10 md:grid-cols-3">
+            <div
+                className="grid gap-10 md:grid-cols-3"
+                style={{ fontFamily: "AgrandirWide, sans-serif" }}
+            >
                 {/* Left - Brand */}
                 <div>
                     <h3 className="text-xl leading-5 font-bold tracking-widest mb-2">
