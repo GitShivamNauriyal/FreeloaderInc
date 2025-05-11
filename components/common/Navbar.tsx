@@ -21,13 +21,13 @@ const Navbar = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
-                    <div
-                        className="flex-shrink-0"
-                        style={{ fontFamily: "AgrandirWide, sans-serif" }}
-                    >
+                    <div className="flex-shrink-0">
                         <Link
                             href="/"
                             className="relative text-white  text-xl font-extrabold glitch-container"
+                            style={{
+                                fontFamily: "AgrandirWide, sans-serif",
+                            }}
                         >
                             <div className="raleway translate-y-1 glitch-text">
                                 FREE
@@ -39,7 +39,10 @@ const Navbar = () => {
                     </div>
 
                     {/* Desktop menu */}
-                    <div className="hidden md:flex md:items-center md:space-x-8">
+                    <div
+                        className="hidden md:flex md:items-center md:space-x-8"
+                        style={{ fontFamily: "AgrandirWide, sans-serif" }}
+                    >
                         {menuItems.map(({ label, path }) => (
                             <div key={label} className="relative group">
                                 <Link
