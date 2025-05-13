@@ -8,22 +8,22 @@ const experiences = [
     {
         title: "INFLUENCER EVENTS",
         subtitle: "Conceptual parties & meet-ups",
-        image: "/assets/images/experience/Picture1.png",
+        image: "/assets/images/experience_new/Picture1.png",
     },
     {
         title: "CORPORATE SHOWS",
         subtitle: "Dealer Meets, Press Launches & Employee Celebrations",
-        image: "/assets/images/experience/Picture2.png",
+        image: "/assets/images/experience_new/Picture2.png",
     },
     {
         title: "FASHION SHOWS",
         subtitle: "Bespoke designer shows & Fashion weeks",
-        image: "/assets/images/experience/Picture3.png",
+        image: "/assets/images/experience_new/Picture3.png",
     },
     {
         title: "POP-UPS",
         subtitle: "Activation & Guerilla Marketing",
-        image: "/assets/images/experience/Picture4.png",
+        image: "/assets/images/experience_new/Picture4.png",
     },
 ];
 

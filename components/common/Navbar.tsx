@@ -39,23 +39,29 @@ const Navbar = () => {
                     </div>
 
                     {/* Desktop menu */}
-                    <div
+                    <ul
                         className="hidden md:flex md:items-center md:space-x-8"
+                        role="menubar"
                         style={{ fontFamily: "AgrandirWide, sans-serif" }}
                     >
                         {menuItems.map(({ label, path }) => (
-                            <div key={label} className="relative group">
+                            <li
+                                key={label}
+                                className="relative group"
+                                role="none"
+                            >
                                 <Link
                                     href={path}
+                                    role="menuitem"
                                     className="px-3 py-2 text-sm font-medium uppercase transition-colors duration-300 text-white hover:text-gray-100"
                                 >
                                     {label.charAt(0).toUpperCase() +
                                         label.slice(1)}
                                 </Link>
                                 {/* {label !== "contact" && <BottomGradientHover />} */}
-                            </div>
+                            </li>
                         ))}
-                    </div>
+                    </ul>
 
                     {/* Mobile menu button */}
                     <div className="flex md:hidden">

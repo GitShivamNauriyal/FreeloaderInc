@@ -47,27 +47,46 @@ export default function Footer() {
                 </div>
 
                 {/* Navigation */}
-                <div>
+                {/* Navigation - SEO optimized */}
+                <nav aria-label="Main Navigation">
                     <h4 className="font-semibold text-lg mb-3 text-white">
                         Navigation
                     </h4>
                     <ul className="space-y-2 text-gray-300">
                         <li>
-                            <Link href="/experiences">Experiences</Link>
+                            <Link
+                                href="/experiences"
+                                title="Explore our curated brand experiences"
+                            >
+                                Experiences
+                            </Link>
                         </li>
                         <li>
-                            <Link href="/experiencial gifting">
+                            <Link
+                                href="/experiencial gifting"
+                                title="Corporate & personal gifting experiences"
+                            >
                                 Experiencial Gifting
                             </Link>
                         </li>
                         <li>
-                            <Link href="/influencers">Influencers</Link>
+                            <Link
+                                href="/influencers"
+                                title="Discover our influencer collaborations"
+                            >
+                                Influencers
+                            </Link>
                         </li>
                         <li>
-                            <Link href="/about-us">About Us</Link>
+                            <Link
+                                href="/about-us"
+                                title="Learn more about our team and mission"
+                            >
+                                About Us
+                            </Link>
                         </li>
                     </ul>
-                </div>
+                </nav>
 
                 {/* More */}
                 {/* <div>
@@ -136,13 +155,16 @@ export default function Footer() {
             <div className="mt-16 border-t border-neutral-800 pt-6 flex flex-col md:flex-row justify-between text-sm text-gray-400">
                 <p>Copyright © 2025 Freeloader Inc. All rights reserved.</p>
                 <div className="flex gap-6 mt-3 md:mt-0">
+                    <a href="#" className="hover:text-white">
+                        Privacy Policy
+                    </a>
                     <a
                         href="/FICPL%20-%20Culture%20Handbook.pdf"
                         className="hover:text-white"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
-                        Privacy Policy
+                        Culture Handbook
                     </a>
 
                     <a href="#" className="hover:text-white">

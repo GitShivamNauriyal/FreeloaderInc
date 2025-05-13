@@ -10,7 +10,7 @@ import CokeGlance from "./CokeGlance";
 
 const imageList = Array.from(
     { length: 30 },
-    (_, i) => `/assets/images/experience/gal${i + 1}.png`
+    (_, i) => `/assets/images/experience_new/gal${i + 1}.png`
 );
 
 const page = () => {
